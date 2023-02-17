@@ -43,6 +43,7 @@
                     <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
                     <li><a href="#">01. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">00. 연산자 : 데이터 저장 + 수식을 통해 변경된 값 저장 </a></li>
                     <li><a href="#">01. 배열 : 데이터 저장(여러개): 표현방법1</a></li>
                     <li><a href="#">02. 배열 : 데이터 저장(여러개): 표현방법2</a></li>
                     <li><a href="#">03. 배열 : 데이터 저장(여러개): 표현방법3</a></li>
@@ -136,7 +137,7 @@
                 <!-- //sample03 -->
 
                 <div id="sample04" class="sample">
-                    <h3>00. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
+                    <h3>01. 상수 : 데이터 저장 + 데이터 변경(X)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
@@ -158,14 +159,158 @@
                         에러(안나옴)
                     </div>   
                 </div>
-                <!-- //sample00 -->
+                <!-- //sample04 -->
 
-                <div id="sample05" class="sample"></div>
-                <div id="sample06" class="sample"></div>
-                <div id="sample07" class="sample"></div>
-                <div id="sample08" class="sample"></div>
-                <div id="sample09" class="sample"></div>
-                <div id="sample10" class="sample"></div>  
+                <div id="sample05" class="sample">
+                    <h3>00.연산자 : 데이터 저장 + 수식을 통해 변경된 값 저장</h3>
+                    <p>연산자는 데이터를 저장 할수도 있고 수식을 통해 변경된값 을 저장 할수있다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const a = 500;
+    const b = 1000;
+
+    연산자
+    console.log(a + b)
+    console.log(a - b)
+    console.log(a > b)
+    console.log(a * b)
+    console.log(a / b)
+    console.log(a % b)                           
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        1500<br>
+                        -500<br>
+                        false<br>
+                        500000<br>
+                        0.5<br>
+                        500<br>
+                    </div>
+                </div>
+                <!-- //sample05 -->
+
+                <div id="sample06" class="sample">
+                    <h3>01. 배열 : 데이터 저장(여러개): 표현방법1</h3>
+                    <p>배열은 여러개의 데이터를 배열해 놓고 배열한 순서대로 값을 저장한다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = new Array();
+    arr[0] = 100;
+    arr[1] = 200;
+    arr[2] = "javascript";
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);    
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascript<br>
+                    </div>
+                </div>
+                <!-- //sample06  -->
+
+                <div id="sample07" class="sample">
+                    <h3>02. 배열 : 데이터 저장(여러개): 표현방법2</h3>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = new Array(100, 200, "javascript");
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        100<br>
+                        200<br>
+                        javascript<br>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>03. 배열 : 데이터 저장(여러개): 표현방법3</h3>
+
+                </div>
+                <!-- //sample08 -->
+
+                <div id="sample09" class="sample">
+                    <h3>04. 배열 : 데이터 저장(여러개): 표현방법4</h3>
+
+                </div>
+                <!-- //sample09 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample10 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample12 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample13 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample14 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample15 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample16 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample17 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample18 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample19 -->
+
+                <div id="sample10" class="sample">
+                    <h3></h3>
+
+                </div>
+                <!-- //sample20 -->
             </div>
         </div>
     </main>
@@ -181,9 +326,9 @@
     <script>
         // 001. 변수 : 데이터 저장
         {
-            var x = 100;             //변수 x에 숫자 100을 저장함
-            var y = 200;             //변수 y에 숫자 200을 저장함
-            var z = "javascript";    //변수 z에 문자 "javascript"를 저장함
+            // var x = 100;             //변수 x에 숫자 100을 저장함
+            // var y = 200;             //변수 y에 숫자 200을 저장함
+            // var z = "javascript";    //변수 z에 문자 "javascript"를 저장함
 
            // console.log(x);
            // console.log(y);
@@ -192,32 +337,32 @@
 
         // 02.변수 : 데이터 저장 + 데이터 변경
         {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+            // let x = 100;
+            // let y = 200;
+            // let z = "javascript";
 
-            x = 300;
-            y = 200;
-            z = "react"
+            // x = 300;
+            // y = 200;
+            // z = "react"
 
-           // console.log(x);
-           // console.log(y);
-           // console.log(z);
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
         }
 
         // 03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
         {
-            let x = 100;
-            let y = 300;
-            let z = "javascript";
+            // let x = 100;
+            // let y = 300;
+            // let z = "javascript";
 
-            x += 300;   // x = x + 300
-            y += 400;
-            z += "react";
+            // x += 300;   // x = x + 300
+            // y += 400;
+            // z += "react";
 
-           // console.log(x);
-           // console.log(y);
-           // console.log(z);
+            // console.log(x);
+            // console.log(y);
+            // console.log(z);
         }
 
         // 00. 상수 : 데이터 저장 + 데이터 변경(X)
@@ -225,9 +370,9 @@
         // 상수(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며
         // 상수의 값을 재지정 할 수도 없습니다.
         {
-            const x = 100;
-            const y = 200;
-            const z = "javascript";
+            // const x = 100;
+            // const y = 200;
+            // const z = "javascript";
             
             //x = 300;         //Assignment to constant variable. 에러뜸
             //y = 400;
@@ -243,10 +388,10 @@
 
         // 변수
         {
-            // const a = 10000;
-            // const b = 20000;
+            const a = 500;
+            const b = 1000;
 
-            // //연산자
+            //연산자
             // console.log(a + b)
             // console.log(a - b)
             // console.log(a > b)
@@ -254,33 +399,33 @@
             // console.log(a / b)
             // console.log(a % b)
             
-            // let c = 10;
-            // c = "100"
+            let c = 10;
+            c = "100"
             // c = 1000;
-            // c += 1000;
+            c += 1000;
 
-            // console.log(c)
+            console.log(c)
         }
 
         // 05. 배열 : 데이터 저장(여러개): 표현방법1
         {
-            // const arr = new Array();
-            // arr[0] = 100;
-            // arr[1] = 200;
-            // arr[2] = "javascript";
+            //  const arr = new Array();
+            //  arr[0] = 100;
+            //  arr[1] = 200;
+            //  arr[2] = "javascript";
 
-            // console.log(arr[0]);
-            // console.log(arr[1]);
-            // console.log(arr[2]);
+            //  console.log(arr[0]);
+            //  console.log(arr[1]);
+            //  console.log(arr[2]);
         }
 
         // 06. 배열 : 데이터 저장(여러개): 표현방법2
         {
-            const arr = new Array(100, 200, "javascript");
+            // const arr = new Array(100, 200, "javascript");
 
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2]);
+            // console.log(arr[0]);
+            // console.log(arr[1]);
+            // console.log(arr[2]);
         }
 
         // 07. 배열 : 데이터 저장(여러개): 표현방법3
@@ -340,13 +485,13 @@
             // console.log(obj.c);
         }
 
-        //  12. 객체 : 데이터 저장(키와 값): 표현방법5
+        //  12. 객체 : 데이터 저장(키와 값): 표현방법4
         {
-            const obj = {a:100, b:200, c:"javascript"};
+             const obj = {a:100, b:200, c:"javascript"};
 
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
+            // console.log(obj.a);
+            // console.log(obj.b);
+            // console.log(obj.c);
         }
         
     </script>
