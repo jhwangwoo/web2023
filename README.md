@@ -1,5 +1,6 @@
 # web2023
-수업시간 예제
+
+나의 블로그 : https://coding23213.tistory.com/
 
 #HTML
 class코딩과구조
