@@ -63,30 +63,13 @@ body {
     color: #fff;
 }
 
-@media (max-width: 600px){
-    body {
-        padding: 20px;
-    }
-    #header h1 {
-        margin-bottom: 10px;
-    }
-    #header h1 a {
-        font-size:  40px;
-    }
-    #header nav ul li a {
-        padding: 5px 10px;
-        margin: 3px 1px;
-        font-size: 14px
-    }
-}
-
 /* 메인영역 */
 #main {
     padding: 40px 0;
     border-bottom: 1px dashed #dcdcdc;
 }
 .main__menu {
-    padding: 40px 0;
+    padding-bottom: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
 .main__sample {
@@ -109,7 +92,6 @@ body {
     margin-top: 10px;
     background-color: #f3f3f3;
     padding: 1em;
-    border-radius: 5px;
 }
 
 /* 푸터 영역 */
