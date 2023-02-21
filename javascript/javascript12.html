@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript12 데이터 효과</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <link rel="shortcut icon" href="assets/ico/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/javascript192x192.png">
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li class="active"><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴랙스 효과</a></li>
+                <li><a href="javascript18.html">게임 효과</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    
+    <main id="main">
+        <div class="container">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
+                    <li><a href="#">03. 데이터 이펙트 : 0부터 100 까지 짝수만 출력하기</a></li>
+                    <li><a href="#">04. 데이터 이펙트 : 0부터 100 까지 5의 배수 출력하기</a></li>
+                </ul>
+            </div>
+            <div id="sample01" class="sample">
+                <h3>01. 데이터 이펙트 : 1부터 100까지 출력하기</h3>
+                <p>for문을 이용해서 1~100까지 출력하는</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=1; i&lt=100; i++){ //반복문 for문
+        console.log(i)
+    }
+}   //결과값 1,2,3, 4, 5, ...100
+</code></pre>
+            </div>
+            <!--sample01-->
+
+            <div id="sample02" class="sample">
+                <h3>02. 데이터 이펙트 : 0부터 50까지 출력하기</h3>
+                <p>for문을 이용해서 0~50까지 출력합니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i&lt=100; i++){  //반복문 for은 초기값을 0을 설정하고 1씩증가 시켜 50번반복함
+        console.log(i)   
+    }
+}   //결과값 0,1,2,3, 4, 5, ...50
+</code></pre>
+            </div>
+            <!--sample02-->
+
+            <div id="sample03" class="sample">
+                <h3>03. 데이터 이펙트 : 0부터 100 까지 짝수만 출력하기</h3>
+                <p>for문을 이용해서 0~100까지 짝수만 출력합니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i&lt=50; i+=2){  //(i= i+2)반복문 for은 초기값을 0을 설정하고 2씩증가 시켜 100까지 계산
+        console.log(i)   
+    }
+}   //결과값 0, 2, 4 ,6, 8 ,10... 96, 98, 100
+</code></pre>
+            </div>
+            <!--sample03-->
+
+            <div id="sample04" class="sample">
+                <h3>04. 데이터 이펙트 : 0부터 100 까지 5의 배수 출력하기</h3>
+                <p>for문을 이용해서 0~100까지 5의 배수를 출력합니다. 조건문인 if문과 증감연산자를 이용하는 방법이 있습니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    for(let i=0; i&lt=100; i+=5){  //(i= i+5)반복문 for은 초기값을 0을 설정하고 5씩증가 시켜 100까지 계산
+        console.log(i)   
+    }
+}   
+
+{
+    for(let i=1; i&lt=100; i++){   //if문을 이용한 방법 
+        if(i % 5 == 0){            //%연산자는 5나누기i의 나머지값이 0과 같을때 출력한다.
+            console.log(i)
+        }
+
+}
+
+//증감 연산자 결과값: 0,5,10,15,20, 25... 95, 100  #0이붙은다
+//if문 연산자 결과값: 5,10,15,20, 25... 95, 100   #0이안붙는다
+</code></pre>
+            </div>
+
+
+        
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:ghkddn132.dothome.co.kr/">ghkddn132.dothome.co.kr</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="assets/js/prism.js"></script>
+    <script>
+        // 01.ㅣ 1부터 100까지 출력하기
+        // for(let i=1; i<=100; i++){
+        //     console.log(i)
+        // }
+        //02. 0부터 50까지 출력하기
+        // for(let i=0; i<=50; i++){
+            // console.log(i)
+        // } 
+  
+        //03. 1부터 100 까지 짝수만 출력하기
+          for(let i=0; i<=100; i+=2){     //i= i+2
+          console.log(i)
+          }
+
+        //04. 1부터 100까지 5의 배수 출력하기
+        //  for(let i=0; i<=100; i+=5){
+        //      console.log(i)
+        //  }
+        
+        // for(let i=1; i<=100; i++){ //if문을 이용한 방법
+        //      if(i % 5 == 0){
+        //          console.log(i)
+        //     }
+        // }
+  
+    </script>
+
+</body>
+</html>
