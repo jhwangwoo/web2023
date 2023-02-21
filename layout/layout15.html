@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃05-flex방식</title>
+    <title>레이아웃5 -flex사용</title>
     <style>
-        *{
+        * {
             margin: 0;
-            padding: 0;
+            height: 0;
         }
         #wrap {
             width: 100%;
@@ -21,11 +21,11 @@
             height: 100px;
             background-color: #B9AAA5;
         }
-        #main { 
+        #main {
             height: 780px;
             background-color: #886F65;
         }
-        #main .container {
+        #main .container{
             display: flex;
             flex-wrap: wrap;
         }
@@ -37,7 +37,7 @@
         #article2 {
             width: 1200px;
             height: 200px;
-            background-color: #684D43;
+            background-color: #74574A;
         }
         #article3 {
             width: 600px;
@@ -59,10 +59,7 @@
             background-color: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
         }
-       
     </style>
-
-
 </head>
 <body>
     <div id="wrap">
@@ -84,6 +81,5 @@
             <div class="container"></div>
         </footer>
     </div>
-    
 </body>
 </html>
