@@ -107,7 +107,7 @@
 
     x = 300;
     y = 200;
-    z = "react"
+    z = "react";
 
     console.log(x);
     console.log(y);
@@ -150,17 +150,17 @@
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
-                             <div>
+                            <div>
                                 400<br>
                                 700<br>
                                 javascriptreact
-                             </div>
+                            </div>
                         </details>
-                        <div class="notice">
-                            <h4>연산자 : 변수로 연산이 가능하다.</h4>
-                            <p>변수를 이용해서 연산이 가능하고, 연산에는 산술 연산자, 대입 연산자, 비교연산자, 논리 연산자, 상황 연산자가 있다</p>
-                        </div>
                     </div>
+                    <div class="notice">
+                        <h4>연산자 : 변수로 연산이 가능하다.</h4>
+                        <p>변수를 이용해서 연산이 가능하고, 연산에는 산술 연산자, 대입 연산자, 비교연산자, 논리 연산자, 상황 연산자가 있다</p>
+                    </div>                       
                 </div>
                 <!-- //sample03 -->
 
@@ -425,7 +425,7 @@
 <pre><code class="language-js">{
     const obj = [
         {a:100, b:200},
-        {c:"javascript"}
+        {c:"javascript"};
     ]
 
     console.log(obj[0].a);
@@ -457,7 +457,7 @@ const obj = {
     a: 100,
         b: [200, 300],
         c: {x:400, y: 5000},
-        d: "javascript"
+        d: "javascript";
     }
 
     console.log(obj.a);
@@ -492,7 +492,7 @@ const obj = {
 <pre><code class="language-js">{
     const a = 100;
     const b = 200;
-    const c = "javascript"
+    const c = "javascript";
 
     const obj = {a, b, c}
 
@@ -518,24 +518,37 @@ const obj = {
                 <div id="sample16" class="sample">
                     <h3>16. 객체 : 데이터 저장(키와값): 표현방법8</h3>
                     <p>객체안에 실행문(함수)가 들어갈수 있다.</p>
+                    <p>함수적용 방식 : function(){ console.log() }</p>
                     <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">{                
     const obj = {
         a:100,
         b: [200,300],
         c: "javascript",
         d: function(){
-            console.log("javascript가 실행 되었습니다.")
+            console.log("javascript가 실행 되었습니다.");
+        },
+        e: function(){
+            console.log(obj.c + "가 실행되었습니다.");                    
+        },
+        f: function(){
+            console.log(this.c + "가 실행되었습니다."); //this는 자기자신을 표현할때사용
         }
-    
+    }
+
     console.log(obj.a);
     console.log(obj.b[0]);
     console.log(obj.b[1]);
-    console.log(obj.b[2]); //undefined 없음
-    console.log(obj.c)
-
-    console.log(obj.d);    //(x)  console.log까지 같이 뜨기에 이렇게 쓰면 안된다.
-    obj.d();    //(o)
+    console.log(obj.b[2]); //undefined
+    console.log(obj.c);
+    obj.d()
+    obj.e()
+    obj.f()
+        
+        
+    // console.log(obj.d); //(x)함수를 쓸때는 console.log까지 같이 뜨기에 이렇게쓰면안된다.
+    // obj.d();  
+}
 </code></pre>
 
                     </div>
@@ -895,21 +908,32 @@ const obj = {
 
         // 객체 : 데이터 저장 (키와값) : 표현방법8 : 함수가들어간 개체안에 실행문이 들어갈수있다
         {
-            // const obj = {
-            //     a:100,
-            //     b: [200,300],
-            //     c: "javascript",
-            //     d: function(){
-            //         console.log("javascript가 실행 되었습니다.")
-            //     }
-            // }
+                
+            const obj = {
+                a:100,
+                b: [200,300],
+                c: "javascript",
+                d: function(){
+                    console.log("javascript가 실행 되었습니다.");
+                },
+                e: function(){
+                    console.log(obj.c + "가 실행되었습니다.");                    
+                },
+                f: function(){
+                    console.log(this.c + "가 실행되었습니다."); //this는 자기자신을 표현할때사용
+                }
+            }
 
-            // console.log(obj.a);
-            // console.log(obj.b[0]);
-            // console.log(obj.b[1]);
-            // console.log(obj.b[2]); //undefined
-            // console.log(obj.c);
-
+            console.log(obj.a);
+            console.log(obj.b[0]);
+            console.log(obj.b[1]);
+            console.log(obj.b[2]); //undefined
+            console.log(obj.c);
+            obj.d()
+            obj.e()
+            obj.f()
+            
+            
             // console.log(obj.d); //(x)console.log까지 같이 뜨기에 이렇게쓰면안된다.
             // obj.d();  
         }

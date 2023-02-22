@@ -86,7 +86,7 @@ body {
     border-bottom: 1px dashed #dcdcdc;
 }
 .main__menu {
-    padding: 40px 0;
+    padding-bottom: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
 .main__sample {
@@ -105,19 +105,25 @@ body {
     margin-bottom: 10px;
     color: #666;
 }
+.main__sample .sample .script .language-js {
+    border-radius: 5px;
+}
+
 .main__sample .result {
     margin-top: 10px;
     background-color: #f3f3f3;
     padding: 1em;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 .main__sample .notice {
-    border-left: 3px solid #0243f1;
+    border-left: 5px solid #0243f1;
     padding: 13px 10px 10px 15px;
     background-color: #f6f6f6;
 }
 .main__sample .notice h4 {
-    margin-bottom: 0;
+    margin-bottom: 5px;
+    
 }
 .main__sample .notice p {
     margin-bottom: 0;
