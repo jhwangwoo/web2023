@@ -908,29 +908,29 @@
         // 객체 : 데이터 저장 (키와값) : 표현방법8 : 함수가들어간 개체안에 실행문이 들어갈수있다
         {
                 
-            const obj = {
-                a:100,
-                b: [200,300],
-                c: "javascript",
-                d: function(){
-                    console.log("javascript가 실행 되었습니다.");
-                },
-                e: function(){
-                    console.log(obj.c + "가 실행되었습니다.");                    
-                },
-                f: function(){
-                    console.log(this.c + "가 실행되었습니다."); //this는 자기자신을 표현할때사용
-                }
-            }
+            // const obj = {
+            //     a:100,
+            //     b: [200,300],
+            //     c: "javascript",
+            //     d: function(){
+            //         console.log("javascript가 실행 되었습니다.");
+            //     },
+            //     e: function(){
+            //         console.log(obj.c + "가 실행되었습니다.");                    
+            //     },
+            //     f: function(){
+            //         console.log(this.c + "가 실행되었습니다."); //this는 자기자신을 표현할때사용
+            //     }
+            // }
 
-            console.log(obj.a);
-            console.log(obj.b[0]);
-            console.log(obj.b[1]);
-            console.log(obj.b[2]); //undefined
-            console.log(obj.c);
-            obj.d()
-            obj.e()
-            obj.f()
+            // console.log(obj.a);
+            // console.log(obj.b[0]);
+            // console.log(obj.b[1]);
+            // console.log(obj.b[2]); //undefined
+            // console.log(obj.c);
+            // obj.d()
+            // obj.e()
+            // obj.f()
             
             
             // console.log(obj.d); //(x)console.log까지 같이 뜨기에 이렇게쓰면안된다.

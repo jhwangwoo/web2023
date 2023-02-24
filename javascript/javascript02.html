@@ -7,6 +7,7 @@
     <title>Javascript2 데이터 불러오기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/javascript192x192.png">
@@ -80,9 +81,184 @@
                 <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 불러오기 </h3>
                     <q>변수에 데이터를 불러 올 수 있습니다.</q>
-                </div>
+                    <div class="script">
+<pre><code>{
+    let x = 100, y = 200, z = "javascript";
 
-            </div>
+    console.log(x ,y ,z);
+}   
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100 200 "javascript"
+                        </div>
+                    </details>
+                </div>
+                <!-- sample01 -->
+
+                <div id="smaple02" class="sample">
+                    <h3>02. 상수 : 데이터 불러오기</h3>
+                    <p>상수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const x = 100, y = 200, z = "javascript";
+    
+    console.log(x, y, z);
+}    
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            100 200 "javascript
+                        </div>
+                    </details>
+                </div>
+                <!-- sample02 -->
+
+                <div id="smaple03" class="sample">
+                    <h3>03. 배열 : 데이터 불러오기</h3>
+                    <p>배열 안에 저장된 데이터를 불러 오는 방법입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr[0], arr[1], arr[2]);
+}    
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            100, 200, "javascript"
+                        </div>
+                    </details>
+                </div>
+                <!-- sample03 -->
+
+                <div id="smaple04" class="sample">
+                    <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                    <p>배열안에 배열을 넣어 저장한 데이터를 불러올수 있습니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, ["javascript","react"]];
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2][0]);       //2번째배열에 0번째배열
+    console.log(arr[2][1]);
+}    
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react
+                        </div>
+                    </details>
+                </div>
+                <!-- sample04 -->
+
+                <div id="smaple05" class="sample">
+                    <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                    <p>"length"를 사용하여 배열안에 있는 것을 불러 온다</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr,length)      //length 갯수구할때 쓴다.
+} 
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            [100,200,"javascript"]
+                        </div>
+                    </details>
+                </div>
+                <!-- sample05 -->
+
+                <div id="smaple06" class="sample">
+                    <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
+                    <p>조건이 성립 될때 까지 불러옵니다</p>
+                    <div class="script">
+<pre><code class="language-js">{
+const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으면 출력 후 i를 하나를 더하고 다시계산한다
+    console.log(arr[i]);
+}
+// i=0; 0&lt;9; console.log(arr[0]); i++  //100
+// i=1; 1&lt;9; console.log(arr[1]); i++  //200
+// i=2; 2&lt;9; console.log(arr[2]); i++  //300
+// i=3; 3&lt;9; console.log(arr[3]); i++  //400
+// i=4; 4&lt;9; console.log(arr[4]); i++  //500
+// i=5; 5&lt;9; console.log(arr[5]); i++  //600
+// i=6; 6&lt;9; console.log(arr[6]); i++  //700
+// i=7; 7&lt;9; console.log(arr[7]); i++  //800
+// i=8; 8&lt;9; console.log(arr[8]); i++  //900
+// i=9; 9&lt;9;"공식이성립안된다" END 
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            600<br>
+                            700<br>
+                            800<br>
+                            900
+                        </div>
+                    </details>
+                </div>
+                <!-- sample06 -->
+
+                <div id="smaple07" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
+                    <p>배열 안에있는 배열을 조건이 성립할때 까지 불러 옵니다</p>
+                    <div class="script">
+<pre><code class="language-js">{
+    for( let i=1; i&lt=10; i++ ){
+        console.log("i : " + i);
+        for( let j=1; j&lt=10; j++ ){
+            console.log("j : " + j);
+        }
+    }
+}    
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과확인하기</summary>
+                        <div></div>
+                    </details>
+                </div>
+                <!-- sample07 -->
+
+
+            </div>           
         </div>
     </main>
     <!-- //main -->
@@ -91,50 +267,52 @@
         <a href="mailto:ghkddn132.dothome.co.kr/">ghkddn132.dothome.co.kr</a>
     </footer>
     <!-- //footer -->
-    
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
         // 01. 변수 : 데이터 불러오기
         // 변수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            // let x = 100, y = 200, z = "javascript";
+        // {
+        //     let x = 100, y = 200, z = "javascript";
 
-            // console.log(x ,y ,z);
-        }
+        //     console.log(x ,y ,z);
+        // }
 
-        //02. 상수 : 데이터 불러오기
+        // 02. 상수 : 데이터 불러오기
         // 상수안에 저장된 데이터를 불러오는 방법입니다.
-        {
-            // const x = 100, y = 200, z = "javascript";
+        // {
+        //     const x = 100, y = 200, z = "javascript";
             
-            // console.log(x, y, z);
-        }
+        //     console.log(x, y, z);
+        // }
 
         //03. 배열 :데이터 불러오기
-        {
-            // const arr = [100, 200, "javascript"];
+        // {
+        //     const arr = [100, 200, "javascript"];
 
-            // console.log(arr[0], arr[1], arr[2]);
-        }
+        //     console.log(arr[0], arr[1], arr[2]);
+        // }
 
         //04. 배열 : 데이터 불러오기 : 2차 배열
-        {
-            // const arr = [100, 200, ["javascript","react"]];
-            // console.log(arr[0]);
-            // console.log(arr[1]);
-            // console.log(arr[2][0]);       //2번째배열에 0번째배열
-            // console.log(arr[2][1]);
-        }
+        // {
+        //     const arr = [100, 200, ["javascript","react"]];
+        //     console.log(arr[0]);
+        //     console.log(arr[1]);
+        //     console.log(arr[2][0]);       //2번째배열에 0번째배열
+        //     console.log(arr[2][1]);
+        // }
 
         //05. 배열 : 데이터 불러오기 : 갯수 구하기
-        {
-            // const arr = [100, 200, "javascript"];
+        // {
+        //     const arr = [100, 200, "javascript"];
 
-            // console.log(arr,length)      //length 갯수구할때 쓴다.
-        }
+        //     console.log(arr,length)      //length 갯수구할때 쓴다.
+        // }
 
         //06. 배열 : 데이터 불러오기 : for()문
         // {
-            //  const arr = [100, 200, 300, 550, 500, 600, 700, 800, 900];
+            // const arr = [100, 200, 300, 550, 500, 600, 700, 800, 900];
 
             // console.log(arr[0]); 
             // console.log(arr[1]); 
@@ -151,7 +329,7 @@
             // }
             
             // for(let i = 0; i<9; i++){    //i는0부터시작하며 i>9 조건이 맞으면 출력 후 i를 하나를 더하고 다시계산한다
-            //     console.log(arr[i])      //  
+            // //     console.log(arr[i])      //  
             // }
             // i=0; 0<9; console.log(arr[0]); i++  //100
             // i=1; 1<9; console.log(arr[1]); i++  //200
@@ -189,14 +367,14 @@
 
 
         // 07. 배열 : 데이터 불러오기 : 중첩 for() 문
-        {
-            for( let i=1; i<=10; i++ ){
-                console.log("i : " + i);
-                for( let j=1; j<=10; j++ ){
-                    console.log("j : " + j);
-                }
-            }
-        }
+        // {
+        //     for( let i=1; i<=10; i++ ){
+        //         console.log("i : " + i);
+        //         for( let j=1; j<=10; j++ ){
+        //             console.log("j : " + j);
+        //         }
+        //     }
+        // }
     </script>
 
 </body>
