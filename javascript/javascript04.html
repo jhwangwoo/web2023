@@ -98,7 +98,7 @@
     // if(num){
     //     document.write("실행되었습니다.(true)");
     // } else {
-    //     document.write("실향되었습니다.(false)";    
+    //     document.write("실행되었습니다.(false)");    
     // }
 
     if(num) document.write("실행되었습니다.(true)");
@@ -182,7 +182,7 @@
 
                 <div id="sample03" class="sample">
                     <h3>05. 중첩 if문</h3>
-                    <p>f문 내부에 또 다른 if문을 작성하는 것을 의미합니다. 이를 사용하면 여러 개의 조건문을 동시에 검사할 수 있으며, 조건식의 결과에 따라 다른 코드 블록이 실행됩니다</p>
+                    <p>if문 내부에 또 다른 if문을 작성하는 것을 의미합니다. 이를 사용하면 여러 개의 조건문을 동시에 검사할 수 있으며, 조건식의 결과에 따라 다른 코드 블록이 실행됩니다</p>
                     <div class="script">
 <pre><code class="language-js">{
     const num = 100;
@@ -289,15 +289,17 @@
         // } else {
         //     document.write("실행 되었습니다.(false)")
         // }
+        //조건식 flase: 0,  null, undefined ,flase, ""(빈문자열)  //숫자는 0만 false만나온다 문자열에 내용이 없으면 false나온다
+        //조건식 true: 1, 2, "0", "1", "ABC", [], {}, true, ... 
 
 
         // 02. if문 생략
         // {
             // const num = 100;
-            // if(num){
+            // if(num == 100){
             //     document.write("실행되었습니다.(true)");
             // } else {
-            //     document.write("실향되었습니다.(false)";    
+            //     document.write("실행되었습니다.(false");    
             // }
         
         //     if(num) document.write("실행되었습니다.(true)");
@@ -321,17 +323,17 @@
 
         // 04. 다중 if
         // {
-        //     const num = 100;
-        //     if(num == 90){    // if(num === 90){}  // 더욱 상세하게 확인하고싶으면
-        //         document.write("실행되었습니다(num == 90)");
-        //     } else if (num == 100){
-        //         document.write("실행되었습니다(num == 100)");
-        //     } else if (num == 100){
-        //         document.write("실행되었습니다(num == 110)");
-        //     } else if (num == 100){
-        //         document.write("실행되었습니다(num == 120)");
-        //     } else {
-        //         document.write("실행되었습니다")
+            // const num = 100;
+            // if(num == 90){    // if(num === 90){}  // 더욱 상세하게 확인하고싶으면
+            //     document.write("실행되었습니다(num == 90)");
+            // } else if (num == 100){
+            //     document.write("실행되었습니다(num == 100)");
+            // } else if (num == 100){
+            //     document.write("실행되었습니다(num == 110)");
+            // } else if (num == 100){
+            //     document.write("실행되었습니다(num == 120)");
+            // } else {
+            //     document.write("실행되었습니다")
         //     }
         // }
 
@@ -360,7 +362,7 @@
         //     document.write(i)
         // }
 
-        // const arr = [1,2,3,4,5,6,7,8,9];
+        // const arr = [1,2,4,5,6,7,8,9,10,11,12,13,14,30];
 
         // for(let i=1; i<arr.length; i++){
         //     document.write(arr[i]);
@@ -392,8 +394,8 @@
 
         //if문사용 홀수짝수
         // for(let i=1; i<=arr.length; i++){
-        //     if( i % 2 == 0){
-        //         document.write(i)
+        //     if( arr[i] % 2 == 0){
+        //         document.write(arr[i])
         //     }
         // }
         // document.write("<br>")
@@ -404,11 +406,11 @@
         //     }
         // }
 
-        // for(let i=1; i<=arr.length; i++){
-        //     if( i % 2 == 0){
-        //         document.write("<span style='color:red'>"+i+"</span>");
+        // for(let i=0; i<=arr.length; i++){
+        //     if( arr[i] % 2 == 0){
+        //         document.write("<span style='color:red'>"+arr[i]+"</span>");
         //     } else {
-        //         document.write(`<span style='color:blue'>${i}</span>`);
+        //         document.write(`<span style='color:blue'>${arr[i]}</span>`);
         //     }
         // }
 
