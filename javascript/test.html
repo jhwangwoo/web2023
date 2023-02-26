@@ -101,7 +101,14 @@
         //         document.write("<br>");
         // }
         //
-
+        // for(let i=1; i<=9; i++){
+        //     document.write(i,"<br>");
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i+"*"+j+"="+i*j);
+        //         document.write("<br>");
+        //     }
+        //     document.write("<br>");
+        // }
 
         
         // const arr = [1,3,5,7,9,11,13,15,17,19];
@@ -141,9 +148,62 @@
         
         // alert(`1부터 ${num}까지의 짝수의 합은 ${sum}입니다.`);
   
-        
+        // let table = "<table border='1'>";
 
-    
+        // for(let i=0; i<5; i++){
+        //     table += "<tr>";
+        //     for(let j=0; j<5; j++){
+        //         table += "<td>"+j+"</td>";
+        //     }
+        //     table += "</tr>";
+        // }
+        // document.write(table);
+
+        // 1~25까지 출력 
+        // let table = "<table border='1'>";
+        // let num = 1;
+
+        // for(let i=1; i<25; i++){
+        //     table += "<tr>";
+        //     document.write(num++);
+            
+         
+        // }
+        // document.write("<br>");
+        // document.write(num);
+
+        let table = "<table border='1'>";
+        let num = 1;
+            
+        for(let i=1; i<=5; i++){
+            table += "<tr>";
+                for(let j=1; j<=5; j++){
+                table += "<td>"+num+++"</td>"; 
+                
+            }
+            table += "</tr>";
+        }
+        document.write(table)
+
+
+//         var table = document.createElement("table");
+//         var row = document.createElement("tr");
+
+//         for (var i = 1; i <= 25; i++) {
+//         var cell = document.createElement("td");
+//         cell.textContent = i;
+//         row.appendChild(cell);
+//         if (i % 5 === 0) {
+//         table.appendChild(row);
+//         row = document.createElement("tr");
+//   }
+// }
+//         if (row.childNodes.length > 0) {
+//           table.appendChild(row);
+//         }
+
+//         document.body.appendChild(table);
+
 
      
 
