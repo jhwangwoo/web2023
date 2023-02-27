@@ -4,77 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 float2</title>
-
+    <title>레이아웃02 float 2</title>
     <style>
         * {
             margin: 0;
-            padding: 0;
+            padding: 0;  
         }
         #wrap {
             width: 1200px;
-            height: 1080px;
+            height: 100px;
             margin: 0 auto;
         }
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #db0c0c;
+            background-color: #C8E6C9;
         }
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #e27474;
+            background-color: #A5D6A7;
         }
-        #side {
-            width: 400px;
-            height: 780px;
+        #aside {
+            width: 300px;
+            height: 780px; 
+            background-color: #81C784;
             float: left;
         }
-        #side1 {
-            width: 400px;
-            height: 390px;
-            background-color: black;
-            
-        }
-        #side2 {
-            width: 400px;
-            height: 390px;
-            background-color: #3116b5;
-        }  
-        #contents {
-            width: 800px;
+        #article {
+            width: 600px;
             height: 780px;
-            background-color: #946527;
+            background-color: #66BB6A;
+            float: left;
+        }
+        #article1 {
+            width: 300px;
+            height: 780px;
+            background-color: #4CAF50;
             float: left;
         }
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #e27474;
+            background-color: #43A047;
             clear: both;
-            
         }
-        #footer1 {
-            width: 600px;
-            height: 100px;
-            background-color: #832b78;
-        }
+
     </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="side">
-            <div id="side1"></div>
-            <div id="side2"></div>
-        </div>
-        <div id="contents"></div>
-        <div id="footer">
-            <div id="footer1"></div>
-            <div id="footer2"></div>
-        </div>
+        <div id="aside"></div>
+        <div id="article"></div>
+        <div id="article1"></div>
+        <div id="footer"></div>
     </div>
     
 </body>
