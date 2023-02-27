@@ -172,40 +172,30 @@
         // document.write("<br>");
         // document.write(num);
 
-        let table = "<table border='1'>";
-        let num = 1;
+        // let table = "<table border='1'>";
+        // let num = 1;
             
-        for(let i=1; i<=5; i++){
-            table += "<tr>";
-                for(let j=1; j<=5; j++){
-                table += "<td>"+num+++"</td>"; 
-                
-            }
-            table += "</tr>";
+        // for(let i=1; i<=5; i++){
+        //     table += "<tr>";
+        //         for(let j=1; j<=5; j++){
+        //         table += "<td>"+j+"</td>";
+        //     }
+        //     table += "</tr>";
+        // }
+        // document.write(table)
+
+
+
+        let table = "<table border='1'>";
+        
+        for (let i=1; i<=10; i++){
+            table +="<tr>";
+                for (let j=1; j<=10; j++){
+                    table+="<td>"+j+"</td>";
+                }
+            table +="</tr>"
         }
-        document.write(table)
-
-
-//         var table = document.createElement("table");
-//         var row = document.createElement("tr");
-
-//         for (var i = 1; i <= 25; i++) {
-//         var cell = document.createElement("td");
-//         cell.textContent = i;
-//         row.appendChild(cell);
-//         if (i % 5 === 0) {
-//         table.appendChild(row);
-//         row = document.createElement("tr");
-//   }
-// }
-//         if (row.childNodes.length > 0) {
-//           table.appendChild(row);
-//         }
-
-//         document.body.appendChild(table);
-
-
-     
+        document.write(table);
 
     </script>
 
