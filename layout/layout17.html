@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃07 - flaot 유형 - 반응형</title>
+    <title>레이아웃17 - flex 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
@@ -25,28 +25,28 @@
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #A5D6A7;
+            background-color: #A5D6A7
         }
-        #section {
-            overflow: hidden;
+        #main {
+            width: 100%;
+            height: 780px;
+            display: flex;
+            flex-wrap: wrap;
         }
         #article1 {
             width: 30%;
             height: 780px;
             background-color: #81C784;
-            float: left;
         }
         #article2 {
             width: 40%;
             height: 780px;
             background-color: #66BB6A;
-            float: left;
         }
         #article3 {
             width: 30%;
             height: 780px;
             background-color: #4CAF50;
-            float: left;
         }
         #footer {
             width: 100%;
@@ -60,45 +60,51 @@
         }
         @media (max-width: 768px){
             #wrap {
-                width: 100%;
+                width: 100%;                
             }
-            #article1 {
-                width: 30%;
-                height: 630px;
+            #article1{
+                width: 40%;
+                height: 580px;
             }
-            #article2 {
-                width: 70%;
-                height: 630px;
+            #article2{
+                width: 60%;
+                height: 580px;
             }
-            #article3 {
-                width: 100%;
-                height: 150px;
-            }
-        }
-
-        @media (max-width: 600px){
-            #article1 {
+            #article3{
                 width: 100%;
                 height: 200px;
             }
-            #article2 {
+        }
+        @media (max-width: 480px){
+            #wrap {
+                width: 100%;                
+            }
+            #article1{
                 width: 100%;
-                height: 430px;
+                height: 230px;
+            }
+            #article2{
+                width: 100%;
+                height: 350px;
+            }
+            #article3{
+                width: 100%;
+                height: 200px;
             }
         }
-        
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="section">
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
-        </div>
-        <div id="footer"></div>
-    </div>   
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <article id="article1"></article>
+            <article id="article2"></article>
+            <article id="article3"></article>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    
 </body>
 </html>

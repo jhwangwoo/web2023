@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃08 - flaot 유형 - 반응형</title>
+    <title>레이아웃18 - flex 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
@@ -13,16 +13,6 @@
         body {
             background-color: #E1F5FE;
         }
-        .clearfix::before,         
-        .clearfix::after{
-            content:'';
-            display: block;
-            line-height: 0;
-        }
-        .clearfix::after{
-            clear: both;
-        }
-        /* 클리어픽스 히든대신씀 */
         #wrap {
             width: 1200px;
             margin: 0 auto;
@@ -36,30 +26,35 @@
             width: 100%;
             height: 100px;
             background-color: #81D4FA;
-        }           
-        #aside {
+        }
+        #main {
+            width: 100%;
+            height: 780px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .aside {
             width: 30%;
             height: 780px;
             background-color: #4FC3F7;
-            float: left;
         }
-        #article1 {
+        .section {
             width: 70%;
+        }
+        .article1 {
+            width: 100%;
             height: 260px;
             background-color: #29B6F6;
-            float: left;
         }
-        #article2 {
-            width: 70%;
+        .article2 {
+            width: 100%;
             height: 260px;
             background-color: #03A9F4;
-            float: left;
         }
-        #article3 {
-            width: 70%;
+        .article3 {
+            width: 100%;
             height: 260px;
             background-color: #039BE5;
-            float: left;
         }
         #footer {
             width: 100%;
@@ -67,63 +62,69 @@
             background-color: #0288D1;
         }
         @media (max-width: 1220px){
-            #wrap{
+            #wrap {
                 width: 96%;
             }
-            #article2{
-                width: 35%;
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .article2 {
+                width: 50%;
                 height: 520px;
             }
-            #article3{
-                width: 35%;
+            .article3 {
+                width: 50%;
                 height: 520px;
             }
         }
         @media (max-width: 768px){
-            #wrap{
+            #wrap {
                 width: 100%;
             }
-            #article1{
-                width: 70%;
+            .article1 {
                 height: 390px;
             }
-            #article2{
-                width: 70%;
+            .article2 {
+                width: 100%;
                 height: 390px;
             }
-            #article3{
+            .article3 {
                 display: none;
             }
         }
-        @media (max-width: 600px){
-            #aside {
+        @media (max-width: 480px){
+            .aside {
                 width: 100%;
                 height: 200px;
             }
-            #article1 {
+            .section {
+                width: 100%;
+            }
+            .article1 {
                 width: 100%;
                 height: 430px;
             }
-            #article2 {
+            .article2 {
                 width: 100%;
                 height: 150px;
             }
         }
-        
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="main" class="clearfix">
-            <div id="aside"></div>
-            <div id="article1"></div>
-            <div id="article2"></div>
-            <div id="article3"></div>
-        </div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside class="aside"></aside>
+            <section class="section">
+                <article class="article1"></article>
+                <article class="article2"></article>
+                <article class="article3"></article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
     </div>
-    
 </body>
 </html>

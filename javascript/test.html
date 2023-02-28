@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자</title>
     <style>
-
         /* css */
-
-
     </style>
 </head>
+
 <body>
     <!-- html -->
 
@@ -46,7 +45,7 @@
 
 
         // for(let i=1; i<=8; i++){
-            
+
         //     console.log(i)
         // }
 
@@ -110,7 +109,7 @@
         //     document.write("<br>");
         // }
 
-        
+
         // const arr = [1,3,5,7,9,11,13,15,17,19];
 
         // for(let i=0; i<=arr.length; i++){
@@ -141,13 +140,14 @@
 
         // const num = prompt("1보다 큰 수를 입력하세요.");
         // let sum = 0;
-        
+
         // for (let i = 2; i <= num; i += 2) {
         //     sum += i;
         // }
-        
+
+
         // alert(`1부터 ${num}까지의 짝수의 합은 ${sum}입니다.`);
-  
+
         // let table = "<table border='1'>";
 
         // for(let i=0; i<5; i++){
@@ -166,15 +166,15 @@
         // for(let i=1; i<25; i++){
         //     table += "<tr>";
         //     document.write(num++);
-            
-         
+
+
         // }
         // document.write("<br>");
         // document.write(num);
 
         // let table = "<table border='1'>";
         // let num = 1;
-            
+
         // for(let i=1; i<=5; i++){
         //     table += "<tr>";
         //         for(let j=1; j<=5; j++){
@@ -186,23 +186,169 @@
 
 
 
-        let table = "<table border='1'>";
-        
-        for (let i=1; i<=10; i++){
-            table +="<tr>";
-                for (let j=1; j<=10; j++){
-                    table+="<td>"+j+"</td>";
-                }
-            table +="</tr>"
-        }
-        document.write(table);
+        // let table = "<table border='1'>";
 
+        // for (let i=1; i<=10; i++){
+        //     table +="<tr>";
+        //         for (let j=1; j<=10; j++){
+        //             table+="<td>"+j+"</td>";
+        //         }
+        //     table +="</tr>"
+        // }
+        // document.write(table);
+
+        // function func (){
+        //     document.write("실행");
+        // }
+        // func();
+
+        // const func = function(){
+        //     document.write("실행");
+        // }
+        // func()
+
+        // function func (str){
+        //     document.write(str);
+        // }
+        // func("실행");
+
+        // function func (){
+        //     const str ="실행";
+        //     return str;
+        // }
+        // document.write(func());
+
+        // for (let i=16; i<=16; i++){
+        //     document.write(i+"<br>");
+        //     for (let j=1; j<=9; j++){
+        //         document.write(i+"*"+j+"="+i*j);
+        //         document.write("<br>");
+        //     }
+        // }
+
+
+
+        //if문사용 홀수짝수
+        // for(let i=1; i<=arr.length; i++){
+        //     if( arr[i] % 2 == 0){
+        //         document.write(arr[i])
+        //     }
+        // }
+        // document.write("<br>")
+
+        // for(let i=1; i<=arr.length; i++){
+        //     if( i % 2 == 1){
+        //         document.write(i)
+        //     }
+        // }
+
+        // for(let i=0; i<=arr.length; i++){
+        //     if( arr[i] % 2 == 0){
+        //         document.write("<span style='color:red'>"+arr[i]+"</span>");
+        //     } else {
+        //         document.write(`<span style='color:blue'>${arr[i]}</span>`);
+        //     }
+        // }
+
+        // 테이블 for문으로 만들기
+        // let table = "<table border='1'>";
+
+        // for(let i=0; i<5; i++){
+        //     table += "<tr>";
+        //     for(let j=0; j<5; j++){
+        //         table += "<td>"+j+"</td>";
+        //     }
+        //     table += "</tr>";
+        // }
+        // document.write(table);
+
+        //1~25까지 출력 
+        // let num = 0;
+
+        // for(let i=1; i<=25; i++){
+        //     document.write(i);
+        //     num++;
+        //  
+        // }
+        // document.write("<br>");
+        // document.write(num);
+
+        // for (let i=1; i<=10; i++){
+        //     if(i % 2 ==0);
+        //     document.write("<>")
+        // }
+
+
+
+        //테이블 25칸(3의 배수(5의 배수는 빨간색)) 
+        // {
+        //     let table = "<table border='1'>";
+        //     let count = 0;
+
+        //     for(let i=1; i<=5; i++){
+        //         table += "<tr>";
+        //         for(let j=1; j<=5; j++){
+        //             count+=3;
+        //             if(count % 5 === 0){
+        //                 table += "<td style='color:red'>"+count+"</td>";
+        //             } else {
+        //                 table += "<td>"+count+"</td>";
+        //             }  
+        //         }
+        //         table += "</tr>";
+        //     }           
+        //     table +="</table>"
+
+        //     document.write(table)
+        // }
+
+        // {
+        //     const num = prompt("숫자를 입력하세요");
+
+        //     function func (num){
+        //         if(num>=1){
+        //             document.write("양수입니다.");                
+        //         }  else if(num<=-1){
+        //             document.write("음수입니다.");
+        //         }  else document.write(parseInt(num));
+        //     }
+        //     func(num)
+        // }
+
+        // // {
+
+
+
+    {
+        // const num = prompt("숫자를 입력하세요");
+        // const sum = prompt("숫자를 입력하세요2");
+        // document.write("두수의 어쩌구 " +getGCD(num,sum));
+        let n = 10;
+        let m = 10;
+        getGCD(n,m);
+        function getGCD(n, m){
+            let max = n > m ? n : m; // 두수중 높은 수를 구한다.
+            let GCD = 0;  //
+            for (let i = 1; i <= max; i++) {
+                if (n % i === 0 && m % i === 0) {
+                    GCD = i;   // 최대공약수
+                }
+                document.write("n +" +n +"___________ m " + m + " ___ GCD ___" + GCD);
+                document.write("<br>");
+            }
+            document.write("GCD " + GCD);
+            return GCD;
+        // }
+        }
+    }  
+    
     </script>
 
 
 
-    
+
 
 
 </body>
+
 </html>
