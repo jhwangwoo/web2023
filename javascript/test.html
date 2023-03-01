@@ -303,45 +303,61 @@
         // }
 
         // {
-        //     const num = prompt("숫자를 입력하세요");
-
         //     function func (num){
         //         if(num>=1){
         //             document.write("양수입니다.");                
         //         }  else if(num<=-1){
         //             document.write("음수입니다.");
-        //         }  else document.write(parseInt(num));
+        //         }  else document.write((0));
         //     }
-        //     func(num)
+
+        //     const num = parseInt(prompt("숫자를 입력하세요"));
+
+        //     if(!isNaN(num)) {  //!isNaN은 매개변수가 숫자임을 검사하는 함수입니다. 
+        //         func(num);
+        //     }
         // }
+
+        // function isPositive(n) {
+        //   if (n > 0) {
+        //     alert(`${n}은 양수입니다.`);
+        //   } else if (n < 0) {
+        //     alert(`${n}은 음수입니다.`);
+        //   } else {
+        //     alert(`${n}은 0입니다.`);
+        //   }
+        // }
+
+        // const number = parseInt(prompt('숫자를 입력하세요.'));
+        // // parseInt() 는 숫자가 아닐 경우 NaN을 반환함
+        // if(!isNaN(number)) {  // 숫자일 경우에만 실행
+        //   isPositive(number);
+        // }
+
+
+
 
         // // {
 
-
-
     {
-        // const num = prompt("숫자를 입력하세요");
-        // const sum = prompt("숫자를 입력하세요2");
-        // document.write("두수의 어쩌구 " +getGCD(num,sum));
-        let n = 10;
-        let m = 10;
-        getGCD(n,m);
-        function getGCD(n, m){
-            let max = n > m ? n : m; // 두수중 높은 수를 구한다.
-            let GCD = 0;  //
+        function func(num,sum) {
+            let max = sum > num ? sum : num;
+            let GCD = 0;
             for (let i = 1; i <= max; i++) {
-                if (n % i === 0 && m % i === 0) {
+                if (sum % i === 0 && num % i === 0) {
                     GCD = i;   // 최대공약수
                 }
-                document.write("n +" +n +"___________ m " + m + " ___ GCD ___" + GCD);
-                document.write("<br>");
             }
-            document.write("GCD " + GCD);
             return GCD;
-        // }
         }
-    }  
-    
+
+        const num = prompt("숫자를 입력하세요");
+        const sum = prompt("두번째 숫자를 입력하세요");
+
+     
+
+        document.write(func(num,sum));
+    }
     </script>
 
 
