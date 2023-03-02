@@ -256,7 +256,7 @@
                     <h3>07. while문</h3>
                     <p>for문과 비슷한 반복문 입니다 while문은 조건이 맞지않으면 실행하지 않습니다.</p>
                     <div class="script">
-                        <pre><code class="language-js">{
+<pre><code class="language-js">{
     let num = 0;    //for문이랑 비슷
     while(num &lt= 5){
         document.write(num);  //조건에 맞지않으면 실행x
@@ -305,7 +305,7 @@
                     <p>반복적인 작업을 수행하는 데 사용되는 제어문입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    for(let i=1; i&lt=100; i++){   //i=>100공식이 성립 될때까지 반복
+    for(let i=1; i&lt=100; i++){   //i=&gt;100공식이 성립 될때까지 반복
         document.write(i)
     }
 }
@@ -349,7 +349,7 @@
                     <p>조건이 성립할 때 까지만 반복 실행을 하고 조건이 성립할 때 멈추는 제어문 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    for(let i=1; i &lt= 100; i++){                
+    for(let i=1; i &lt;= 100; i++){                
         if( i == 10){
         break;    // 1~9까지나오고 브레이크  
         }
@@ -375,11 +375,12 @@
                     <p>조건이 성립 되는것을 빼고 반복실행 하는 제어문 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    for(let i=1; i&lt=20; i++){
+    for(let i=1; i&lt;=20; i++){
         if(i==10){
             continue;   //10을 건너뛰고 카운트
         }
         document.write(i);  //출력문이 조건문보다 위에 있을경우 10까지 카운트 됩니다. 
+    }
 }
 </code></pre>
                     </div>

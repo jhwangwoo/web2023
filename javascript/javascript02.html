@@ -201,21 +201,22 @@
                     <p>조건이 성립 될때 까지 불러옵니다</p>
                     <div class="script">
 <pre><code class="language-js">{
-const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으면 출력 후 i를 하나를 더하고 다시계산한다
+    for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i&lt;9 조건이 맞으면 출력 후 i를 하나를 더하고 다시계산한다
     console.log(arr[i]);
-}
-// i=0; 0&lt;9; console.log(arr[0]); i++  //100
-// i=1; 1&lt;9; console.log(arr[1]); i++  //200
-// i=2; 2&lt;9; console.log(arr[2]); i++  //300
-// i=3; 3&lt;9; console.log(arr[3]); i++  //400
-// i=4; 4&lt;9; console.log(arr[4]); i++  //500
-// i=5; 5&lt;9; console.log(arr[5]); i++  //600
-// i=6; 6&lt;9; console.log(arr[6]); i++  //700
-// i=7; 7&lt;9; console.log(arr[7]); i++  //800
-// i=8; 8&lt;9; console.log(arr[8]); i++  //900
-// i=9; 9&lt;9;"공식이성립안된다" END 
+    }
+    // i=0; 0&lt;9; console.log(arr[0]); i++  //100
+    // i=1; 1&lt;9; console.log(arr[1]); i++  //200
+    // i=2; 2&lt;9; console.log(arr[2]); i++  //300
+    // i=3; 3&lt;9; console.log(arr[3]); i++  //400
+    // i=4; 4&lt;9; console.log(arr[4]); i++  //500
+    // i=5; 5&lt;9; console.log(arr[5]); i++  //600
+    // i=6; 6&lt;9; console.log(arr[6]); i++  //700
+    // i=7; 7&lt;9; console.log(arr[7]); i++  //800
+    // i=8; 8&lt;9; console.log(arr[8]); i++  //900
+    // i=9; 9&lt;9;"공식이성립안된다" END 
+    }
 </code></pre>
                     </div>
                 </div>
@@ -273,17 +274,17 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
     });
 
     //forEach :화살표 함수
-    num.forEach((el)=>{
+    num.forEach((el)=&gt;{
         document.write(el);
     });
 
     //forEach :화살표 함수 : 괄호 생략
-    num.forEach(el=>{
+    num.forEach(el=&gt;{
         document.write(el); 
     });
 
     //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
-    num.forEach(el=> document.write(el));
+    num.forEach(el=&gt; document.write(el));
 
     // forEach(값, 인덱스, 배열)
     num.forEach(function(element, index, array){
@@ -449,7 +450,7 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
 
 
         // 08. 배열 : 데이터 불러오기 forEach()
-        {
+        // {
             const num = [100, 200, 300, 400, 500];
 
             // document.write(num[0],"<br>");
@@ -458,8 +459,8 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
             // document.write(num[3],"<br>");
             // document.write(num[4],"<br>");
 
-        //     document.write("<br><br>");
-        //     //for문
+            // document.write("<br><br>");
+            // //for문
 
             // for(let i=0; i<=num.length; i++){     //아무때나 사용가능
             //     document.write(num[i],"<br>");    
@@ -468,30 +469,30 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
             // document.write("<br><br>");
             
             // forEach
-            num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
-                document.write(el,"<br>");
-            });
+        //     num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
+        //         document.write(el,"<br>");
+        //     });
 
-            document.write("<br><br>");
+        //     document.write("<br><br>");
 
-            //forEach :화살표 함수
-            num.forEach((el)=>{
-                document.write(el,"<br>");
-            });
+        //     //forEach :화살표 함수
+        //     num.forEach((el)=>{
+        //         document.write(el,"<br>");
+        //     });
 
-            document.write("<br><br>");
+        //     document.write("<br><br>");
 
-            //forEach :화살표 함수 : 괄호 생략
-            num.forEach(el=>{
-                document.write(el,"<br>"); 
-            });
+        //     //forEach :화살표 함수 : 괄호 생략
+        //     num.forEach(el=>{
+        //         document.write(el,"<br>"); 
+        //     });
 
-            document.write("<br><br>");
+        //     document.write("<br><br>");
 
-            //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
-            num.forEach(el=> document.write(el,"<br>"));
+        //     //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
+        //     num.forEach(el=> document.write(el,"<br>"));
             
-            document.write("<br><br>");
+        //     document.write("<br><br>");
 
             // forEach(값, 인덱스, 배열)
             num.forEach(function(element, index, array){
@@ -499,7 +500,7 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
                 document.write(index,"<br>");
                 document.write(array,"<br>");
             });
-        }
+        // }
 
         // 09. 배열 : 데이터 불러오기 :for of
         // {
@@ -522,13 +523,13 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
 
         //11. 배열 : 데이터 불러오기 : map()
         // {
-        //     const num = [100, 200, 300, 400, 500];
+            // const num = [100, 200, 300, 400, 500];
 
-        //     num.forEach(function(el, i, a){
-        //         console.log(el);
-        //         console.log(i);       //데이터값
-        //         console.log(a);
-        //     });
+            num.forEach(function(el, i, a){
+                console.log(el);
+                console.log(i);       //데이터값
+                console.log(a);
+            });
 
 
         //     num.map(function(el, i, a){
