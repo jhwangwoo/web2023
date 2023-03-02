@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+        }
+
+        /* image wrap */
+        .image__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image__inner .image {
+            width: 570px;
+            height: 370px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .image__body {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            text-align: left;
+            padding: 30px;
+        }
+        .image__body .title {
+            font-size: 32px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+        .image__body .desc {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            padding-right: 20%;
+        }
+        .image__body .btn {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 30px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="image__wrap section nexon">
+        <div class="container">
+            <h2 class="section__h2">쿠키 만드는 방법</h2>
+            <p class="section__desc">다양한 종류의 쿠키가 있으며, 재료와 조리 방법에 따라 다양한맛을 느낄 수 있습니다.</p>
+            <div class="image__inner">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imagetype01_01.jpg" alt="쿠키의 종류">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">쿠키의 종류</h3>
+                        <p class="desc">초코칩 쿠키, 오트밀 쿠키, 마키롱, 스노우볼 쿠키, 레몬 쿠키, 등이 있습니다.</p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="../asset/img/imagetype01_02.jpg" alt="쿠키를 만들어봅시다">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">쿠키를 만들어봅시다</h3>
+                        <p class="desc">밀가루, 버터, 설탕 등을 사용하여 만들며, 다양한 재료를 넣어 맛과 향을 냅니다.</p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+            </div>
+        </div>   
+    </section>
+    
+</body>
+</html>

@@ -76,6 +76,9 @@
                     <li><a href="#">23. 객체 : 데이터 불러오기 : 비화구조 할당</a></li>
                     <li><a href="#">24. 객체 : 데이터 불러오기 : 객체구조분해 할당</a></li>
                 </ul>
+                <ul>
+                    <li>형변화, typeof()</li>
+                </ul>
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
@@ -257,6 +260,55 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
                 </div>
                 <!-- sample07 -->
 
+                <div id="sample08" class="sample">
+                    <h3>08. 배열 : 데이터 불러오기 : forEach()</h3>
+                    <p>배열에 있는 데이터를 반복 시킬때 사용하는 함수 입니다.</p>
+                    <div class="language-js">
+<pre><code>{
+    const num = [100, 200, 300, 400, 500];
+
+    //forEach
+    num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
+        document.write(el);
+    });
+
+    //forEach :화살표 함수
+    num.forEach((el)=>{
+        document.write(el);
+    });
+
+    //forEach :화살표 함수 : 괄호 생략
+    num.forEach(el=>{
+        document.write(el); 
+    });
+
+    //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
+    num.forEach(el=> document.write(el));
+
+    // forEach(값, 인덱스, 배열)
+    num.forEach(function(element, index, array){
+        document.write(element,"<br>");
+        document.write(index,"<br>");
+        document.write(array,"<br>");
+    });
+}
+</code></pre>
+                    </div>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            forEach ~ 화살표 함수<br>
+                            100200300400500,<br>
+                            forEach(값, 인덱스, 배열)<br>
+                            100
+                            0
+                            100,200,300,400,500
+                        </div>
+                    </details>
+                </div>
+
 
             </div>           
         </div>
@@ -375,7 +427,118 @@ for(let i = 0; i&lt;9; i++){    //i는0부터시작하며 i>9 조건이 맞으�
         //         }
         //     }
         // }
-    </script>
 
-</body>
+        // 형변환 typeof
+        // { 
+            // let x = 100, y = "200", z;
+            // const func = function(){}
+
+            // document.write(x);
+            // document.write(typeof(x));  
+            // document.write(y);
+
+            // document.write(typeof(y));
+            // y = Number (y);
+            // document.write(typeof(y));
+         
+            // document.write(z);
+            // document.write(typeof(z));
+            // document.write(func);
+        //     // document.write(typeof(func));     
+        // }
+
+
+        // 08. 배열 : 데이터 불러오기 forEach()
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            // document.write(num[0],"<br>");
+            // document.write(num[1],"<br>");
+            // document.write(num[2],"<br>");
+            // document.write(num[3],"<br>");
+            // document.write(num[4],"<br>");
+
+        //     document.write("<br><br>");
+        //     //for문
+
+            // for(let i=0; i<=num.length; i++){     //아무때나 사용가능
+            //     document.write(num[i],"<br>");    
+            // }
+
+            // document.write("<br><br>");
+            
+            // forEach
+            num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
+                document.write(el,"<br>");
+            });
+
+            document.write("<br><br>");
+
+            //forEach :화살표 함수
+            num.forEach((el)=>{
+                document.write(el,"<br>");
+            });
+
+            document.write("<br><br>");
+
+            //forEach :화살표 함수 : 괄호 생략
+            num.forEach(el=>{
+                document.write(el,"<br>"); 
+            });
+
+            document.write("<br><br>");
+
+            //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
+            num.forEach(el=> document.write(el,"<br>"));
+            
+            document.write("<br><br>");
+
+            // forEach(값, 인덱스, 배열)
+            num.forEach(function(element, index, array){
+                document.write(element,"<br>");
+                document.write(index,"<br>");
+                document.write(array,"<br>");
+            });
+        }
+
+        // 09. 배열 : 데이터 불러오기 :for of
+        // {
+        //     const arr = [100, 200, 300, 400, 500];
+            
+        //     for(let i of arr){         //배열에서 사용해야합니다.
+        //         document.write(i); 
+        //     }
+        // }
+        // document.write("<br>");
+
+        //10. 배열 : 데이터 불러오기 : for in
+        // {
+        //     const arr = [100, 200, 300, 400, 500];  
+
+        //     for(let i in arr){           //객체에서 사용해야합니다
+        //         document.write(arr[i]);
+        //     }
+        // }
+
+        //11. 배열 : 데이터 불러오기 : map()
+        // {
+        //     const num = [100, 200, 300, 400, 500];
+
+        //     num.forEach(function(el, i, a){
+        //         console.log(el);
+        //         console.log(i);       //데이터값
+        //         console.log(a);
+        //     });
+
+
+        //     num.map(function(el, i, a){
+        //         console.log(el);
+        //         console.log(i);     // 배열안에 배열로
+        //         console.log(a);
+
+        //     });
+        // }
+        </script>
+
+</yody>
 </html>
