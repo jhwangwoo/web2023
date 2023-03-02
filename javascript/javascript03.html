@@ -184,7 +184,7 @@
                     <p>선언적 함수를 화살표로 하여금 간략하게 적을 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
-    func = () => {   //function을 없애고 =과 =>를 넣어 간략하게하였습니다.
+    func = () =&gt; {   //function을 없애고 =과 =&gt;를 넣어 간략하게하였습니다.
         document.write("실행되었습니다.");
     }
     func();
@@ -207,7 +207,7 @@
                     <p>익명 함수를 화살표로 하여금 간략하게 적을 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const func = () => {
+    const func = () =&gt; {
         document.write("실행되었습니다.");
     }
     func();
@@ -230,7 +230,7 @@
                     <p>매개변수 함수를 화살표로 하여금 간략하게 적을 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    func = (str) => {
+    func = (str) =&gt; {
         document.write(str);
     }
     func("실행되었습니다.");
@@ -253,7 +253,7 @@
                     <p>리턴값 함수를 화살표로 하여금 갈략하게 적을 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    func=()=>{
+    func=()=&gt;{
         const str = ("실행되었습니다.");
         return str;
     }
@@ -277,7 +277,7 @@
                     <p>익명과 매개변수,리턴값이 합쳐지고 화살표로 만든 함수 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const func = (str) => {
+    const func = (str) =&gt; {
         return str;      //모든함수는 return값이 있지만 생략 한것이다
     }
     document.write(func("실행 되었습니다."));
@@ -300,7 +300,7 @@
                     <p>익명과 매개변수,리턴값이 합쳐지고 괄호를 생략하고 화살표로 만든 함수 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const func = str => {
+    const func = str =&gt; {
         return str;      //모든함수는 return값이 있지만 생략 한것이다
     }
     document.write(func("실행 되었습니다."));
@@ -323,7 +323,7 @@
                     <p>익명 함수,매개변수,리턴값 함수가 합쳐지고 괄호와 리턴이 생략된 화살표 함수 입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const func = str => str;  //리액트에서많이사용
+    const func = str =&gt; str;  //리액트에서많이사용
     
     document.write(func("실행되었습니다."));
 }
@@ -345,7 +345,7 @@
                     <p>익명 함수,매개변수,리턴값 함수가 합쳐지고 괄호와 리턴이 생략된 함수를 선언적 함수로 변경하였습니다..</p>
                     <div class="script">
 <pre><code class="language-js">{
-    func = str => str;  //리액트에서많이사용 //dis?쓸수없음
+    func = str =&gt; str;  //리액트에서많이사용 //dis?쓸수없음
     
     document.write(func("실행되었습니다."));
 }
