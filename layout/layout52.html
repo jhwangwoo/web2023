@@ -4,65 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>평가문항1</title>
+    <title>평가문항2</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
         body {
-            background-color: #a15151;
+            background-color: #c6dcc7;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-areas: 
-                "header header"
-                "nav nav"
-                "aside article1"
-                "aside article2"
-                "footer footer"
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "aside1 article1 aside2"
+                "aside1 article2 aside2"
+                "footer footer footer"     
             ;
-            grid-template-columns: 400px 800px;
+            grid-template-columns: 300px 600px 300px;
             grid-template-rows: 100px 100px 390px 390px 100px;
         }
         #header {
-            background-color: #de964e;
+            background-color: #a0e38c;
             grid-area: header;
         }
         #nav {
-            background-color: #ddb42f;
+            background-color: #49a24c;
             grid-area: nav;
         }
-        #aside {
-            background-color: #d7c67e;
-            grid-area: aside;
+        #aside1 {
+            background-color: #8ce382;
+            grid-area: aside1;
+        }
+        #aside2 {
+            background-color: #41943c;
+            grid-area: aside2;
         }
         #article1 {
-            background-color: #e71f1f;
+            background-color: #475136;
             grid-area: article1;
         }
         #article2 {
-            background-color: #cb7f7f;
+            background-color: #c2be41;
             grid-area: article2;
         }
         #footer {
-            background-color: #e1bda2;
+            background-color: #dbc0a7;
             grid-area: footer;
         }
-
     </style>
 </head>
 <body>
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <aside id="aside"></aside>
+        <aside id="aside1"></aside>
+        <aside id="aside2"></aside>
         <article id="article1"></article>
         <article id="article2"></article>
         <footer id="footer"></footer>
-    </div>
-    
+    </div>    
 </body>
 </html>

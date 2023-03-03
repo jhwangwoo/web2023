@@ -9,60 +9,117 @@
 <body>
     
 </body>
-    <script>
-        {
-            function func(){
-                document.write("함수가 실행되었습니다."); //선언적함수
-            }
-            func()
+<script>
+    {
+        for(let i=1; i<=50; i++){
+            document.write(i);
         }
-        {
-            const func = function(){
-                document.write("함수가 실행되었습니다.");// 익명함수
-            }
-            func()
+    }
+    document.write("<br>");
+    {
+        for(let i=0; i<=100; i+=2){
+            document.write(i);
         }
-        {
-            function func (str){
-                document.write(str);
-            }
-            func("함수가 실행되었습니다.");// 매개변수 함수
-        }
-        {
-            function func (){
-                const str ="함수가실행되었습니다";
-                return str;
-            }
-            document.write(func());
-        }
-        {
-            //1010 테이블만들기
-            let table ="<table border='1'>"
-            
-            for(let i=1; i<=10; i++){
-                table+="<tr>"
-                for(let j=1; j<=10; j++){
-                    table +="<td>"+j+"</td>"
-                }
-                table+="</tr>"
-            }
-            table+="</table>"
-
-            document.write(table);
-        }
-        {
-            //구구단
-            
-            for(let i=1; i<=10; i++){
-                document.write(i+"<br>");
-                for(let j=1; j<=10; j++){
-                    document.write(i+"*"+j+"="+i*j+"<br>");
-                }
+    }
+    document.write("<br>");
+    {
+        for(let i=1; i<=100; i++){
+            if(i % 2==1){
+                document.write(i);
             }
         }
+    }
+    document.write("<br>");
+    {
+        let table ="<table border='1'>";
+        let sum = 0;
         
-        
+        for(let i=1; i<=5; i++){
+            table+="<tr>"
+            for(let j=1; j<=10; j++){
+                sum++
+                table+="<td>"+sum+"</td>"
+            }
+            table+="</tr>"
+        }
+        document.write(table);
+    }
+    document.write("<br>");
+    {
+        let sum =0;
+        for(let i=1; i<=10; i++){
+            sum+=i;
+        }
+        document.write(sum);
+    }
+    document.write("<br>");
+    {
+        for(let i=2; i<=9; i++){
+            document.write(i+"<br>");
+            for(let j=1; j<=9; j++){
+                document.write(i+"*"+j+"="+i*j+"<br>");
+            }
+        }
+    }
+    document.write("<br>");
+    {
+        function func(){
+            document.write("실행되었습니다.");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        const func= function(){
+            document.write("실행");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        function func(str){
+            document.write(str);
+        }
+        func("실행");
+    }
+    document.write("<br>");
+    {
+        function func(){
+            const str="실행";
+            return str;
+        }
+        document.write(func());
+    }
+    document.write("<br>");
+    {
+        func = () =>{
+            document.write("실행되었습니다.");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        const func = () =>{
+            document.write("실행");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        func = (str) =>{
+            document.write(str);
+        }
+        func("실행");
+    }
+    document.write("<br>");
+    {
+        func = () =>{
+            const str="실행";
+            return str;
+        }
+        document.write(func());
+    }
 
-    </script>
 
+</script>
 </html>

@@ -4,54 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>평가문항1</title>
+    <title>평가문항</title>
     <style>
         * {
-            margin: 0;
+            margin: 0; 
             padding: 0;
         }
         body {
-            background-color: #a15151;
+            background-color: #b56a6a;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-areas: 
-                "header header"
-                "nav nav"
-                "aside article1"
-                "aside article2"
-                "footer footer"
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "aside article1 article2"
+                "aside article3 article3"
+                "aside article4 article4"
+                "footer footer footer"
             ;
-            grid-template-columns: 400px 800px;
-            grid-template-rows: 100px 100px 390px 390px 100px;
+            grid-template-columns: 300px 450px 450px;
+            grid-template-rows: 100px 100px 260px 260px 260px 100px;
         }
         #header {
-            background-color: #de964e;
+            background-color: #933838;
             grid-area: header;
         }
         #nav {
-            background-color: #ddb42f;
+            background-color: #c78080;
             grid-area: nav;
         }
         #aside {
-            background-color: #d7c67e;
+            background-color: #e4b9b9;
             grid-area: aside;
         }
         #article1 {
-            background-color: #e71f1f;
+            background-color: #611010;
             grid-area: article1;
         }
         #article2 {
-            background-color: #cb7f7f;
+            background-color: #ce5757;
             grid-area: article2;
         }
+        #article3 {
+            background-color: #2a1414;
+            grid-area: article3;
+        }
+        #article4 {
+            background-color: #b13636;
+            grid-area: article4;
+        }
         #footer {
-            background-color: #e1bda2;
+            background-color: #68be87;
             grid-area: footer;
         }
-
     </style>
 </head>
 <body>
@@ -61,6 +69,8 @@
         <aside id="aside"></aside>
         <article id="article1"></article>
         <article id="article2"></article>
+        <article id="article3"></article>
+        <article id="article4"></article>
         <footer id="footer"></footer>
     </div>
     
