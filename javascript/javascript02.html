@@ -256,7 +256,7 @@
                 <div class="result">
                     <details>
                         <summary>결과확인하기</summary>
-                        <div></div>
+                        <div>i:1 j:2 j:3 j:4 ... j:10 i:2 j:1 j:2 j:3...j:10...i:10 j:1 j:2...j:10</div>
                     </details>
                 </div>
                 <!-- sample07 -->
@@ -288,9 +288,9 @@
 
     // forEach(값, 인덱스, 배열)
     num.forEach(function(element, index, array){
-        document.write(element,"<br>");
-        document.write(index,"<br>");
-        document.write(array,"<br>");
+        document.write(element,"&lt;br&gt;");
+        document.write(index,"&lt;br&gt;");
+        document.write(array,"&lt;br&gt;");
     });
 }
 </code></pre>
@@ -301,11 +301,23 @@
                         <summary>결과 확인하기</summary>
                         <div>
                             forEach ~ 화살표 함수<br>
-                            100200300400500,<br>
+                            100200300400500,<br><br>
                             forEach(값, 인덱스, 배열)<br>
-                            100
-                            0
-                            100,200,300,400,500
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500<br>
                         </div>
                     </details>
                 </div>
@@ -469,36 +481,36 @@
             // document.write("<br><br>");
             
             // forEach
-        //     num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
-        //         document.write(el,"<br>");
-        //     });
+        // num.forEach(function(el){         //배열에 있는 데이터를 반복 시킬때 사용
+            // document.write(el,"<br>");
+        // });
 
         //     document.write("<br><br>");
 
-        //     //forEach :화살표 함수
-        //     num.forEach((el)=>{
-        //         document.write(el,"<br>");
-        //     });
+            //forEach :화살표 함수
+            // num.forEach((el)=>{
+            //     document.write(el,"<br>");
+            // });
 
-        //     document.write("<br><br>");
+            // document.write("<br><br>");
 
-        //     //forEach :화살표 함수 : 괄호 생략
-        //     num.forEach(el=>{
-        //         document.write(el,"<br>"); 
-        //     });
+            // //forEach :화살표 함수 : 괄호 생략
+            // num.forEach(el=>{
+            //     document.write(el,"<br>"); 
+            // });
 
-        //     document.write("<br><br>");
+            // document.write("<br><br>");
 
-        //     //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
-        //     num.forEach(el=> document.write(el,"<br>"));
+            // //forEach :화살표 함수 : 괄호 생략 : 중괄호 생략
+            // num.forEach(el=> document.write(el,"<br>"));
             
-        //     document.write("<br><br>");
+            // document.write("<br><br>");
 
             // forEach(값, 인덱스, 배열)
             // num.forEach(function(element, index, array){
-            //     document.write(element,"<br>");
-            //     document.write(index,"<br>");
-            //     document.write(array,"<br>");
+            // document.write(element,"<br>");
+            // document.write(index,"<br>");
+            // document.write(array,"<br>");
             // });
         // }
 
@@ -523,7 +535,7 @@
 
         //11. 배열 : 데이터 불러오기 : map()
         // {
-            // const num = [100, 200, 300, 400, 500];
+        //     const num = [100, 200, 300, 400, 500];
 
             // num.forEach(function(el, i, a){
             //     console.log(el);
@@ -532,12 +544,13 @@
             // });
 
 
-            // num.map(function(el, i, a){
-            //     console.log(el);
-            //     console.log(i);     // 배열안에 배열로
-            //     console.log(a);
+        //     num.map(function(el, i, a){
 
-            // });
+        //         console.log(el);
+        //         console.log(i);     //배열 내의 모든 요소 각각에 대하여 인자로 주어진 콜백 함수를 호출한 결과를 모아 새로운 배열을 반환
+        //         console.log(a);
+
+        //     });
         // }
 
 
