@@ -592,7 +592,7 @@
         {a: 100, b:300, c:"javascript"}
     ]
 
-    obj.map((el) =&gt; {
+    obj.map(function(el) {
         console.log(el.a);
         console.log(el.b);
         console.log(el.c);
@@ -1010,7 +1010,7 @@
 
         //
         // {
-            const arr = [100, 200, 300, 400, [500, 600]];
+            // const arr = [100, 200, 300, 400, [500, 600]];
 
         //     console.log(arr.length);
             //for문 배열안에 데이터 하나씩 출력
@@ -1085,16 +1085,16 @@
             // }
             
             //15.객체 : 데이터 불러오기 : Object
-            {
-                const obj = {
-                    a: 100,
-                    b: 200,
-                    c: "javascript"
-                }
-                console.log(Object.keys(obj)); //abc를불러올때 key
-                console.log(Object.values(obj)); //값
-                console.log(Object.entries(obj)); //항목 [Array(2), Array(2), Array(2)],  'a',100,'b',200,'c',javascript
-            }
+            // {
+            //     const obj = {
+            //         a: 100,
+            //         b: 200,
+            //         c: "javascript"
+            //     }
+            //     console.log(Object.keys(obj)); //abc를불러올때 key
+            //     console.log(Object.values(obj)); //값
+            //     console.log(Object.entries(obj)); //항목 [Array(2), Array(2), Array(2)],  'a',100,'b',200,'c',javascript
+            // }
 
             //16. 객체 : 데이터 불러오기 : 변수
             // {
@@ -1131,7 +1131,7 @@
             //         {a: 100, b:300, c:"javascript"}
             //     ]
 
-            //     obj.map((el) => {
+            //     obj.map(function(el)  {
             //         console.log(el.a);
             //         console.log(el.b);
             //         console.log(el.c);
