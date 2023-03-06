@@ -73,9 +73,6 @@
                     <li><a href="#">20. 객체 : 데이터 불러오기 : 객체 펼침연산자</a></li>
                     <li><a href="#">21. 객체 : 데이터 불러오기 : 객체 구조분해 할당</a></li>
                 </ul>
-                <ul>
-                    <li>형변화, typeof()</li>
-                </ul>
             </div>
             <div class="main__sample">
                 <div id="sample01" class="sample">
@@ -1013,7 +1010,7 @@
 
         //
         // {
-        //     const arr = [100, 200, 300, 400, [500, 600]];
+            const arr = [100, 200, 300, 400, [500, 600]];
 
         //     console.log(arr.length);
             //for문 배열안에 데이터 하나씩 출력
@@ -1033,7 +1030,7 @@
             // for(let i in arr){
             //     console.log(arr[i])
             // }
-            // //for of
+            //for of
             // for(let i of arr){
             //     console.log(i)
             // }
@@ -1088,16 +1085,16 @@
             // }
             
             //15.객체 : 데이터 불러오기 : Object
-            // {
-            //     const obj = {
-            //         a: 100,
-            //         b: 200,
-            //         c: "javascript"
-            //     }
-            //     console.log(Object.keys(obj)); //abc를불러올때 key
-            //     console.log(Object.values(obj)); //값
-            //     console.log(Object.entries(obj)); //항목 [Array(2), Array(2), Array(2)],  'a',100,'b',200,'c',javascript
-            // }
+            {
+                const obj = {
+                    a: 100,
+                    b: 200,
+                    c: "javascript"
+                }
+                console.log(Object.keys(obj)); //abc를불러올때 key
+                console.log(Object.values(obj)); //값
+                console.log(Object.entries(obj)); //항목 [Array(2), Array(2), Array(2)],  'a',100,'b',200,'c',javascript
+            }
 
             //16. 객체 : 데이터 불러오기 : 변수
             // {
