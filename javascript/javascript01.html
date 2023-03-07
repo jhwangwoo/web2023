@@ -638,7 +638,7 @@
 
                 <div id="sample19" class="sample">
                     <h3>19. ++ 연산자 (전치,후치)</h3>
-                    <p></p>
+                    <p>'='연산자와 같이 사용이 되면 결과 값에 영향을 줍니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     let hap, j, k, l;
@@ -652,7 +652,7 @@
 }
 </code></pre>
                     </div>
-                    <div>
+                    <div class="reslut">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
@@ -660,6 +660,44 @@
                                 2<br>
                                 2<br>
                                 2
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div id="sample20" class="sample">
+                    <h3>20. 형변환 typeof</h3>
+                    <p>변수나 값의 자료형을 다른 자료형으로 변환하는 과정입니다.</p>
+                    <div class="script">
+<pre><code class="language-js">{ 
+    let x = 100, y = "200", z;
+    const func = function(){}
+
+    document.write(x);          //x값이 나옵니다.
+    document.write(typeof(x));  //x는 숫자라고 알려 줍니다.
+    document.write(y);          // y는 ""사이에 있으므로 문자입니다.
+    
+    document.write("<br>");
+
+    document.write(typeof(y)); // y는 ""사이에 있으므로 문자입니다.
+    y = Number (y);            // y를 숫자로 바꿔 주었습니다.
+    document.write(typeof(y)); // y 가 숫자로 바뀌었습니다.
+
+    document.write("<br>");
+    
+    document.write(z);          //없는값이므로 nudefined가 뜹니다.
+    document.write(typeof(z));  //없는값이므로 nudefined가 뜹니다.
+    document.write(func);       // 값이 나온다
+    document.write(typeof(func));     //함수라고 알려 줍니다
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100number200<br>
+                                stringnumber<br>
+                                nudefinednudefinedfunction(){}function
                             </div>
                         </details>
                     </div>
@@ -1118,9 +1156,27 @@
         //     //함수밖javascript
         // }
 
-        //  //18.식별자,예약자 
-        {
+        //20. 형변환 typeof
+        { 
+            let x = 100, y = "200", z;
+            const func = function(){}
+
+            document.write(x);
+            document.write(typeof(x));  
+            document.write(y);
             
+            document.write("<br>");
+
+            document.write(typeof(y));
+            y = Number (y);
+            document.write(typeof(y));
+
+            document.write("<br>");
+            
+            document.write(z);
+            document.write(typeof(z));
+            document.write(func);
+            document.write(typeof(func));     
         }
 
         // 변수 : 저장문
