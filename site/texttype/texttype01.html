@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: rgba(219, 7, 7, 0.6);
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text__wrap */
+        .text__wrap {
+        }
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner .text{
+            width: 32.333333%;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover{
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: #ce3939;
+            background-image: url(../asset/img/textType01_01.svg);
+            background-position: center; 
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__inner .text.t1::before {
+            background-color: #EDD0A6;
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text__inner .text.t2::before {
+            background-color: #A9F5C3;
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text__inner .text.t3::before {
+            background-color: #B8E9FF;
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner .text.t4::before {
+            background-color: #F8C6F3;
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text__inner .text.t5::before {
+            background-color: #C4BAFF;
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text__inner .text.t6::before {
+            background-color: #F9C6C6;
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 1s;
+        }
+        .text__btn:hover::before{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <sectiont class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">notice</span>
+            <h2 class="section__h2 mb70">쿠키를 만들때 주의점</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">재료의 품질 확인하기</h3>
+                    <p class="text__desc">좋은 품질의 재료를 사용하는 것이 맛있는 쿠키를 만드는 핵심입니다. 신선한 재료를 사용하고, 유통기한을 확인하고, 가능한 경우 유기농 또는 천연 재료를 사용하는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">정확한 양 계산하기</h3>
+                    <p class="text__desc">쿠키를 만들 때 정확한 양과 비율을 잘 지켜서 재료를 사용해야 합니다. 레시피에서 지정한 양과 비율을 잘 지켜서 누구든지 쉽게 따라할 수 있는 쿠키를 만들어보아요. </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">반죽을 과하게 섞지 않기</h3>
+                    <p class="text__desc">반죽을 과하게 섞으면 쿠키가 딱딱해지거나 지루해질 수 있습니다. 반죽이 잘 섞이도록 믹서기나 주걱 등을 사용해서 부드럽게 섞어주시기 바랍니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">오븐 온도와 시간 조절하기 </h3>
+                    <p class="text__desc">오븐의 온도와 굽는 시간은 쿠키의 맛과 질감에 큰 영향을 미칩니다. 레시피에서 지정한 온도와 시간을 지켜야 합니다. 시간에 따라 쿠키가 타거나 덜 익을수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">쿠키를 굽는 시트 조절하기</h3>
+                    <p class="text__desc">쿠키를 굽는 시트의 간격을 충분히 띄워서 균등하게 굽히도록 하세요. 시트의 크기와 모양에 따라 쿠키의 모양이 바뀔 수 있으므로 주의해야 합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">쿠키를 굽은 후 식히기</h3>
+                    <p class="text__desc">쿠키를 굽은 후에는 오븐에서 꺼내서 식히기 전에 5분 정도 시간을 두세요. 그 후에는 완전히 식히기 전에 쿠키를 빼지 마세요. 쿠키가 완전히 식으면 구리거나 크리스피해집니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
