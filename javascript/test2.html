@@ -214,6 +214,49 @@
     //     document.write(func());
     // }
 
+    // 08.데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)
+    // {
+    //     let table = "<table border='1'>";
+    //     let count = 0;
+        
+    //     for(let i=1; i<=5; i++){
+    //         table += "<tr>";
+    //         for(let j=1; j<=5; j++){
+    //             count++;
+    //             if(count % 2 === 0){
+    //                 table += "<td style='color:red'>"+count+"</td>";
+    //             } else {
+    //             table += "<td style ='color:blue'>"+count+"</td>";
+    //             }  
+    //         }
+    //         table += "</tr>";
+    //     }           
+    //     table +="</table>"
+
+    //     document.write(table)
+    // }
+    // 09.데이터 이펙트 테이블 25(데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)
+    {
+        let table = "<table border='1'>";
+        let num = 0;
+
+        for(let i=1; i<=5; i++){
+            table += "<tr>";
+            for(let j=1; j<=5; j++){
+                num++;
+                if(num % 2 == 0){
+                    table+="<td style='color:red'>"+num+"</td>";
+                } else {
+                table+="<td style='color:blue'>"+num+"</td>";
+                }     
+            }
+            table += "</tr>"
+        }
+        table += "</table>"
+
+        document.write(table);
+    }
+
 
 </script>
 </html>
