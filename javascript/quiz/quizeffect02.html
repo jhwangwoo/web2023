@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트01</title>
+    <title>퀴즈 이펙트02</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body >
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>정답 확인하기 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>주관식 확인하기 유형</em></h1>
         <ul>
-            <li class="active"><a href="quizeffect01.html">1</a></li>
-            <li><a href="quizeffect02.html">2</a></li>
+            <li><a href="quizeffect01.html">1</a></li>
+            <li class="active"><a href="quizeffect02.html">2</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -54,12 +54,14 @@
                         </div>
                     </div>
                     <div class="quiz__answer">
+                        <input class="input" type="text" placeholder="정답을 적어주세요!">
                         <button class="confirm">정답 확인하기</button>
                         <div class="result"></div>
                     </div>
                 </div>
-                <div class="quiz__contents"></div>
-                <div class="quiz__footer"></div>
+                <div class="quiz__footer">
+                    <div class="quiz__desc"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -70,7 +72,7 @@
     </footer>
     <!-- //footer -->
     <script>
-        // 선택자
+        //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__tiile span");
         const quizTime = quizWrap.querySelector(".quiz__tiile em");
@@ -78,34 +80,48 @@
         const quizQuestionNum = quizWrap.querySelector(".quiz__question em");
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
+        const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
         const quizFooter = quizWrap.querySelector(".quiz__footer");
 
-        // 문제 정보
-        const infoType = "웹디자인 기능사";
-        const infoTime = "2012년 1회";
+        //문제정보
+        const infoType = "정보처리 기능사";
+        const infoTime = "2011년 5회";
         const infoNumber ="1";
-        const infoQuestion = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?";
-        const infoAnswer = "연변대비";
+        const infoQuestion = "프레젠테이션에서 화면 전체를 전환하는 단위를 의미하는 것은?";
+        const infoAnswer = "슬라이드";
+        const infoDesc = "슬라이드는 프리젠테이션의 화면 전체를 말하고, 개체는 화면을 구성하는 개개의 요소를 말한다."
 
-        //문제 출력
-        quizTitle.innerText = infoType;
-        quizTime.innerText = infoTime;
-        quizQuestionNum.innerText = infoNumber;
-        quizQuestion.innerText = infoQuestion;
-        quizAnswerResult.innerText = infoAnswer;
+        // 문제 출력
+        quizTitle.textContent = infoType;
+        quizTime.textContent = infoTime;
+        quizQuestion.textContent = infoQuestion;
+        quizQuestionNum.textContent = infoNumber;
+        quizDesc.textContent = infoDesc;
+        quizAnswerResult.textContent = infoAnswer
 
-        //정답 숨기기
+        //정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";
         quizFooter.style.display = "none";
 
-        //정답 확인
+        //사용자 정답
         quizAnswerConfirm.addEventListener("click", function(){
-            quizAnswerResult.style.display = "block";
-            quizAnswerConfirm.style.display = "none"; //style.display는 눈에 안보이게 하거나 보이게 할수 있습니다.DOM 요소의 CSS display 속성 값을 설정하거나 반환하는 데 사용됩니다. CSS display 속성은 요소가 화면에 어떻게 보이는지 결정하는 중요한 속성 중 하나입니다.
-            dogWrap.classList.add("like"); //classList.add()는 DOM 요소의 클래스 리스트에 새로운 클래스를 추가하는 역할을 합니다.
-        })
+            const userAnswer = quizAnswerInput.value.trim(); //trim()은 빈공칸을없애준다.
 
+            quizAnswerInput.style.display = "none"
+            quizAnswerResult.style.display ="block";
+            quizAnswerConfirm.style.display = "none";
+            quizFooter.style.display = "block";
+
+            if(infoAnswer == userAnswer){
+                // alert("정답입니다.")
+                dogWrap.classList.add("like"); //classList.add()는 DOM 요소의 클래스 리스트에 새로운 클래스를 추가하는 역할을 합니다.               
+            } else {
+                // alert("오답입니다.")
+                dogWrap.classList.add("dislike");
+            }
+        });
 
     </script>
 </body>
