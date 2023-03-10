@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    
+</body>
+<script>
+    {
+        for(let i=1; i<=100; i++){
+            document.write(i);
+        }
+    }
+    document.write("<br>");
+    {
+        let table ="<table border='1'>"
+
+        for(let i = 1; i<=10; i++){
+            table+="<tr>";
+            for(let j=1; j<=10; j++){
+                table +="<td>"+j+"</td>";  
+            }
+            table+="</tr>"
+        }
+        table+="</table>"
+
+        document.write(table);
+    }
+    document.write("<br>");
+    {
+        let num = 0;
+
+        for(let i=0; i<=100; i+=2){
+            num+=i;
+        }
+        document.write(num);
+    }
+    document.write("<br>");
+    {
+        for(let i=1; i<=100; i++){
+            if(i % 2==0){
+                document.write("<span style ='color:blue'>"+i+"</span>");
+            } else{
+                document.write("<span style ='color:red'>"+i+"</span>");
+            }
+        }
+    }
+    document.write("<br>");
+    {
+        let arr=[1,2,3,4,5,6,7,8,9,10];
+
+        arr.forEach(function(i){
+            document.write(i);
+        });
+    }
+    document.write("<br>");
+    {
+        function func(){
+            document.write("선언적");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        const func = function(){
+            document.write("익명")
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        function func(str){
+            document.write(str);
+        }
+        func("매개변수")    
+    }
+    document.write("<br>");
+    {
+        function func(){
+            const str="리턴";
+            return str;
+        }
+        document.write(func());
+    }
+    document.write("<br>");
+    {
+        func = () => {
+            document.write("선언적");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        const func = () => {
+            document.write("익명");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        func = (str) => {
+            document.write(str);
+        }
+        func("매개변수")    
+    }
+    document.write("<br>");
+    {
+        func = () => {
+            const str="리턴";
+            return str;
+        }
+        document.write(func());
+    }
+    document.write("<br>");
+    {
+        for(let i=0; i<=100; i++){
+            document.write(i);
+        }
+    }
+    document.write("<br>");
+    {
+        let num = 0;
+        
+        for(let i=0; i<=100; i+=2){
+            num+=i;    
+        }
+        document.write(num);
+    }
+</script>
+</html>
