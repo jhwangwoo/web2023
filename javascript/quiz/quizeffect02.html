@@ -15,6 +15,7 @@
         <ul>
             <li><a href="quizeffect01.html">1</a></li>
             <li class="active"><a href="quizeffect02.html">2</a></li>
+            <li><a href="quizeffect03.html">3</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -23,7 +24,7 @@
         <div class="quiz__wrap">
             <div class="quiz">
                 <div class="quiz__header">
-                    <h2 class="quiz__tiile"><span></span> <em></em></h2>
+                    <h2 class="quiz__title"><span></span> <em></em></h2>
                 </div>
                 <div class="quiz__main">
                     <div class="quiz__question">
@@ -58,8 +59,6 @@
                         <button class="confirm">정답 확인하기</button>
                         <div class="result"></div>
                     </div>
-                </div>
-                <div class="quiz__footer">
                     <div class="quiz__desc"></div>
                 </div>
             </div>
@@ -74,8 +73,8 @@
     <script>
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizTitle = quizWrap.querySelector(".quiz__tiile span");
-        const quizTime = quizWrap.querySelector(".quiz__tiile em");
+        const quizTitle = quizWrap.querySelector(".quiz__title span");
+        const quizTime = quizWrap.querySelector(".quiz__title em");
         const quizQuestion = quizWrap.querySelector(".quiz__question span");
         const quizQuestionNum = quizWrap.querySelector(".quiz__question em");
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
@@ -83,7 +82,6 @@
         const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizFooter = quizWrap.querySelector(".quiz__footer");
 
         //문제정보
         const infoType = "정보처리 기능사";
@@ -103,7 +101,7 @@
 
         //정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";
-        quizFooter.style.display = "none";
+        quizDesc.style.display = "none";
 
         //사용자 정답
         quizAnswerConfirm.addEventListener("click", function(){
@@ -112,7 +110,7 @@
             quizAnswerInput.style.display = "none";
             quizAnswerResult.style.display ="block";
             quizAnswerConfirm.style.display = "none";
-            quizFooter.style.display = "block";
+            quizDesc.style.display = "block";
 
             if(infoAnswer == userAnswer){
                 // alert("정답입니다.")
