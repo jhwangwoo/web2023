@@ -99,6 +99,7 @@
         const quizConfirm = quizWrap.querySelector(".quiz__answer .confirm");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
 
+        console.log(quizSelect)
         //문제 정보
         const quizInfo = [
             {
@@ -129,7 +130,7 @@
         function answerQuiz(){
             // 사용자 가 선택한 인풋박스(checked) == 문제 정답(quizInfo[0].infoAnswer)
             for(let i=0; i < quizChoice.length; i++){  //정답의 
-                if(quizSelect[i].checked == true){ //사용자가 보기를 체크한 상태
+                if(quizSelect[i].checked == true){ //사용자가 보기를 체크한 상태 
                     if(quizSelect[i].value==quizInfo[0].infoAnswer){
                         //alert("정답")
                         dogWrap.classList.add("like")

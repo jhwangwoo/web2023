@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: rgba(219, 7, 7, 0.6);
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+
+        /* imgtext__wrap */
+        .imgtext__inner {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+        .imgtext {
+            width: 32.3333%;
+            /* background-color: #e57474; */
+        }
+        .imgtext li {
+            list-style: none;
+            line-height: 1.5;
+            color: #666;
+        }
+        .imgtext p {
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: #666;
+        }  
+        .imgtext img {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="imgtext__wrap section nexon">
+        <div class="container">
+            <div class="imgtext__inner">
+                <div class="imgtext" style="overflow: hidden;">
+                    <span class="section__small">notice</span>
+                    <h2 class="section__h2">쿠키의 종류 10가지</h2>
+                    <p>쿠키의 종류는 매우 다양합니다. 아래는 10가지 이상의 쿠키 종류를 알려드리겠습니다</p>
+                    <ul>
+                        <li>·초코칩 쿠키 (Chocolate Chip Cookie)</li>
+                        <li>·오트밀 쿠키 (Oatmeal Cookie)</li>
+                        <li>·스노우볼 쿠키 (Snowball Cookie)</li>
+                        <li>·마들렌 (Madeleine)</li>
+                        <li>·레몬 바 (Lemon Bar)</li>
+                        <li>·마카롱 (Macaron)</li>
+                        <li>·쇼트브레드 (Shortbread)</li>
+                        <li>·스프링클 쿠키 (Sprinkle Cookie)</li>
+                        <li>·맥아담 쿠키 (Macadamia Nut Cookie)</li>
+                        <li>·글로스 쿠키 (Gloss Cookie)</li>
+                    </ul>
+                </div>
+                <article class="imgtext">
+                    <figure class="imgtext__img">
+                        <img src="../asset/img/imgtexttype01_01.jpg" alt="쿠키종류">
+                    </figure>
+                </article>
+                <article class="imgtext">
+                    <figure class="imgtext__img">
+                        <img src="../asset/img/imgtexttype01_02.jpg" alt="쿠키종류2">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
