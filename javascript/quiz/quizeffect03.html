@@ -11,11 +11,12 @@
 </head>
 <body >
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>주관식 확인하기 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>주관식(여러문제) 확인하기 유형</em></h1>
         <ul>
             <li><a href="quizeffect01.html">1</a></li>
             <li><a href="quizeffect02.html">2</a></li>
             <li class="active"><a href="quizeffect03.html">3</a></li>
+            <li><a href="quizeffect04.html">4</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -284,7 +285,7 @@
                 //사용자 정답
                 const userAnswer = quizAnswerInput[num].value;
 
-                quizAnswerInput[num].style.display = "none";   //인푹박스 숨김
+                quizAnswerInput[num].style.display = "none";   //인풋박스 숨김
                 quizAnswerResult[num].style.display ="block";  // 정답 보이기
                 quizAnswerConfirm[num].style.display = "none"; // 정답 확인 버튼 숨기기
                 quizDesc[num].style.display = "block";         //해설 보기
