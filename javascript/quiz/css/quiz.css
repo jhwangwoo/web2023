@@ -209,6 +209,7 @@
     background: #fff;
     box-shadow: inset 0 0 0 4px #fe6a00;
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 .quiz__choice label input:checked + span {
     background-color: #f5f5f5;
@@ -216,6 +217,63 @@
 .quiz__choice label input:checked + span::before {
     box-shadow: inset 0 0 0 8px #fe6a00;;
 }
+.quiz__check {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    border-radius: 50%;
+    z-index: 1000;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-family: "SCoreDream";
+    cursor:pointer
+}
+.quiz__info {
+    position: fixed;
+    right: 20px;
+    bottom: 170px;
+    background-color: #dd2b2b;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    font-family: "SCoreDream";
+    color: #fff;
+}
+.quiz__info::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -10px;
+    border-top: 10px solid #dd2b2b;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+/* .quiz__modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);   
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+.quiz__modal .modal {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+} */
 
 /* dog__wrap */
 .dog .tail,
