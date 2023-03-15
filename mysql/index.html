@@ -332,12 +332,35 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 <pre><code class="language-js">SELECT * FROM member WHERE youName LIKE '김%';</code></pre>
                     <h4>youName 중에 "현"으로 끝나는 이름 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE youName LIKE '%현';</code></pre>
+                    <h4>youName 중에 "상"이 들어가는 이름 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE youName LIKE '_상_';</code></pre>
+                    <h4>youName 중에 "상"이 들어가는 이름 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE youName LIKE '김%' OR youName LIKE '이%';</code></pre>
                     <h4>이름만 불러오기</h4>
 <pre><code class="language-js">SELECT youName FROM member;</code></pre>
                     <h4>이름과 나이 불러오기</h4>
 <pre><code class="language-js">SELECT youName, youAge FROM member;</code></pre>
                     <h4>이름과 나이(30살이상) 불러오기</h4>
 <pre><code class="language-js">SELECT youName, youAge FROM member WHERE youAge >=30;</code></pre>
+                    <h4>나이가 25이상이면서 김씨 성을 갖고 있는 사람 이름 불러오기</h4>
+<pre><code class="language-js">SELECT youName FROM member WHERE youAge >=25 AND youName LIKE '김%';</code></pre>
+                    <h4>나이가 25이상 또는 김씨 성을 갖고 있는 사람 이름 불러오기</h4>
+<pre><code class="language-js">SELECT youName FROM member WHERE youAge >=25 OR youName LIKE '김%';</code></pre>
+                    <h4>나이가 25이상이고 아이디가 2 또는 아이디가 9인 맴버 불러오기</h4>
+<pre><code class="language-js">SELECT * FROM member WHERE (memberID = 2 OR memberID = 9) AND youAge >=25;</code></pre>
+<pre><code class="language-js">SELECT * FROM member WHERE youAge >=25 AND memberID iN(2,9);</code></pre>
+                    <h4>회원 데이터를 5새만 불러오기(1-5)</h4>
+<pre><code class="language-js">SELECT * FROM member LIMIT 5;</code></pre>
+                    <h4>회원 데이터를 5새만 불러오기(6-10)</h4>
+<pre><code class="language-js">SELECT * FROM member LIMIT 5,5;</code></pre>
+                    <h4>회원 이메일을 기준으로 10개만 불러오기(11-20)</h4>
+<pre><code class="language-js">SELECT youEmail FROM member LIMIT 10,10;</code></pre>
+                    <h4>회원 나이중 중복 제거하고 불러오기</h4>
+<pre><code class="language-js">SELECT DISTINCT youAge FROM member</code></pre>
+
+
+
+
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
                     <div class="bs-callout bs-callout-info"><code>UPDATE</code> 테이블명 <code>SET</code>컬럼명 조건</div>
 <pre><code class="language-js">
