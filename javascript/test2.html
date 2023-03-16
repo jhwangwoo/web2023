@@ -85,25 +85,25 @@
     //     document.write(table);
     // }
     // document.write("<br>"+"<br>"+"<br>");
-    {
-        let table = "<table border='1'>";
-        let sum = 0;
+    // {
+    //     let table = "<table border='1'>";
+    //     let sum = 0;
 
-        for(let i=1; i<=10; i++){
-            table+="<tr>";
-            for(let j=1; j<=10; j++){
-                sum+=3;
-                if(sum % 5 == 0){
-                    table+="<td style=color:red>"+sum+"</td>";
-                } else {
-                    table+="<td>"+sum+"</td>";
-                }
-            }
-            table+="</tr>"
-        }
-        table+="</table>"
-        document.write(table)
-    }
+    //     for(let i=1; i<=10; i++){
+    //         table+="<tr>";
+    //         for(let j=1; j<=10; j++){
+    //             sum+=3;
+    //             if(sum % 5 == 0){
+    //                 table+="<td style=color:red>"+sum+"</td>";
+    //             } else {
+    //                 table+="<td>"+sum+"</td>";
+    //             }
+    //         }
+    //         table+="</tr>"
+    //     }
+    //     table+="</table>"
+    //     document.write(table)
+    // }
     // {
     //     for(let i=1; i<=50; i++){
     //         document.write(i);
@@ -236,27 +236,36 @@
     //     document.write(table)
     // }
     // 09.데이터 이펙트 테이블 25(데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색)
+    // {
+    //     let table = "<table border='1'>";
+    //     let num = 0;
+
+    //     for(let i=1; i<=5; i++){
+    //         table += "<tr>";
+    //         for(let j=1; j<=5; j++){
+    //             num++;
+    //             if(num % 2 == 0){
+    //                 table+="<td style='color:red'>"+num+"</td>";
+    //             } else {
+    //             table+="<td style='color:blue'>"+num+"</td>";
+    //             }     
+    //         }
+    //         table += "</tr>"
+    //     }
+    //     table += "</table>"
+
+    //     document.write(table);
+    // }
+    
     {
-        let table = "<table border='1'>";
-        let num = 0;
+        let i = 1;
 
-        for(let i=1; i<=5; i++){
-            table += "<tr>";
-            for(let j=1; j<=5; j++){
-                num++;
-                if(num % 2 == 0){
-                    table+="<td style='color:red'>"+num+"</td>";
-                } else {
-                table+="<td style='color:blue'>"+num+"</td>";
-                }     
-            }
-            table += "</tr>"
+        while(i < 5){
+            console.log(i);
+            i++;  
         }
-        table += "</table>"
-
-        document.write(table);
-    }
-
+        
+    }   
 
 </script>
 </html>
