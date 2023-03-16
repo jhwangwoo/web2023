@@ -141,7 +141,7 @@
                     <div class="bs-callout bs-callout-info">
                         윈도우 : cd C:/MAMP/bin/mysql/bin<br>
                         맥 : cd Application/mamp/Libary/bin
-                        로그인 : mysql -uroot -proot;
+                        로그인 : mysql -uroot -proot
                     </div>
 <pre><code class="language-js">Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 4
@@ -338,6 +338,10 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 <pre><code class="language-js">SELECT * FROM member WHERE youName LIKE '김%' OR youName LIKE '이%';</code></pre>
                     <h4>이름만 불러오기</h4>
 <pre><code class="language-js">SELECT youName FROM member;</code></pre>
+                    <h4>이름만 불러오기(내림차순)ORDER BY(기준)</h4>
+<pre><code class="language-js">SELECT youName FROM member ORDER BY youName DESC;</code></pre>
+                    <h4>이름만 불러오기(올림차순)ORDER BY(기준)</h4>
+<pre><code class="language-js">SELECT youName FROM member ORDER BY youName ASC;</code></pre>
                     <h4>이름 갯수 불러오기</h4>
 <pre><code class="language-js">SELECT count(youName) FROM member;</code></pre>
 <pre><code class="language-js">SELECT count(*) FROM member;</code></pre>
@@ -366,14 +370,25 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>
                     <div class="bs-callout bs-callout-info"><code>UPDATE</code> 테이블명 <code>SET</code>컬럼명 조건</div>
-<pre><code class="language-js">
-                        
-</code></pre>
+                    <h4>모든 회원의 비밀번호를 1234로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "1234";</code></pre>
+                    <h4>아이디가 3번인 회원만 비밀번호를 9999로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "9999" WHERE memberID = 3;</code></pre>
+                    <h4>아이디가 5번~10번 회원만 비밀번호를 7777로 수정하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "7777" WHERE memberID BETWEEN 5 AND 10;</code></pre>
+                    <!-- <h4>비밀번호를 "1234567"로 변경하고 패스워드를 내림차순으로 10개만 변경하기</h4>
+<pre><code class="language-js">UPDATE member SET youPass = "1234567" ORDER BY youPass DESC LIMIT 10;</code></pre> -->
+
                     <h4 id="intro6-4" class="page-header">데이터 삭제하기</h4>
                     <div class="bs-callout bs-callout-info"><code>DELETE</code> <code>FROM</code> 테이블명 <code>WHERE</code> 조건</div>
-<pre><code class="language-js">
-                        
-</code></pre>
+                    <h4>아이디가 5번인 맴버 삭제</h4>
+<pre><code class="language-js">DELETE FROM member WHERE memberID = 5;</code></pre>
+                    <h4>회원 비밀번호가 1234인 사람만 삭제하기</h4>
+<pre><code class="language-js">DELETE FROM member WHERE youPass = "1234";</code></pre>
+                    <h4>이름을 기준으로 5번째 맴버까지를 삭제</h4>
+<pre><code class="language-js">DELETE FROM member ORDER BY youName LIMIT 5;</code></pre>
+                    <h4>맴버 아이디를 기준으로 11, 13, 15번째 맴버까지를 삭제</h4>
+<pre><code class="language-js">DELETE FROM member WHERE memberID IN(1, 3, 6);</code></pre>
                 </div>
                 <!-- //intro6 -->
             </div>

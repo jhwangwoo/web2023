@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입03 (C-1)</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1000px;
+            display: flex;
+        }
+        #main {
+            width: 800px;
+        }
+        #header {
+            width: 20%;
+            height: 650px;
+        }
+        #header .logo {
+            width: 100%;
+            height: 100px;
+            background-color: #e3be82;
+        }
+        #header .nav {
+            width: 100%;
+            height: 550px;
+            background-color: #ebb47a;
+        }
+        #slider {
+            width: 80%;
+            height: 350px;
+            background-color: #e6b8a2;
+        }
+        #section {
+            width: 80%;
+            display: flex;
+        }
+        #section .cont1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #deab90;
+        }
+        #section .cont2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #d69f7e;
+        }
+        #section .cont3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #cd9777;
+        }
+        #footer {
+            width: 80%;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #footer .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #c38e70;
+        }
+        #footer .foot2 {
+            width: 80%;
+            height: 50px;
+            background-color: #b07d62;
+        }
+        #footer .foot3 {
+            width: 80%;
+            height: 50px;
+            background-color: #9d6b53;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">로고</div>
+            <nav class="nav">메뉴</nav>
+        </header>
+        <main id="main">
+            <article id="slider">슬라이드</article>
+            <section id="section">
+                <article class="cont1">공지사항</article>
+                <article class="cont2">배너</article>
+                <article class="cont3">바로가기</article>
+            </section>
+            <footer id="footer">
+                <div class="foot1">로고</div>
+                <div class="foot2">하단 메뉴</div>
+                <div class="foot3">카피라이터</div>
+            </footer>
+        </main>
+    </div>
+    
+</body>
+</html>
