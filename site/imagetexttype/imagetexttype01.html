@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* imgText__wrap */
+        .imgtext__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .imgtext__inner article {
+            width: 31.333%;
+        }
+        .imgtext__inner .text span {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: rgba(219, 7, 7, 0.6);
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .imgtext__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
+        }
+        .imgtext__inner .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .imgtext__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgtext__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgtext__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgtext__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgtext__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgtext__inner .img.i1 {
+            background-image: url(../asset/img/imgtexttype01_01.jpg);
+        }
+        .imgtext__inner .img.i2 {
+            background-image: url(../asset/img/imgtexttype01_02.jpg);
+        }
+        .imgtext__inner .img.i1 a {
+            background-color: #A96A6A;
+        }
+        .imgtext__inner .img.i2 a {
+            background-color: #F5C568;
+        }
+    </style>
+</head>
+<body>
+    <section class="imgtext__wrap section nexon">
+        <div class="container">
+            <div class="imgtext__inner">
+                <article class="text">
+                    <span class="section__small">notice</span>
+                    <h2 class="section__h2">쿠키의 종류 10가지</h2>
+                    <p>쿠키의 종류는 매우 다양합니다. 아래는 10가지 이상의 쿠키 종류를 알려드리겠습니다</p>
+                    <ul>
+                        <li><a herf="#">초코칩 쿠키 (Chocolate Chip Cookie)</a></li>
+                        <li><a herf="#">오트밀 쿠키 (Oatmeal Cookie)</a></li>
+                        <li><a herf="#">스노우볼 쿠키 (Snowball Cookie)</a></li>
+                        <li><a herf="#">마들렌 (Madeleine)</a></li>
+                        <li><a herf="#">레몬 바 (Lemon Bar)</a></li>
+                        <li><a herf="#">마카롱 (Macaron)</a></li>
+                        <li><a herf="#">쇼트브레드 (Shortbread)</a></li>
+                        <li><a herf="#">스프링클 쿠키 (Sprinkle Cookie)</a></li>
+                        <li><a herf="#">맥아담 쿠키 (Macadamia Nut Cookie)</a></li>
+                        <li><a herf="#">글로스 쿠키 (Gloss Cookie)</a></li>
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">촉촉한 쿠키</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">바삭한 쿠키</a>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

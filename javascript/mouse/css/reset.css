@@ -1,0 +1,66 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/BMJua/BMJua.css');
+@import url('https://webfontworld.github.io/gonggames/EsaManru.css');
+@import url('https://webfontworld.github.io/nyj/NYJGothic.css');
+@import url('https://webfontworld.github.io/iropke/IropkeBatang.css');
+@import url('https://webfontworld.github.io/kohi/KOHIBaeum.css');
+@import url('https://webfontworld.github.io/tmoney/TmoneyRoundWind.css');
+@import url('https://webfontworld.github.io/eland/ElandChoice.css');
+@import url('https://webfontworld.github.io/utoImagegothic/UtoImageGothic.css');
+@import url('https://webfontworld.github.io/Jalpullineun/JalpullineunHaru.css');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: NexonLv1Gothic;
+}
+.font02 {
+    font-family: BMJua;
+}
+.font03 {
+    font-family: EsaManru;
+}
+.font04 {
+    font-family: NYJGothic;
+}
+.font05 {
+    font-family: IropkeBatang;
+}
+.font06 {
+    font-family: KOHIBaeum;
+}
+.font07 {
+    font-family: TmoneyRoundWind;
+}
+.font08 {
+    font-family: ElandChoice;
+}
+.font09 {
+    font-family: UtoImageGothic;
+}
+.font10 {
+    font-family: JalpullineunHaru;
+}
