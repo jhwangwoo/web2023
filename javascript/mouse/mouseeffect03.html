@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>01. 마우스 이펙트</title>
+    <title>03. 마우스 이펙트</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
     <style>
         header {
-            position: relative;
-            z-index: 10;
+            z-index: 100;
         }
         .mouse__wrap {
             cursor: none;
@@ -25,16 +24,16 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            position: relative;
+            z-index: 10;
         }
         .mouse__text p {
             font-size: 1.5vw;
             line-height: 1.6;
-            z-index: 10;
         }
         .mouse__text p:last-child {
             font-size: 2vw;
             line-height: 1.6;
-            z-index: 10;
         }
         .mouse__coursor {
             position: absolute;
@@ -48,7 +47,7 @@
             background-image: url(img/mouseEffect03-min.jpg);
             background-size: cover;
             background-position: center center;
-            background-attachment: fixed; /**/
+            background-attachment: fixed; 
         }
     </style>
 </head>
@@ -70,7 +69,6 @@
     <main id="main">
         <div class="mouse__wrap">
             <div class="mouse__coursor"></div>
-            <div class="mouse__coursor2"></div>
             <div class="mouse__text">
                 <p>Only I can change my life. No one can do it for me.</p>
                 <p>나만이 내 인생을 바꿀 수 있다. 아무도 날 대신해 해줄 수 없다.</p>
@@ -106,7 +104,6 @@
         //     y : 0
         // }
         
-
         window.addEventListener("mousemove", e => {
             gsap.to(cursor, {
                 duration: 0.5,
