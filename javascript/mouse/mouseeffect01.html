@@ -212,7 +212,7 @@
 
         //getAttribute();
         document.querySelectorAll(".mouse__text span").forEach(function(span){
-            let attr = span.getAttribute("class");
+            let attr = span.getAttribute("class"); //속성값가져오기
             //attr = s1 s2 s3 s4 s5 s6
             span.addEventListener("mouseover", function(){
                 cursor.classList.add(attr);
