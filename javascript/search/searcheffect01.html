@@ -305,13 +305,12 @@
             searchList.forEach(el => {
                 // const cssName = el.getAttribute("data-name");
                 const cssName = el.dataset.name;
-                const Num = 0
 
-                if(cssName.indexOf(userWord)){     //값을 입력할때 indexOf의 값이 0인 것만
-                    //데이터가 있을 때
+                if(cssName.indexOf(userWord)){     //값을 입력할때 indexOf는 입력한 단어의 첫번째 위치값을 반환한다. 0 = false
+                    //위치값이 0이아닐때는 다 트루 이므로 다숨겨줍니다.
                     el.classList.add("hide");
                 } else {
-                    //데이터가 없을 때
+                    //위치값이 0일때 는 펄스 이므로 지워줍니다.
                     el.classList.remove("hide");
                 }
             });
