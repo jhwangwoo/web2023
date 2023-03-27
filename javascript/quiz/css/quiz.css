@@ -143,6 +143,20 @@
 .quiz__answer .confirm:hover {
     background-color: #b2f384;
 }
+.quiz__answer .next {
+    background-color: #c9ffa3;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: "SCoreDream";
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor:pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+.quiz__answer .next:hover {
+    background-color: #b2f384;
+}
 .quiz__answer .result {
     background-color: #fff;
     border: 6px ridge #cacaca;
@@ -161,6 +175,7 @@
     font-size: 22px;
     margin-bottom: 10px;
 }
+
 .quiz__view {
     border-bottom: 6px solid #cacaca;
     overflow: hidden;

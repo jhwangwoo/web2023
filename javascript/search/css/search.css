@@ -153,7 +153,7 @@
 .search__info {
     text-align: right;
     padding: 0.6vw 2vw;
-    border-top: 0.3vw dashed #000;
+    /* border-top: 0.3vw dashed #000; */
     border-bottom: 0.3vw dashed #000;
 }
 .search__list ul {
