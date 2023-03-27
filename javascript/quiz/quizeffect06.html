@@ -160,8 +160,7 @@
 
         let quizCount = 0;
         let quizScore = 0;
-        let quizScore2 = 0;
-
+        
         const updateQuiz1 = (index) => {
             let typeTag =`
                 <span>${quizInfo[index].infoType}</span>
@@ -232,7 +231,6 @@
                 console.log("정답입니다.");
                 dogWrap.classList.add("like");     
             } else {
-                quizScore2++
                 console.log("오답입니다.");
                 dogWrap.classList.add("dislike");
             }
