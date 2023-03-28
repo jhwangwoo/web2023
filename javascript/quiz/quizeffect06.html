@@ -19,6 +19,7 @@
             <li><a href="quizeffect04.html">4</a></li>
             <li><a href="quizeffect05.html">5</a></li>
             <li class="active"><a href="quizeffect06.html">6</a></li>
+            <li><a href="quizeffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -33,10 +34,9 @@
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
-                            <div class="all"></div>
-                            <div class="all2">맞힌갯수<span>?</span></div>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
+                            <div class="count"></div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -157,9 +157,10 @@
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const dogWrapCount = quizWrap.querySelector(".dog__wrap .count");
 
-        let quizCount = 0;
-        let quizScore = 0;
+        let quizCount = 0;   //퀴즈번호
+        let quizScore = 0;  // 현재 점수
         
         const updateQuiz1 = (index) => {
             let typeTag =`
@@ -169,9 +170,6 @@
             let questionTag =`
                 <em>${index+1}</em>.
                 <span>${quizInfo[index].infoQuestion}</span>
-            `;
-            let countallTag = `
-                총 문제: ${index+1}/${quizInfo.length}<br>
             `;
             let choiceTag = `
                 <label for="choice1">
@@ -200,7 +198,9 @@
             quizQuestion.innerHTML = questionTag;
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
-            countall.innerHTML = countallTag;
+
+            let quizLength = quizInfo.length - quizCount;
+            dogWrapCount.innerHTML = "총"+quizInfo.length+"문제 중 "+quizLength+"문제 남았습니다." 
             
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -230,29 +230,33 @@
                 quizScore++
                 console.log("정답입니다.");
                 dogWrap.classList.add("like");     
+                quizAnswer.style.display = "block";
+                quizDesc.style.display = "block";
             } else {
                 console.log("오답입니다.");
                 dogWrap.classList.add("dislike");
+                quizAnswer.style.display = "block";
+                quizDesc.style.display = "block";
             }
 
-            document.querySelector(".dog__wrap span").innerHTML = quizScore; //맞힌 갯수 확인
-
             //다음 버튼, 해설 나타나기
-            quizAnswer.style.display = "block"
-            quizDesc.style.display = "block"
             
+            let CountLast = Math.ceil((quizScore / quizInfo.length) * 100);
+            let countRsult = (CountLast >= 60) ? "합격" : "불합격";
+
+            //마지막 문제일때
+            if(quizCount == quizInfo.length -1){
+                quizAnswer.style.display = "none";
+                dogWrapCount.innerHTML = "총"+quizScore+"개 맞았습니다. 점수는"+CountLast+"입니다. "+countRsult+"입니다."
+            }
         };  
         
         //정답 확인
         quizNext.addEventListener("click", () => {
-            if(quizScore == quizInfo.length-1){
-                document.querySelector(".quiz__check").textContent = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-            } else {
-                quizCount++;    //quizCount에 1을더해서
-                updateQuiz1(quizCount);     //updateQuiz()를 변경
-                
-                dogWrap.classList.remove("like", "dislike");  //강아지 초기화
-            }
+            quizCount++;    //quizCount에 1을더해서
+            updateQuiz1(quizCount);     //updateQuiz()를 변경
+
+            dogWrap.classList.remove("like", "dislike");  //강아지 초기화    
         });
     </script>
 </body>

@@ -1,0 +1,37 @@
+/* banner__wrap */
+#bannerType {
+    box-sizing: border-box;
+    background-image: url(../img/bannertype01_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner__inner h3{
+    font-size: 50px;
+    margin-bottom: 45px;
+    color: #fff;
+}
+.banner__inner p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 90px;
+    color: #F5F5F5;
+}
+.banner__inner a {
+    color: #fff;
+    text-decoration:underline;
+}
+
+/* 미디어쿼리 */
+@media (max-width: 960px){
+    .banner__inner h3 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 600px){
+    .banner__inner h3 {
+        font-size: 30px;
+    }
+    .banner__inner p {
+        margin-bottom: 50px;
+    }
+}
