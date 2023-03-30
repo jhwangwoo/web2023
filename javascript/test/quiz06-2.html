@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈테스트</title>
+    <link rel="stylesheet" href="css/solution-2.css">
+</head>
+<body>
+    <button id="bttn">&#9776;</button>
+
+    <nav id="nav">
+      <ul>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">Typescript</a></li>
+        <li><a href="#">Node.js</a></li>
+      </ul>
+    </nav>
+    <script>
+    const bttn = document.querySelector('#bttn');
+    const nav = document.querySelector('#nav');
+
+    bttn.addEventListener('click', () => { 
+        nav.classList.add('active');  //add 대신 toggle 을사용하면 클릭했을때 active를 지우거나 넣을수있습니다.
+        bttn.classList.add('active');
+    });
+    bttn.addEventListener('mouseout', () => { 
+        nav.classList.remove('active');
+        bttn.classList.remove('active');
+    });
+    </script>
+</body>
+</html>

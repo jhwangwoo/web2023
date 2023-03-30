@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈테스트</title>
+    <style>
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+        img {
+            width: 600px;
+        }
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3>마우스 오버하면 이미지 랜덤으로 바꾸기</h3>
+        <img src="../mouse/img/mouseEffect01-min.jpg" alt="">
+    </div>
+    <script>
+        const cover = document.querySelector("#container img");
+        
+        const covers = [
+                "../mouse/img/mouseEffect02-min.jpg",
+                "../mouse/img/mouseEffect03-min.jpg",
+                "../mouse/img/mouseEffect04-min.jpg",
+                "../mouse/img/mouseEffect05-min.jpg"
+        ]
+        
+        cover.addEventListener("mouseover", () =>{
+            let random = Math.floor(Math.random()*4);
+            console.log(random);
+            cover.src = covers[random]
+            // "../mouse/img/mouseEffect02-min.jpg"
+        });
+        cover.addEventListener("mouseout", function(){
+            cover.src = "../mouse/img/mouseEffect01-min.jpg"
+        });
+    </script>
+    
+</body>
+</html>

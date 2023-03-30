@@ -122,7 +122,7 @@
                     }
                     console.log(formattedQusetion);
                     const anwerChoices = [...item.incorrect_answers]; //틀린답 불러오기
-                    formattedQusetion.answer = Math.floor(Math.random() * anwerChoices.length) + 1; //정답을 랜덤으로 불러오기
+                    formattedQusetion.answer = Math.floor(Math.random() * anwerChoices.length) + 1; //0이상1미만의 값 * 4 =0~3 +1 1~4정답을 랜덤으로 불러오기
                     anwerChoices.splice(formattedQusetion.answer -1, 0, item.incorrect_answers); // 정답이랑 오답을 합치기
                     anwerChoices.forEach((choice, index) => {
                         formattedQusetion["choice" + (index + 1)] = choice;

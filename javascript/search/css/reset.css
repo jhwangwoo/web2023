@@ -19,7 +19,7 @@
        url('https://cdn.jsdelivr.net/gh/webfontworld/cookierun/CookieRunBold.woff') format('woff'),
        url('https://cdn.jsdelivr.net/gh/webfontworld/cookierun/CookieRunBold.ttf') format("truetype");
   font-display: swap;
-} 
+}
 @font-face {
   font-family: 'CookieRun';
   font-weight: 900;

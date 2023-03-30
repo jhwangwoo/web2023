@@ -47,14 +47,61 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">수학메서드 : Math.round() : 반올림</a></li>
-                    <li><a href="#">수학메서드 : Math.floor() : 버림</a></li>
-                    <li><a href="#">수학메서드 : Math.ceil() : 올림</a></li>
-                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                    <li><a href="#sample01">01. Math.random() : 랜덤값 반환(0~1 사이의 난수 값을 반환) : 반환(숫자)</a></li>
+                    <li><a href="#sample02">02. Math.round() : 반올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample03">03. Math.floor() : 버림 : 반환(숫자)</a></li>
+                    <li><a href="#sample04">04. Math.ceil() : 올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">05. Math.max() : 가장 큰 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample06">06. Math.min() : 가장 작은 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample07">07. Math.abs() : 절대값 : 반환(숫자)</a></li>
+                    <li><a href="#sample08">08. Math.trunc() : 값의 정수 부분만 : 반환(숫자)</a></li>
+                    <li><a href="#sample09">09. Math.PI() : 원에 둘레에 대한 지름의 비율(π)을 나타내며 약 3.141592... : 반환(숫자)</a></li>
+                    <li><a href="#sample10">10. Math.sqrt() : 값의 제곱근을 반환 : 반환(숫자)</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="main__sample">
+            <div id="sample01" class="sample"> 
+                <h3>01. Math.random()</h3>
+                <div class="notice">Math.random()</div>
+                <ul>
+                    <li>0이상~1미만 사이의 난수 값을 반환합니다.</li>
+                </ul>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>기본값</th>
+                            <th>메서드</th>
+                            <th>리턴값</th>
+                            <th>클릭</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sample01_N1"></td>
+                            <td class="sample01_Q1"></td>
+                            <td class="sample01_M1"></td>
+                            <td class="sample01_P1"></td>
+                            <td class="sample01_B1"><button class>클릭</button></td>
+                        </tr>
+                        <tr>
+                            <td class="sample01_N2"></td>
+                            <td class="sample01_Q2"></td>
+                            <td class="sample01_M2"></td>
+                            <td class="sample01_P2"></td>
+                            <td class="sample01_B2"><button class>클릭</button></td>
+                        </tr>                        <tr>
+                            <td class="sample01_N3"></td>
+                            <td class="sample01_Q3"></td>
+                            <td class="sample01_M3"></td>
+                            <td class="sample01_P3"></td>
+                            <td class="sample01_B3"><button class>클릭</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //sample01 -->
         </div>
     </main>
     <!-- //main -->
@@ -62,7 +109,33 @@
         <a href="mailto:ghkddn132.dothome.co.kr/">ghkddn132.dothome.co.kr</a>
     </footer>
     <!-- //footer -->
-    <script>   
+    <script>
+    //번호에 스크립트이용해서 123
+    {   
+
+
+        document.querySelector(".sample01_N1").innerHTML = "1";
+        document.querySelector(".sample01_Q1").innerHTML = "0~1(난수)";
+        document.querySelector(".sample01_M1").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B1").addEventListener("click", () => {
+            document.querySelector(".sample01_P1").innerHTML = Math.random()
+        }); 
+
+
+        document.querySelector(".sample01_N2").innerHTML = "2";
+        document.querySelector(".sample01_Q2").innerHTML = "0~9(정수)";
+        document.querySelector(".sample01_M2").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B2").addEventListener("click", () => {
+            document.querySelector(".sample01_P2").innerHTML = Math.floor(Math.random()*10);
+        }); 
+
+        document.querySelector(".sample01_N3").innerHTML = "3";
+        document.querySelector(".sample01_Q3").innerHTML = "1~100(정수)";
+        document.querySelector(".sample01_M3").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B3").addEventListener("click", () => {
+            document.querySelector(".sample01_P3").innerHTML = Math.floor(Math.random()*100)+1;
+        }); 
+    }
     </script>
  
 </body>

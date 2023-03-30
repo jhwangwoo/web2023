@@ -955,6 +955,7 @@
         //정답 확인
         const answerQuiz = () => {
             const quizChoices = document.querySelectorAll(".quiz__choice");
+            quizScore = 0;
 
             //시용자가 체크한 정답 == 문제 정답
             quizInfo.forEach((question, number) => {
@@ -965,11 +966,13 @@
 
                 if(userAnswer == question.infoAnswer){
                     // alert("정답")
+                    dogWrap[number].classList.remove("dislike")
                     dogWrap[number].classList.add("like");
                     quizScore++;
                 } else {
                     // alert("오답")
                     dogWrap[number].classList.add("dislike");
+                    dogWrap[number].classList.remove("like");
                     //
                 }
             });
@@ -979,6 +982,7 @@
 
             //점수 보이기
             document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+            document.querySelector(".quiz__info").style.display = "block"
         }
 
 
