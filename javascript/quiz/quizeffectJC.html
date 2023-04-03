@@ -108,7 +108,7 @@
 
         //데이터 불러오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json") //json을가져옴
+            fetch("json/gineungsaJC2008_01.json") //json을가져옴
             .then(res => res.json())  //fetch에서 가져온것을 res.json로 변경 하여 가져온후 실행
             .then(items => {        //가져온 json을 items로 변경
 
@@ -163,7 +163,8 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number} </span>. ${question.question}</div>
-                        <div class="cbt__question__img"><img src="img/gineungsaJC2023_01_01.jpg" alt="기능사"></div>
+                        <div class="cbt__question__img"><img style='width:300px' src="${question.QuestionImg}"></div>
+                        <div class="cbt__question__desc">${question.QuestionDesc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_0" onclick="answerSelect(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
