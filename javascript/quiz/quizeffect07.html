@@ -65,7 +65,7 @@
                         <div class="cbt__title">수험자 : <em></em></div>
                         <div class="cbt__score">
                             <span>전체 문제수 : <em class="allcount">1</em>문항<br></span>
-                            <span>남은 문제수 : <em class="count">1</em>문항</span>
+                            <span>남은 문제수 : <em class="count">100</em>문항</span>
                         </div>
                     </div>
                     <div class="cbt__omr">
@@ -104,7 +104,7 @@
         const cbtomr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
         const quizallcount = document.querySelector(".cbt__score .allcount")
-        const quizcount = document.querySelector(".cbt__score .count")
+        const quizcount = document.querySelector(".count")
 
         let questionAll = []; //모든 퀴즈 정보
 
@@ -230,9 +230,12 @@
                 } else quizDesc[number]. classList.remove("hide");
             });
         }
+
         const answerSelect = () => {
-            
-        }
+            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+            const remainingCount = questionAll.length - answeredCount;
+            quizcount.innerText = remainingCount;
+        };
 
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
