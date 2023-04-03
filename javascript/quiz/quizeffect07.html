@@ -62,10 +62,10 @@
                 </div>
                 <div class="cbt__info">
                     <div>
-                        <div class="cbt__title">수험자 : <em>정황우</em></div>
+                        <div class="cbt__title">수험자 : <em></em></div>
                         <div class="cbt__score">
-                            <span>전체 문제수 : <em></em>문항<br></span>
-                            <span>남은 문제수 : <em></em>문항</span>
+                            <span>전체 문제수 : <em class="allcount">1</em>문항<br></span>
+                            <span>남은 문제수 : <em class="count">1</em>문항</span>
                         </div>
                     </div>
                     <div class="cbt__omr">
@@ -103,6 +103,8 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtomr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        const quizallcount = document.querySelector(".cbt__score .allcount")
+        const quizcount = document.querySelector(".cbt__score .count")
 
         let questionAll = []; //모든 퀴즈 정보
 
@@ -195,8 +197,10 @@
 
             cbtQuiz.innerHTML = exam.join('');
             cbtomr.innerHTML = omr.join('');
-        }
 
+            quizallcount.innerText = questionAll.length;
+        };
+        
         // 정답 확인
         const answerQuiz = () => {
             const cbtSelects = document.querySelectorAll(".cbt__selects");
@@ -207,28 +211,27 @@
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
                 // console.log(numberAnswer)
-
+                
                 if(numberAnswer == question.answer){
                     console.log("정답");
                     cbtSelects[number].parentElement.classList.add("good");
                 } else {
                     console.log("오답");
                     cbtSelects[number].parentElement.classList.add("bad");
-
+                    
                     const label = cbtSelects[number].querySelectorAll("label");
                     label[question.answer].classList.add("correct")
                     
                 }
                 const quizDesc = document.querySelectorAll(".cbt__desc");
-
+                
                 if(quizDesc[number].innerText == "undefined"){
                     quizDesc[number]. classList.add("hide");
                 } else quizDesc[number]. classList.remove("hide");
             });
         }
-
         const answerSelect = () => {
-
+            
         }
 
         cbtSubmit.addEventListener("click", answerQuiz);
