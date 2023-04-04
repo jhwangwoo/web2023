@@ -62,10 +62,10 @@
                 </div>
                 <div class="cbt__info">
                     <div>
-                        <div class="cbt__title">수험자 : <em></em></div>
+                        <div class="cbt__title">수험자 : <em class="cbt__name"></em></div>
                         <div class="cbt__score">
-                            <span>전체 문제수 : <em class="allcount">1</em>문항<br></span>
-                            <span>남은 문제수 : <em class="count">100</em>문항</span>
+                            <span>전체 문제수 : <em class="cbt_length">0</em>문항<br></span>
+                            <span>남은 문제수 : <em class="cbt__rest">0</em>문항</span>
                         </div>
                     </div>
                     <div class="cbt__omr">
@@ -103,12 +103,14 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtomr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
-        const quizallcount = document.querySelector(".cbt__score .allcount")
-        const quizcount = document.querySelector(".count")
+        const cbtLength = document.querySelector(".cbt_length");
+        const cbtRest = document.querySelector(".cbt__rest");
 
-        let questionAll = []; //모든 퀴즈 정보
+        let questionAll = [];              //모든 퀴즈 정보
+        let questionLength = 0;            //전체 문제수
+        let questionRest = questionLength; //남은 문제수
 
-        //데이터 불러오기
+        //데이터 가져오기
         const dataQuestion = () => {
             fetch("json/gisa2020_01.json") //json을가져옴
             .then(res => res.json())  //fetch에서 가져온것을 res.json로 변경 하여 가져온후 실행
@@ -152,6 +154,11 @@
                 });
                 newQuestion(); //문제 만들기
 
+                //전체 문제수 만들기
+                questionLength = questionAll.length;
+                cbtLength.innerHTML = questionLength;
+                cbtRest.innerHTML = questionLength;
+
             })  //res.json을 items으로 하여 상수
             .catch((err) => console.log(err));
         }
@@ -167,13 +174,13 @@
                         <div class="cbt__question"><span>${question.number} </span>. ${question.question}</div>
                         <div class="cbt__question__img"></div>
                         <div class="cbt__selects">
-                            <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_0" onclick="answerSelect(this)">
+                            <input type="radio" id="select${number}_1" name="select${number}" value="${number}_0" onclick="answerSelect2(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
-                            <input type="radio" id="select${number}_2" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
+                            <input type="radio" id="select${number}_2" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
                             <label for="select${number}_2"><span>${question.choice2}</span></label>
-                            <input type="radio" id="select${number}_3" name="select${number}" value="${number+1}_2" onclick="answerSelect(this)">
+                            <input type="radio" id="select${number}_3" name="select${number}" value="${number}_2" onclick="answerSelect2(this)">
                             <label for="select${number}_3"><span>${question.choice3}</span></label>
-                            <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_3" onclick="answerSelect(this)">
+                            <input type="radio" id="select${number}_4" name="select${number}" value="${number}_3" onclick="answerSelect2(this)">
                             <label for="select${number}_4"><span>${question.choice4}</span></label>
                         </div>
                         <div class="cbt__desc hide">${question.desc}</div>
@@ -183,13 +190,13 @@
                 omr.push(`
                     <div class="omr">
                         <strong>${question.number}</strong>
-                        <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_0">
+                        <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_0" onclick="answerSelect(this)">
                         <label for="omr${number}_1"><span class="label-inner">1</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_1">
+                        <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_1" onclick="answerSelect(this)">
                         <label for="omr${number}_2"><span class="label-inner">2</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_2">
+                        <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_2" onclick="answerSelect(this)">
                         <label for="omr${number}_3"><span class="label-inner">3</span></label>
-                        <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_3">
+                        <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_3" onclick="answerSelect(this)">
                         <label for="omr${number}_4"><span class="label-inner">4</span></label>
                     </div>
                 `)
@@ -198,7 +205,6 @@
             cbtQuiz.innerHTML = exam.join('');
             cbtomr.innerHTML = omr.join('');
 
-            quizallcount.innerText = questionAll.length;
         };
         
         // 정답 확인
@@ -229,11 +235,29 @@
                 } else quizDesc[number]. classList.remove("hide");
             });
         }
+        //보기 체크
+        const answerSelect2 = (elem) => {
+            const answer = elem.value;             //클릭 했을때 vlaue값을 가져옴
+            const answerNum = answer.split("_")    //
 
-        const answerSelect = () => {
-            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
-            const remainingCount = questionAll.length - answeredCount;
-            quizcount.innerText = remainingCount;
+            const select = document.querySelectorAll(".cbt__omr .omr"); //전체 문항 수 100개를 가져온다
+            const label = select[answerNum[0]].querySelectorAll("input"); //보기 4개
+            label[answerNum[1]].checked = true;
+
+            const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
+            cbtRest.innerHTML = questionLength - answerInputs.length;
+        }
+        //보기 체크2
+        const answerSelect = (elem) => {
+            const answer = elem.value;
+            const answerNum = answer.split("_")    //
+
+            const select = document.querySelectorAll(".cbt__quiz .cbt"); //전체 문항 수 100개를 가져온다
+            const label = select[answerNum[0]].querySelectorAll("input"); //보기 4개
+            label[answerNum[1]].checked = true;
+
+            const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
+            cbtRest.innerHTML = questionLength - answerInputs.length;
         };
 
         cbtSubmit.addEventListener("click", answerQuiz);

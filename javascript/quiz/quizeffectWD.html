@@ -163,7 +163,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number} </span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img style='width:300px' src="${question.QuestionImg}"></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_0" onclick="answerSelect(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>

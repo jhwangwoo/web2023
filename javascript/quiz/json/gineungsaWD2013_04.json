@@ -9,8 +9,9 @@
         "desc": "텍스타일 디자인은 공업(제품)디자인"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음 설명 중 ( ) 안에 공통으로 들어갈 디자인 요소는?<br><img style='width:300px' src='img/2013042.jpg'>",
+        "question": "다음 설명 중 ( ) 안에 공통으로 들어갈 디자인 요소는?",
         "infoTime": "2013년 4회",
+        "question_img": "img/2013042.jpg",
         "infoNumber": "20130402",
         "correct_answer": "점",
         "incorrect_answers": ["빛","면","입체"],
@@ -81,7 +82,8 @@
         "desc": "다이렉트 메일(Direct Mail)<br>예상 구매자에게 직접 광고물을 보냄으로써 광고나 선전을 하는 것으로 DM이라고도 한다"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음 중 A, B에 들어갈 알맞은 용어는?<br><img style='width:300px' src='img/20130411.jpg'>",
+        "question": "다음 중 A, B에 들어갈 알맞은 용어는?",
+        "question_img": "img/20130411.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130411",
         "correct_answer": "혼색계, 현색계",
@@ -209,7 +211,8 @@
         "desc": "하이재커 : 사용자를 중간에 가로채 특정 사이트로 연결하거나 특정 검색엔진을 사용하게 하는 악성코드"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음이 설명하고 있는 것은?<br><img style='width:300px' src='img/20130427.jpg'>",
+        "question": "다음이 설명하고 있는 것은?",
+        "question_img": "img/20130427.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130427",
         "correct_answer": "DHTML",
@@ -321,7 +324,8 @@
         "desc": "본문의 연산자 우선순위 [ ] → + → & → &&"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음과 같은 내비게이션 구조는?<br><img style='width:300px' src='img/20130441.jpg'>",
+        "question": "다음과 같은 내비게이션 구조는?",
+        "question_img": "img/20130441.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130441",
         "correct_answer": "계층 구조",
@@ -393,7 +397,8 @@
         "desc": "RGB는 가산혼합이므로 색이 섞일수록 명도가 높아져 흰색이 됩니다.<br>R=255,G=255,B=255 화이트<br>R=0, G=0, B=0 블랙"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음 중 웹사이트 디자인 프로세스의 순서를 옳게 나열한 것은?<br><img style='width:300px' src='img/20130450.jpg'>",
+        "question": "다음 중 웹사이트 디자인 프로세스의 순서를 옳게 나열한 것은?",
+        "question_img": "img/20130450.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130450",
         "correct_answer": "③→①→②→④",
@@ -457,7 +462,8 @@
         "desc": "내비게이션에서는 최소한 메뉴를 적게 만들어야 합니다."
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음이 설명하고 있는 것은?<br><img style='width:300px' src='img/20130458.jpg'>",
+        "question": "다음이 설명하고 있는 것은?",
+        "question_img": "img/20130458.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130458",
         "correct_answer": "태블릿(Tablet)",
@@ -473,7 +479,8 @@
         "desc": "1세대 - 진공관<br>2세대 - 트랜지스터 (TR)<br>3세대 - 집적회로 (IC)<br>4세대 - 고밀도 집적회로 (LSI) 초고밀도 집적회로(VLSI)<br>5세대 - SLSI, ULSI, 바이오소자, 광소자"
     },{
         "subject": "웹디자인 기능사",
-        "question": "다음 ( )안에 공통으로 들어갈 알맞은 단어는?<br><img style='width:300px' src='img/20130460.jpg'>",
+        "question": "다음 ( )안에 공통으로 들어갈 알맞은 단어는?",
+        "question_img": "img/20130460.jpg",
         "infoTime": "2013년 4회",
         "infoNumber": "20130460",
         "correct_answer": "위지위그(WYSIWYG)",
