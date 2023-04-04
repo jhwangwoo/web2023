@@ -63,7 +63,6 @@
                     <button class="cbt__submit">답안지 제출하기</button>
                 </div>
                 <div class="cbt__info">
-
                     <div>
                         <div class="cbt__title">수험자 : <em class="cbt__name"></em></div>
                         <div class="cbt__score">
@@ -147,7 +146,7 @@
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
                         <div data-lit-hue="20" data-lit-count="100" class="lit-container">
-                            <button>시작하기</button>
+                            <button class="start">시작하기</button>
                         </div>
                     </div>
                 </div>
@@ -166,10 +165,15 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtLength = document.querySelector(".cbt_length");
         const cbtRest = document.querySelector(".cbt__rest");
+        const cbtstart = document.querySelector(".cbt__start");
 
         let questionAll = [];              //모든 퀴즈 정보
         let questionLength = 0;            //전체 문제수
         let questionRest = questionLength; //남은 문제수
+
+        document.querySelector(".start").addEventListener("click", () => {
+            cbtstart.style.display = "none"
+        });
 
         //데이터 가져오기
         const dataQuestion = () => {
@@ -233,7 +237,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number} </span>. ${question.question}</div>
-                        <div class="cbt__question__img">${question.question_img}</div>
+                        <div class="cbt__question__img"><img style='width:300px' src="${question.question_img}" alt=""></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number}_0" onclick="answerSelect2(this)">
@@ -267,6 +271,11 @@
             cbtQuiz.innerHTML = exam.join('');
             cbtomr.innerHTML = omr.join('');
 
+            document.querySelectorAll(".cbt__question__desc").forEach(el => {
+                if(el.innerText == "undefined"){
+                    el.style.display = "none";
+                }
+            });
         };
 
         // 정답 확인
@@ -320,7 +329,10 @@
 
             const answerInputs = document.querySelectorAll(".cbt__selects input:checked");
             cbtRest.innerHTML = questionLength - answerInputs.length;
-        };
+        }
+        
+
+
 
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();

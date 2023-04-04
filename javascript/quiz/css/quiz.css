@@ -595,7 +595,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z' /%3E%3C/svg%3E%0A");
 }
 
-/* .cbt__start {
+.cbt__start {
     position: fixed;
     display: flex;
     align-items: center;
@@ -608,7 +608,7 @@
     z-index: 10000;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-} */
+}
 .cbt__start > div {
     width: 50%;
     height: 50vh;
