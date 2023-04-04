@@ -94,11 +94,11 @@
     font-family: "SCoreDream";
 }
 .cbt__conts {
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     background-color: #fff;
 }
 .cbt__header {
-    width: calc(102% - 340px);
+    width: calc(100% - 280px);
     background-color: #cfd3d0;
     border: 8px ridge #dad7d7;
     margin-bottom: 20px;
@@ -116,82 +116,37 @@
 }
 .cbt__aside {
     position: fixed;
-    right: 20px;
-    top: 100px;
-    width: 280px;
+    right: 10px;
+    top: 135px;
+    width: 275px;
+    height: calc(100vh - 150px);;
+    background-color: #fff;
+}
+.cbt__aside > div:first-child {
     margin-bottom: 10px;
-
-}
-.cbt__aside div:first-child {
-    margin-bottom: 10px;
-}
-.cbt__quiz {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} 
-.cbt__quiz .cbt {
-    width: 49%;
-    border: 8px ridge #dad7d7;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-.cbt__quiz .cbt {
-    position: relative;
-}
-.cbt__quiz .cbt.good::after {
-    content: '';
-    background-image: url(../img/O.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.cbt__quiz .cbt {
-    position: relative;
-}
-.cbt__quiz .cbt.bad::after {
-    content: '';
-    background-image: url(../img/x.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    border: 4px ridge #cacaca;
+    background-color: #f3f3f3;
 }
 .cbt__info {
-    background-color: #cfd3d0;
+    margin-bottom: 10px;
     height: calc(80vh - 90px);
     border-bottom: 8px ridge #dad7d7;
-    background-color: #f5f5f5;
-    border: 8px ridge #dad7d7;
     position: fixed;
     overflow-y: auto;
 }
 .cbt__info > div:first-child {
     border-bottom:  4px ridge #cacaca;
+    background-color: #f5f5f5;
     padding: 20px;
+    border: 4px ridge #cacaca;
+    margin-bottom: 10px;
 }
-.cbt__info .cbt__title {
+.cbt__title {
     text-decoration: underline;
     text-align: center;
 }
-.cbt__info .cbt__score {
+.cbt__score {
     text-align: center;
-}
-.cbt__time {
-    position: relative;
-    margin: 3px 0;
-    padding: 15px 0;
-    padding-left: 40px;
-    border-radius: 50px;
-    background-color: #555555;
-    color: #fff;
 }
 .cbt__time::before {
     content: '';
@@ -202,14 +157,24 @@
     height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-alarm' width='22' height='22' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Ccircle cx='12' cy='13' r='7' /%3E%3Cpolyline points='12 10 12 13 14 13' /%3E%3Cline x1='7' y1='4' x2='4.25' y2='6' /%3E%3Cline x1='17' y1='4' x2='19.75' y2='6' /%3E%3C/svg%3E");
 }
+.cbt__time {
+    position: relative;
+    margin: 3px 0;
+    padding: 15px 0;
+    padding-left: 40px;
+    border-radius: 50px;
+    background-color: #555;
+    color: #fff;
+}
 .cbt__submit {
     position: relative;
-    padding: 15px 0;
+    padding: 15px 129px;
     padding-left: 40px;
     margin-top: 10px;
     border-radius: 50px;
     background-color: #555;
     color: #fff;
+    font-family: "SCoreDream";
 }
 .cbt__submit::before {
     content: '';
@@ -221,7 +186,11 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-edit' width='22' height='22' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3' /%3E%3Cpath d='M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3' /%3E%3Cline x1='16' y1='5' x2='19' y2='8' /%3E%3C/svg%3E");
 }
 .cbt__omr {
+    border: 8px ridge #cacaca;
+    overflow-y: auto;
+    height: 500px;
     padding: 20px;
+    background-color: #f5f5f5;
 }
 .cbt__omr .omr {
     margin: 8px 0;
@@ -276,6 +245,45 @@
     transform: translateY(-0.25em);
     width: 20px;
     color: #313e55;
+}
+.cbt__quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+.cbt__quiz .cbt {
+    width: 49%;
+    border: 8px ridge #dad7d7;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.cbt__quiz .cbt {
+    position: relative;
+}
+.cbt__quiz .cbt.good::after {
+    content: '';
+    background-image: url(../img/O.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cbt__quiz .cbt {
+    position: relative;
+}
+.cbt__quiz .cbt.bad::after {
+    content: '';
+    background-image: url(../img/x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /* quiz__wrap */
@@ -491,6 +499,7 @@
     border: 3px solid #cacaca;
     padding: 10px;
     margin-bottom: 15px;
+    text-align: center;
 }
 .cbt__selects {
     margin-bottom: 15px;
@@ -584,6 +593,48 @@
     width: 20px;
     padding: 20px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z' /%3E%3C/svg%3E%0A");
+}
+
+/* .cbt__start {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+} */
+.cbt__start > div {
+    width: 50%;
+    height: 50vh;
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+}
+.cbt__modal1 h2 {
+    font-size: 30px;
+    margin: 80px;
+
+}
+.cbt__modal1 select {
+    border: 1px solid #cacaca;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    font-family: "SCoreDream";
+}
+.cbt__modal1 button {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    background: #fff;
+    border-radius: 5px;
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    font-family: 'SCoreDream';
+    border: 1px solid #CACACA
 }
 /* dog__wrap */
 .dog .tail,
@@ -1041,5 +1092,4 @@
         width: 100%;
     }
 }
-
 
