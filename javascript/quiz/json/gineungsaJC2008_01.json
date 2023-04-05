@@ -101,7 +101,7 @@
         "infoTime": "2008년 1회",
         "infoNumber": "20080113",
         "question": "다음 그림의 논리회로에서 출력(C)는? (단, A=1, B=1 이다.)<br>",
-        "question_img": "img/gineungsaJC_2008_01_13.jpg",
+        "question_img": "gineungsaJC_2008_01_01",
         "correct_answer": "0",
         "incorrect_answers": ["1","11","10"],
         "desc": "위의 OR게이트는 어느 한쪽이라도 1이면 1이므로 1이되고 밑은 AND게이트는 두개 입력 모두가 1이여야지만 1이 출력되는 게이트 입니다..그러므로1과 1의 출력에서 NAND게이트에 입력 되므로(NAND게이트는AND게이트의 반대 값이 나옴.) 1과 1이 AND 게이트에 입력되면 출력이 1이므로 결국 마지막 출력은 0이 됩니다."
@@ -118,7 +118,7 @@
         "infoTime": "2008년 1회",
         "infoNumber": "20080115",
         "question": "다음과 같은 진리표를 갖는 논리 게이트는?",
-        "question_img": "img/gineungsaJC_2008_01_15.jpg",
+        "question_img": "gineungsaJC_2008_01_02",
         "correct_answer": "NAND 게이트",
         "incorrect_answers": ["NOR 게이트","NOT 게이트","AND 게이트"],
         "desc": "AND 게이트와 출력이 반대 이므로 NAND 입니다."
@@ -151,7 +151,7 @@
         "infoTime": "2008년 1회",
         "infoNumber": "20080119",
         "question": "다음 논리회로는 무슨 회로인가?",
-        "question_img": "img/gineungsaJC_2008_01_19.jpg",
+        "question_img": "gineungsaJC_2008_01_03",
         "correct_answer": "반가산기",
         "incorrect_answers": ["전가산기","카운터","패리티 발생기"],
         "desc": "입력 X, Y 2개 출력 S, C 2개 이므로 반가산기 입니다.<br>반가산기 : 입력 2 출력 2<br>전가산기 : 입력 3 출력 2"
