@@ -126,7 +126,7 @@
             currentIndex = (currentIndex + 1) % $(".slider").length;
             
             $(".slider__inner").css("position", "relative");
-            $(".slider__inner").animate({top : -450 * currentIndex}, 600, "easeOutElastic");
+            $(".slider__inner").animate({top : -450 * currentIndex}, 600);
 
         },sliderInterval);
     </script>
