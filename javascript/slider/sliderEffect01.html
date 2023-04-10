@@ -96,13 +96,13 @@
 
         setInterval(() => {
             // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0  // currentIndex
-            // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  // nextInex
-            let nextInex = (currentIndex + 1) % sliderCount;
+            // 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  // nextIndex
+            let nextIndex = (currentIndex + 1) % sliderCount;
             
             slider[currentIndex].style.opacity = "0"
-            slider[nextInex].style.opacity = "1"
+            slider[nextIndex].style.opacity = "1"
 
-            currentIndex = nextInex;
+            currentIndex = nextIndex;
             console.log(currentIndex);
 
             // slider[0].style.opacity = "0"; //첫번째 이미지를 안보이게   
