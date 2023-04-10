@@ -170,10 +170,10 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtLength = document.querySelector(".cbt_length");
         const cbtRest = document.querySelector(".cbt__rest");
-        const cbtStart = document.querySelector (".cbt__start");
         const cbtViewSubject = document.querySelector (".cbt__view .subject");
         const cbtHeader = document.querySelector (".cbt__header h2");
         const cbtStartBtn = document.querySelector (".cbt__start__btn");
+        const cbtStart = document.querySelector (".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
         const name = document.querySelector(".name");
         const quizscored = document.querySelector(".quiz__score");
@@ -183,7 +183,7 @@
         let quizScore = 0;            //맞힌 문제수
         let questionRest = questionLength; //남은 문제수
         let questionTime = "";
-        let questionTimeRemain = "615";
+        let questionTimeRemain = "3600";
 
         //시작하기
         const startQuiz = () => {
@@ -418,6 +418,7 @@
                 return minutes + "분" + seconds + "초";
 
                 //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기(숙제)
+
             }
         }
         
