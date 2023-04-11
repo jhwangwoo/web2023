@@ -86,29 +86,29 @@
         let sliderwidth = slider[0].offsetWidth;                //이미지의 가로값
         let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫번째 이미지 복사
 
-        // //복사한 첫번째 이미지 마지막에 붙여넣기
-        // sliderInner.appendChild(sliderClone);
+        //복사한 첫번째 이미지 마지막에 붙여넣기
+    //     sliderInner.appendChild(sliderClone);
 
-        // function sliderEffect(){
-        //     currentIndex++;
+    //     function sliderEffect(){
+    //         currentIndex++;
 
-        //     sliderInner.style.transition = "all 0.6s";
-        //     sliderInner.style.transform = "translateX(-"+ sliderwidth * currentIndex +"px)";
+    //         sliderInner.style.transition = "all 0.6s";
+    //         sliderInner.style.transform = "translateX(-"+ sliderwidth * currentIndex +"px)";
 
-        //     //마지막 이미지에 위치 했을 떄
-        //     if(currentIndex == sliderCount){
-        //         setTimeout(() => {
-        //             sliderInner.style.transition = "0s";
-        //             sliderInner.style.transform = "translateX(0px)";
-        //         },700);
-        //         currentIndex = 0;
-        //     }
-        // }
-        // setInterval(sliderEffect,sliderInterval);
-    </script>
+    //         //마지막 이미지에 위치 했을 떄
+    //         if(currentIndex == sliderCount){
+    //             setTimeout(() => {
+    //                 sliderInner.style.transition = "0s";
+    //                 sliderInner.style.transform = "translateX(0px)";
+    //             },700);
+    //             currentIndex = 0;
+    //         }
+    //     }
+    //     setInterval(sliderEffect,sliderInterval);
+    // </script>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" ></script>
     <script>
         
         //복사한 첫번째 이미지 마지막에 붙여넣기
@@ -135,15 +135,35 @@
             }
         }
         setInterval(sliderEffect,sliderInterval);
-
-    </script> 
+    </script>  -->
 
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
+        sliderInner.appendChild(sliderClone);
 
-    </script> -->
+        function sliderEffect(){
+            currentIndex++;
+
+            $(".slider__inner").css({
+                transition: "all 0.6s",
+                transform: "translateX(-" + sliderwidth * currentIndex + "px)"
+            });
+
+            //마지막 이미지에 위치 했을 떄
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    $(".slider__inner").css({
+                        transition: "0s",
+                        transform: "translateX(0px)"
+                    });
+                },700);
+                currentIndex = 0;
+            }
+        }
+        setInterval(sliderEffect,sliderInterval);
+    </script>
 </body>
 
 </html>
