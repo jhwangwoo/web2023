@@ -160,7 +160,7 @@
             let dotActive = document.querySelectorAll(".slider__dot .dot");
             dotActive.forEach((active) => active.classList.remove("active"));
             dotActive[num].classList.add("active");
-        }
+        };
 
         //버튼을 클릭했을 때
         sliderBtn.forEach((btn,index) => {
@@ -175,6 +175,12 @@
                 }
             });
         });
+        
+        let dotClick = document.querySelectorAll(".slider__dot .dot");
+        dotClick.forEach((active, el) => {
+            active.addEventListener()
+        });
+        
     </script>
 
     <!-- GSAP -->
