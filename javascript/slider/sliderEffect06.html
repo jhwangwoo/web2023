@@ -176,9 +176,12 @@
             });
         });
         
+        //돗버튼 누럿을때 그값 가져오기
         let dotClick = document.querySelectorAll(".slider__dot .dot");
-        dotClick.forEach((active, el) => {
-            active.addEventListener()
+        dotClick.forEach((active, i) => {
+            active.addEventListener("click",() =>{
+                gotoSlider(i);
+            });
         });
         
     </script>
