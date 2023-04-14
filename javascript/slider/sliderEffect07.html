@@ -125,6 +125,7 @@
         
         function imageSlider(parent, images){
             let currentIndex = 0;
+            console.log(images);
 
             // 선택자
             let slider = {
@@ -184,10 +185,11 @@
             slider.prevBtn.addEventListener("click", function() {
                 imageNodes[currentIndex].classList.remove("active");
                 currentIndex--;
-
+                // console.log(currentIndex)
                 //0 4 3 2 1 0 4 3..
                 if(currentIndex < 0) currentIndex = images.length - 1;
                 imageNodes[currentIndex].classList.add("active");
+                // console.log(currentIndex)
 
                 //썸네일
                 slider.thumnails.querySelector("img.active").classList.remove("active");
@@ -199,7 +201,7 @@
                 currentIndex++;
 
                 //1 2 3 4 0 1 2 3 4...
-                currentIndex = (currentIndex) % images.length;
+                currentIndex = currentIndex % images.length;
                 imageNodes[currentIndex].classList.add("active");
 
                 // 썸네일
@@ -216,4 +218,4 @@
 
 </body>
 
-</html>
+</html> 
