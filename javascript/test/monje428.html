@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p428 마무리 문제</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #333232;
+            color: #fff;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 20% auto;
+        }
+        .border {
+            width: 100%;
+            height: 250px;
+            border: 3px solid #fff;
+        }
+        .lotto {
+            padding: 30px;
+            text-align: center;
+        }
+        .lotto h3 {
+            padding: 10px 0;
+        }
+        .lottobtn {
+            width: 20%;
+            height: 60px;
+        }
+        .lottonum {
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="border">
+            <div class="lotto">
+                <h3>로또 번호 생성기</h3>
+                <button class="lottobtn">번호 생성</button>
+                <div class="lottonum">번호</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const wrap = document.querySelector("#wrap");
+    const lottoBtn = wrap.querySelector(".lottobtn");
+    const lottoNum = wrap.querySelector(".lottonum");
+
+    lottoBtn.addEventListener("click", function(){
+        let set = new Set(); //S는 대문자
+        for(i=0; i<6; i++){
+            set.add(Math.floor(Math.random() * 45) + 1)
+        }
+
+        let randomNum = Array.from(set)
+        console.log(randomNum)
+        lottoNum.innerHTML = randomNum;
+    });
+</script>
+</html>
