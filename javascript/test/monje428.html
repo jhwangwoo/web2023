@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p428 마무리 문제</title>
+    <link href="https://webfontworld.github.io/ChosunGs/ChosunGs.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             background-color: #333232;
-            color: #fff;
         }
         #wrap {
             width: 1000px;
-            margin: 20% auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .border {
             width: 100%;
-            height: 250px;
+            height: 280px;
             border: 3px solid #fff;
+            border-radius: 10px;
         }
         .lotto {
             padding: 30px;
@@ -27,13 +32,40 @@
         }
         .lotto h3 {
             padding: 10px 0;
+            color: #fff;
+            padding-bottom: 25px;
         }
         .lottobtn {
             width: 20%;
             height: 60px;
+            color: #fff;
+            border-radius: 50px;
         }
         .lottonum {
+            display: flex;
+            text-align: center;
+            justify-content: center;
             padding: 20px 0;
+        }
+        .num_color {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#252525;
+        }
+        .lottonum .num{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-family: 'ChosunGs';
         }
     </style>
 </head>
@@ -43,7 +75,26 @@
             <div class="lotto">
                 <h3>로또 번호 생성기</h3>
                 <button class="lottobtn">번호 생성</button>
-                <div class="lottonum">번호</div>
+                <div class="lottonum">
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                    <div class="num_color">
+                        <div class="num"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -53,6 +104,8 @@
     const wrap = document.querySelector("#wrap");
     const lottoBtn = wrap.querySelector(".lottobtn");
     const lottoNum = wrap.querySelector(".lottonum");
+    const lottocolor = wrap.querySelectorAll(".lottonum .num_color");
+    const lottonumLength = wrap.querySelectorAll(".num_color .num");
 
     lottoBtn.addEventListener("click", function(){
         let set = new Set(); //S는 대문자
@@ -61,8 +114,22 @@
         }
 
         let randomNum = Array.from(set)
-        console.log(randomNum)
-        lottoNum.innerHTML = randomNum;
+        randomNum.forEach((num,i) => {
+
+            if(num <= 10){
+                lottocolor[i].style.background = "#f8ec3e";
+            } else if (num <= 20){
+                lottocolor[i].style.background = "#2947f3";
+            } else if (num <= 30){
+                lottocolor[i].style.background = "#f84848";
+            } else if (num <= 40){
+                lottocolor[i].style.background = "#252525";
+            } else {
+                lottocolor[i].style.background = "#037e03";
+            }  
+            lottonumLength[i].innerHTML = num;
+            lottonumLength[i].style.background = "#fff";
+        });
     });
 </script>
 </html>

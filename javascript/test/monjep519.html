@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>p519 마무리 문제</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/ChosunGs/ChosunGs.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,7 +17,11 @@
         }
         #wrap {
             width: 1000px;
-            margin: 20% auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .border {
             width: 100%;
@@ -27,8 +34,14 @@
         .wisesaying h3 {
             padding: 10px 0;
         }
+        .quote{
+            padding: 20px 0;
+            font-family: 'NexonLv1Gothic';
+        }
         .author {
             padding: 20px 0;
+            font-family: 'ChosunGs';
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,15 +69,14 @@
                 // console.log(datas.quotes[0].quote)
                 let wisesaying = datas.quotes;
                 let Random = Math.trunc(Math.random() * wisesaying.length);
-                let wisesayingRandom = datas.quotes[Random];
+                let wisesayingRandom = wisesaying[Random];
 
                 quote.innerHTML = wisesayingRandom.quote
                 author.innerHTML = wisesayingRandom.author
-                // console.log(wisesayingRandom)
-
+                console.log(wisesayingRandom)
             });
         };
         datawisesaying();
-        setInterval(datawisesaying,1000);
+        setInterval(datawisesaying,10000);
     </script>
 </html>
