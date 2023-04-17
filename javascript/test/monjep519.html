@@ -16,7 +16,7 @@
         body {
             /* background-image: url(img/monje519.jpg); */
             background-size: cover;
-            transition: all 0.1s;
+            transition: all 0.3s;
         }
         #wrap {
             width: 1000px;
@@ -81,7 +81,7 @@
                 let wisesaying = datas.quotes;
                 let Random = Math.trunc(Math.random() * wisesaying.length);
                 let wisesayingRandom = wisesaying[Random];
-
+                
                 quote.innerHTML = wisesayingRandom.quote
                 author.innerHTML = wisesayingRandom.author
                 // console.log(wisesayingRandom)
