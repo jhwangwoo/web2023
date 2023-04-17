@@ -12,11 +12,11 @@
             margin: 0;
             padding: 0;
             color: #fff;
-
         }
         body {
-            background-image: url(img/monje519.jpg);
+            /* background-image: url(img/monje519.jpg); */
             background-size: cover;
+            transition: all 0.1s;
         }
         #wrap {
             width: 1000px;
@@ -62,8 +62,16 @@
 </body>
     <script>
         const quote = document.querySelector(".quote");
-        const author = document.querySelector(".author span");
-        
+        const author = document.querySelector(".author span");  
+
+        const bgimg = () => {
+            fetch(`https://source.unsplash.com/random/?wallpapers`)
+            .then((imgs) => {
+                let imgurl = imgs.url
+                console.log(imgurl)
+                document.body.style.backgroundImage = 'url('+imgurl+')'
+            });
+        }
 
         const datawisesaying = () => {
             fetch("json/dummy01.json")
@@ -78,6 +86,7 @@
                 author.innerHTML = wisesayingRandom.author
                 // console.log(wisesayingRandom)
             });
+            bgimg();
         };
         datawisesaying();
         setInterval(datawisesaying,10000);
