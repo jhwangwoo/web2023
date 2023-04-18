@@ -192,19 +192,44 @@
             //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop;
             // }
 
-            //foreEach
-            document.querySelectorAll(".info li").forEach((element, i) => {
-                document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop;
-
-            //for in
-            for(let i in document.querySelectorAll(".info li")){
-                document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop;
-            }
+            // foreEach
+            // document.querySelectorAll(".info li").forEach((el, i) => {
+            //     document.querySelector(".info .offset"+(i+1)).innerText = document.getElementById("section"+(i+1)).offsetTop;
+            // });
 
             //for of
+            // const h = document.querySelectorAll(".info li");
+            // let infoindex = 0;
+            // for(let i of h){
+            //     infoindex++;
+            //     i.querySelector("span").innerText = document.getElementById("section"+infoindex).offsetTop;
+            // }
+
+
+            //for in
+            // const h = document.querySelectorAll(".info li");
+            // let infoindex = 0;
+            // for (let i in h){
+            //     // console.log(i)
+            //     if(h.hasOwnProperty(i)){
+            //         // console.log(i)
+            //         infoindex++;
+            //         h[i].querySelector("span").innerText = document.getElementById("section" + infoIndex).offsetTop;
+            //     }
+            // }
+            //for in 문
+            const a = document.querySelectorAll(".info ul li");
+            let infoIndex = 0;
+            for (let i in a) {
+                if (a.hasOwnProperty(i)) {
+                    infoIndex++;
+                    a[i].querySelector("span").innerText = document.getElementById("section" + infoIndex).offsetTop;
+                }
+            }
+
 
             // console.log(document.documentElement.scrollTop);
-            });
+
         });
         document.querySelectorAll(".Parallax__nav li a").forEach(li => {
             li.addEventListener("click", (e) => {
@@ -214,6 +239,7 @@
                 });
             });
         });
+        
     </script>
 </body>
 </html> 
