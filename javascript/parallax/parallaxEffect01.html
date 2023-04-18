@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>패럴렉스 이펙트07</title>
+    <title>패럴렉스 이펙트01</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/Parallax.css">
@@ -158,10 +158,6 @@
     <!-- footer -->
 
     <script>
-        // 선택자
-        const scrollY = document.querySelector(".scroll span");
-        
-
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset+500 || window.scrollY+500 || document.documentElement.scrollTop+500;
             
@@ -207,26 +203,16 @@
 
 
             //for in
-            // const h = document.querySelectorAll(".info li");
-            // let infoindex = 0;
-            // for (let i in h){
-            //     // console.log(i)
-            //     if(h.hasOwnProperty(i)){
-            //         // console.log(i)
-            //         infoindex++;
-            //         h[i].querySelector("span").innerText = document.getElementById("section" + infoIndex).offsetTop;
-            //     }
-            // }
-            //for in 문
-            const a = document.querySelectorAll(".info ul li");
-            let infoIndex = 0;
-            for (let i in a) {
-                if (a.hasOwnProperty(i)) {
-                    infoIndex++;
-                    a[i].querySelector("span").innerText = document.getElementById("section" + infoIndex).offsetTop;
+            const h = document.querySelectorAll(".info li");
+            let infoindex = 0;
+            for (let i in h){
+                // console.log(i)
+                if(h.hasOwnProperty(i)){
+                    // console.log(i)
+                    infoindex++;
+                    h[i].querySelector("span").innerText = document.getElementById("section" + infoindex).offsetTop;
                 }
             }
-
 
             // console.log(document.documentElement.scrollTop);
 
