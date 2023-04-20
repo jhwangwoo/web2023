@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "ReciaSerifDisplay";
+        }
+        body {
+            height: 20000px;
+            background-color: #E0E4DD;
+            position: relative;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .img__inner {
+            width: 40vw;
+            height: 100vh;
+            /* background-color: #fff; */
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .s1-img1 {
+            width: 19vh;  
+            height: 100vh;
+        }
+        
+        /* .s1-img1 > div:nth-child(1) {padding: 0 40vh;}
+        .s1-img1 > div:nth-child(2) {padding: 0 30vh;}
+        .s1-img1 > div:nth-child(3) {padding: 0 20vh;}
+        .s1-img1 > div:nth-child(4) {padding: 0 10vh;}
+        .s1-img1 > div:nth-child(5) {padding: 0 0vh;} */
+        /* .s1-img1 > div {
+            width: 50vh;
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+        .s1-img1 > div> div {
+            width: 18vh;
+            height: 18vh;
+            position: absolute;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            filter: saturate(0%);
+            right: 70vw;
+            top: 55vw;
+        }
+        .s1-img2 {
+            width: 19vh;
+            height: 100vh;    
+        } 
+        /* .s1-img2 > div {
+            width: 50vh;
+            height: 20vh;
+        } */
+        .s1-img2 > div> div {
+            width: 18vh;
+            height: 18vh;
+            position: absolute;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 5px solid #000;
+            filter: saturate(0%);
+            left: 70vw;
+        }
+        .s2-text2 {
+            background-color: #777373;
+
+            color:#fff;
+            z-index: 1;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image:url(https://source.unsplash.com/500x500/?coding);
+            
+        
+        }
+        .s2-text2 > div{
+
+        }
+  
+
+        .s1-img1-1 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?blue);}
+        .s1-img2-1 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?red);}
+        .s1-img1-2 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?white);}
+        .s1-img2-2 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?sliver);}
+        .s1-img1-3 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?pink);}
+        .s1-img2-3 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?green);}
+        .s1-img1-4 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?gray);}
+        .s1-img2-4 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?yellow);}
+        .s1-img1-5 > div:first-child {background-image: url(https://source.unsplash.com/500x500/?purple);}
+        .s1-img2-5 > div:last-child {background-image: url(https://source.unsplash.com/500x500/?black);}
+
+        
+    </style>
+
+    <link href="https://webfontworld.github.io/recia/ReciaSerifDisplay.css" rel="stylesheet">
+</head>
+<body>
+    <div class="scrollTop"></div>
+    <section id="section1">
+        <div class="s1-text1 fixed"
+            data-0= "font-size: 0vw; opacity: 1"
+            data-1000= "font-size: 30vw; opacity: 1"
+            data-2000= "font-size: 30vw; opacity: 1"
+            data-3000= "font-size: 0vw; opacity: 0"
+        >hello</div>
+        <div class="s1-text2 fixed"
+            data-2000= "font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg)"
+            data-3000= "font-size: 40vw; transform: translate(-50%, -50%) rotate(720deg)"
+        >World</div>
+        <div class="img__inner fixed">
+            <div class="s1-img1">
+                <div class="s1-img1-1">
+                    <div
+                    data-3500= "right: 70vw; top: 40vw"
+                    data-4500= "right: 50vw; top: 40vw"
+                    data-5500= "right: 50vw; top: 0vw"
+                    data-9000= "right: 50vw; top: 0vw"
+                    data-10000= "right: 100vw; top: 0vw"
+                    ></div>
+                </div>
+            
+                <div class="s1-img1-2">
+                    <div
+                    data-4000= "right: 70vw; top: 40vw"
+                    data-5000= "right: 50vw; top: 40vw"
+                    data-6000= "right: 50vw; top: 10vw"
+                    data-10000= "right: 50vw; top: 10vw"
+                    data-11000= "right: 100vw; top: 10vw"
+                    ></div>
+                </div>
+            
+                <div class="s1-img1-3">
+                    <div
+                    data-4500= "right: 70vw; top: 40vw"
+                    data-5500= "right: 50vw; top: 40vw"
+                    data-6500= "right: 50vw; top: 20vw"
+                    data-8000= "right: 50vw; top: 20vw"
+                    data-9000= "right: 100vw; top: 20vw"
+
+                    ></div>
+                </div>
+            
+                <div class="s1-img1-4">
+                    <div
+                    data-5000= "right: 70vw; top: 40vw"
+                    data-6000= "right: 50vw; top: 40vw"
+                    data-7000= "right: 50vw; top: 30vw"
+                    data-12000= "right: 50vw; top: 30vw"
+                    data-13000= "right: 100vw; top: 30vw"
+
+                    ></div>
+                </div>
+            
+                <div class="s1-img1-5">
+                    <div
+                    data-5500= "right: 70vw; top: 40vw"
+                    data-6500= "right: 50vw; top: 40vw"
+                    data-7500= "right: 50vw; top: 40vw"
+                    data-11000= "right: 50vw; top: 40vw"
+                    data-12000= "right: 100vw; top: 40vw"
+                    ></div>
+                </div>
+            </div>
+        
+            <div class="s1-img2">
+                <div class="s1-img2-1">
+                    <div
+                    data-3500= "left: 70vw; top: 0vw"
+                    data-4500= "left: 50vw; top: 0vw"
+                    data-5500= "left: 50vw; top: 40vw"
+                    data-12000= "left: 50vw; top: 40vw"
+                    data-13000= "left: 100vw; top: 40vw"
+
+                    ></div>
+                </div>
+            
+                <div class="s1-img2-2">
+                    <div
+                    data-4000= "left: 70vw; top: 0vw"
+                    data-5000= "left: 50vw; top: 0vw"
+                    data-6000= "left: 50vw; top: 30vw"
+                    data-8000= "left: 50vw; top: 30vw"
+                    data-9000= "left: 100vw; top: 30vw"
+                    ></div>
+                </div>
+            
+                <div class="s1-img2-3">
+                    <div
+                    data-4500= "left: 70vw; top: 0vw"
+                    data-5500= "left: 50vw; top: 0vw"
+                    data-6500= "left: 50vw; top: 20vw"
+                    data-10000= "left: 50vw; top: 20vw"
+                    data-11000= "left: 100vw; top: 20vw"
+
+                    ></div>
+                </div>
+            
+                <div class="s1-img2-4">
+                    <div
+                    data-5000= "left: 70vw; top: 0vw"
+                    data-6000= "left: 50vw; top: 0vw"
+                    data-7000= "left: 50vw; top: 10vw"
+                    data-9000= "left: 50vw; top: 10vw"
+                    data-10000= "left: 100vw; top: 10vw"
+                    ></div>
+                </div>
+            
+                <div class="s1-img2-5">
+                    <div
+                    data-5500= "left: 70vw; top: 0vw"
+                    data-6500= "left: 50vw; top: 0vw"
+                    data-7500= "left: 50vw; top: 0vw"
+                    data-11000= "left: 50vw; top: 0vw"
+                    data-12000= "left: 100vw; top: 0vw"
+                    ></div>
+                </div>    
+            </div>
+        </div>
+        <div class="s2-text2 fixed"
+        data-13000= "width: 0vh; height: 0vh; font-size; 0vw; top:50%; left:50%;transform: translate(-50%, -50%); opacity: 1"
+        data-13500= "width: 1vh; height: 1vh; font-size: 0vw; top:50%; left:50%; opacity: 1"
+        data-14000= "width: 1vh; height: 1vh; font-size: 0vw; top:50%; left:50%; opacity: 1"
+        data-14500= "width: 200vh; height: 1vh; font-size: 10vw; top:50%; left:50%; opacity: 1"
+        data-15000= "width: 200vh; height: 100vh; font-size: 10vw; top:50%; left:50%; opacity: 1"
+        >ㅇㅇㅇ
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+    </section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+        let s = skrollr.init();
+
+        window.addEventListener("scroll", () =>{
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scrollTop").innerText = scrollTop;
+        });
+    </script>
+</body>
+</html>
