@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>d</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+        }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container2 {
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #wrap {
+        }
+        #main {
+            padding-top: 40px;
+            
+        }
+        #section {
+
+        }
+        #nav {
+            width: 22%;
+            padding-left: 10px;
+        }
+        #nav img {
+            width: 150px;
+            padding-bottom: 40px;
+        }
+
+
+        .nav__wrap li{
+            font-size: 24px;
+            padding: 10px 0;
+        }
+        .nav__inner li{
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+        }
+        #section {
+            width: 75%;
+        }
+        .banner {
+            height: 412px;
+            overflow: hidden;
+        }
+        .banner__inner {
+
+        }
+        .imgs {
+            height: 412px;
+        }
+        .textcard {
+            text-align: center;
+        }
+        .textcard h2 {
+            padding: 50px 0;
+        }
+        .text__inner {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            padding-bottom: 40px;
+        }
+        .text__inner img{
+            padding: 10px;
+        }
+        .text__inner > div{
+            width: 17%;
+        }
+        .card__inner {
+            height: 330px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #eee;
+        }
+        .card__inner > div {
+            width: 28%;
+            height: 50px;
+            padding: 20px 10px;
+            border: 1px solid #e1e1e1;
+            background-color: #fff;
+            font-size: 10.4px;
+            line-height: 1.7;
+            
+        }
+        .card__inner .card1 {
+            height: 250px;
+        }
+        .card__inner .card2 {
+            height: 250px;
+        }
+        .card__inner .card3 {
+            height: 250px;
+        }
+        .card__inner img {
+            width: 100px;
+            padding: 30px 0;
+        }
+        #footer {
+            margin-top: 20px;
+            text-align: left;
+            background-color: #eee;
+        }
+        #footer div:first-child img {
+            width: 100px;
+        }
+    </style>
+    
+</head>
+<body>  
+    <div id="wrap">
+        <main id="main">
+            <div class="container">
+                <nav id="nav">
+                    <div>
+                        <img src="imgs/logo01.jpg" alt="정부24">
+                    <div>
+                     <ul class="nav__wrap">
+                        <li><a href="#">서비스</a>
+                            <ul class="nav__inner">
+                                <li><a href="#">분야별 정책정보</a></li>
+                                <li><a href="#">정책뉴스</a></li>
+                                <li><a href="#">연구보고서</a></li>
+                                <li><a href="#">간행물</a></li>
+                                <li><a href="#">정책자료</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">정책정보</a></li>
+                        <li><a href="#">연구보고서</a></li>
+                        <li><a href="#">간행물</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                </nav>
+                <section id="section">
+                    <div class="banner">
+                        <div class="banner__inner">
+                            <div class="imgs"><img src="imgs/banner01.jpg" alt="새로운시작"></div>
+                            <div class="imgs"><img src="imgs/banner01.jpg" alt="새로운시작"></div>
+                            <div class="imgs"><img src="imgs/banner01.jpg" alt="새로운시작"></div>
+                            <div class="imgs"><img src="imgs/banner01.jpg" alt="새로운시작"></div>
+                        </div>
+                    </div>
+                    <div class="textcard">
+                        <h2>자주 찾는 서비스 | 키워드 서비스</h2>
+                        <div class="text__inner">
+                            <div class="text1">
+                                <div><img src="imgs/icon01.jpg" alt="주민등록표등본">주민등록록표<br>등본</div>
+                            </div>
+                            <div class="text2">
+                                <div><img src="imgs/icon02.jpg" alt="토지(임야)대장열람/등본 발급신청">토지(임야)대장<br>열람/등본 발급신청</div>
+                            </div>
+                            <div class="text3">
+                                <div><img src="imgs/icon03.jpg" alt="건축물대장 등/초본발급(열람) 신청">건축물대장 등/초본<br>발급(열람) 신청</div>
+                            </div>
+                            <div class="text4">
+                                <div><img src="imgs/icon04.jpg" alt="지방세 납세증명">지방세 납세증명</div>
+                            </div>
+                            <div class="text5">
+                                <div><img src="imgs/icon05.jpg" alt="지적도(암야도) 등본발급 및 열람">지적도(암야도) 등본<br>발급 및 열람</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__inner">
+                        <div class="card1">
+                            <a href="#"><h2>공지사항</h2></a>
+                            <div><img src="imgs/icon06.jpg" alt="공지사항"></div>
+                            <ul>
+                                <li>· [어디서나 대학민원]호서대학교 팩스...</li>
+                                <li>· [전라북도 고창군] 새올행정시스템 D...</li>
+                                <li>· 교육부 행정 전자 서명 인증 센터 시스템...</li>
+                            </ul>
+                        </div>
+                        <div class="card2">
+                            <a href="#"><h2>자료실</h2></a>
+                            <div><img src="imgs/icon07.jpg" alt="자료실"></div>
+                            <ul>
+                                <li>· [어디서나 대학민원]호서대학교 팩스...</li>
+                                <li>· [전라북도 고창군] 새올행정시스템 D...</li>
+                                <li>· 교육부 행정 전자 서명 인증 센터 시스템...</li>
+                            </ul>
+                        </div>
+                        <div class="card3">
+                            <a href="#"><h2>FAQ</h2></a>
+                            <div><img src="imgs/icon08.jpg" alt="FAQ"></div>
+                            <ul>
+                                <li>· [어디서나 대학민원]호서대학교 팩스...</li>
+                                <li>· [전라북도 고창군] 새올행정시스템 D...</li>
+                                <li>· 교육부 행정 전자 서명 인증 센터 시스템...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer id="footer">
+                <div class="container2">
+                    <div><img src="imgs/logo02.jpg" alt="정부24"></div>
+                    <div>
+                        03171 서울특별시 세종대로 209 (세종로) 행정안전부<br>
+                        정부24 콜센터 1588-2188 정부민원 안내콜센터 국번없이 110<br>
+                        Copyright ⓒ Ministry of the interior and Safety.All Rights reser ved.
+                    </div>
+                    <div><img src="imgs/icon09.jpg" alt="">
+                    <img src="imgs/icon10.jpg" alt="">
+                    <img src="imgs/icon11.jpg" alt=""></div>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+</body>
+<script>
+    const slider = document.querySelectorAll(".imgs");
+    // console.log(slider)
+    const sliderinner = document.querySelector(".banner__inner");
+    const sliderHeight = slider[0].offsetHeight;
+    const sliderlegth =slider.length
+    // console.log(sliderHeight);
+    const time = 1000;    
+    let count = 1;
+
+    sliderinner.style.transform = "translateY("+(-(sliderHeight*(sliderlegth-1)))+"px)";
+    
+
+    setInterval(() => {
+        count = (count - (sliderlegth-1)) % sliderlegth;
+        console.log(count);
+        
+        sliderinner.style.transition = "all 0.6s"
+        
+        sliderinner.style.transform = "translateY("+ sliderHeight * count +"px)"
+    }, time);
+
+</script>
+</html>
