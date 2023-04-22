@@ -113,10 +113,10 @@
                 <div id="sample02" class="sample"> 
                     <h3>02. charAt()</h3>
                     <div class="notice">"문자열".charAt(위치값)</div>
-                    <ul>
-                        <li>문자열(String) 객체의 메서드 중 하나로, 특정 인덱스(index)에 해당하는 문자(character)를 반환합니다.</li>
-                        <li>주어진 인덱스의 문자를 반환합니다. 인덱스가 유효하지 않은 경우, 즉 문자열의 길이를 벗어나는 인덱스를 사용하는 경우, 빈 문자열('')을 반환합니다.</li>
-                    </ul>
+                <ul>
+                    <li>문자열(String) 객체의 메서드 중 하나로, 특정 인덱스(index)에 해당하는 문자(character)를 반환합니다.</li>
+                    <li>주어진 인덱스의 문자를 반환합니다. 인덱스가 유효하지 않은 경우, 즉 문자열의 길이를 벗어나는 인덱스를 사용하는 경우, 빈 문자열('')을 반환합니다.</li>
+                </ul>
                     <div class="script">
 <pre><code class="language-js">{
     "javascript refercence".charAt(0);   //"j"
@@ -133,7 +133,7 @@
 
                 <div id="sample03" class="sample"> 
                     <h3>03. charCodeAt()</h3>
-                    <div class="notice">"문자열".charAt(위치값)</div>
+                    <div class="notice">"문자열".charCodeAt(위치값)</div>
                     <ul>
                         <li>특정 인덱스(index)에 해당하는 문자(character)의 코드 유닛값(Unicode code point)을 반환합니다.</li>
                         <li>코드 유닛값(Unicode code point)이란 프로그램에서 문자를 인식하기 위한 유니코드(Unicode) 인코딩 방식 중 하나입니다.</li>
@@ -155,7 +155,7 @@
 
                 <div id="sample04" class="sample"> 
                     <h3>04. codePointAt()</h3>
-                    <div class="notice">"문자열".charPointAt(위치값)</div>
+                    <div class="notice">"문자열".codePointAt(위치값)</div>
                     <ul>
                         <li>특정 위치(index)에 있는 문자(character)의 코드 포인트(code point)를 반환합니다.</li>
                         <li>코드 포인트란 유니코드(Unicode)에서 문자를 나타내기 위해 할당된 고유한 값을 의미합니다. 이 값은 UTF-16에서 2바이트 이상의 문자를 표현할 때에는 여러 개의 유니코드 코드 포인트를 결합하여 만들어집니다.</li>
@@ -177,7 +177,7 @@
 
                 <div id="sample05" class="sample"> 
                     <h3>05. concat()</h3>
-                    <div class="notice">"배열1".concat(배열2)</div>
+                    <div class="notice">배열1.concat(배열2)</div>
                     <ul>
                         <li>두 개 이상의 배열을 연결(concatenate)하여 새로운 배열을 만듭니다.</li>
                         <li>기존의 배열에 새로운 요소를 추가하는 push() 메서드와는 달리, 두 개 이상의 배열을 연결하여 하나의 배열로 만드는 것이 목적입니다. 이 메서드는 인자로 전달한 배열들을 연결하여 새로운 배열을 반환하며, 원본 배열은 변경되지 않습니다.</li>
@@ -354,7 +354,7 @@
 
                 <div id="sample12" class="sample"> 
                     <h3>12. normalize()</h3>
-                    <div class="notice">"문자열1"normalize() === "문자열2".normalize().</div>
+                    <div class="notice">"문자열1"normalize() === "문자열2".normalize()</div>
                     <ul>
                         <li>문자열에서 발생하는 Unicode 정규화 문제를 해결하기 위해 사용됩니다.</li>
                         <li>Unicode는 문자를 표현하는 표준 방식이지만, 문자를 표현하는 방법이 여러 가지로 나뉘어져 있습니다. 이러한 다양한 표현 방식으로 인해 문자열 비교, 검색, 정렬 등의 작업이 원하는 결과를 내지 못할 수 있습니다. 이때, normalize() 메서드를 사용하여 문자열을 표준화하여 사용할 수 있습니다.</li>
