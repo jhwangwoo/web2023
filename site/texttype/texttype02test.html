@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형2</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nexon {
+            font-family: "NexonLv1Gothic";
+        }
+        .container {
+            width: 1150px;
+            margin: 0 auto;
+            padding: 120px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container > div:first-child {
+            width: 30%;
+        }
+        .container > div:first-child h1 {
+            font-size: 50px;
+            padding: 18px 0 40px;
+
+        }
+        .container > div:first-child p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .container > div:last-child {
+            width: 70%;
+        }
+        #text__wrap {
+        }
+        .red {
+            content:'';
+            padding: 3px 30px 3px;
+            border-radius: 30px;
+            background-color: #f34;
+            color: #fff;
+            font-size: 14px;
+        }
+        .text__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner > .text {
+            width: 48%;
+            height: 190px;
+            padding-top: 60px;
+            position: relative;
+            
+        }
+        .text__inner > .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+            
+        }
+        .text__inner > div h2 {
+            font-size: 24px;
+            padding: 10px 0 27px ;
+        }
+        .text__inner > div p {
+            font-size: 18px;
+        }
+        .text__inner > .text.t1::before {
+            background-color: rgba(72, 236, 157, 0.2);
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text__inner > .text.t2::before {
+            background-color: rgba(141, 255, 51, 0.2);
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text__inner > .text.t3::before {
+            background-color: rgba(247, 109, 109, 0.2);
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner > .text.t4::before {
+            background-color: rgba(72, 87, 236, 0.2);
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="text__wrap nexon">
+        <div class="container">
+            <div>
+                <span class="red">FRONTEND</span>
+                <h1>프론트앤드<br>전문과정</h1>
+                <p>프론트앤드 개발자로 취업하기 위한<br>
+                    전문 과정입니다.<br>
+                    여러분들도 도전해보세요!</p>
+            </div>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h2>웹디자인</h2>
+                    <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할 </p>
+                </div>
+                <div class="text t2">
+                    <h2>웹 퍼블리셔</h2>
+                    <p>퍼블리싱은 웹 사이트를 제작할 때, 웹 디자이너가 디자인한 것을 웹 표준성과 접근성에 부합하도록 재정하였다.</p>
+                </div>
+                <div class="text t3">
+                    <h2>프론트앤드 개발자</h2>
+                    <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.</p>
+                </div>
+                <div class="text t4">
+                    <h2>백앤드 개발자</h2>
+                    <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

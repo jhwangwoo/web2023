@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME Effect</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../game/css/bg.css">
     <link rel="stylesheet" href="../game/css/game.css">
     <link rel="stylesheet" href="../game/css/reset.css">
+    <link rel="stylesheet" href="../game/css/music.css">
+    
 </head>
 <body>
     <div class="cursor">
@@ -39,6 +42,51 @@
                 <span>노랑 음악 듣기</span>
             </div>
         </div>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>Music</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view10.png" alt="음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>노래 작가 이림</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/music_audio_01.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재생</span>
+                            <span>재생</span>
+                            <span>다음곡 재생</span>
+                            <span>재생 목록</span>
+                            <!-- <span>한곡 반복</span>
+                            <span>랜덤 반복</span>
+                            <span>정지 반복</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
+        </div>
+        <!-- 뮤직 플레이어 -->
     </main>
     <footer id="footer">
         <div class="info">현재 맥을 사용하고 있으며, 화면 크기는 1920 X 760 입니다.</div>
@@ -49,6 +97,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src= "js/music.js"></script>
     <script>
         // $(".icon1").draggable({containment:".ion__box", scroll: false});
         // $(".icon2").draggable();
@@ -145,22 +194,34 @@
         }
         printAgent();
 
+        function printTime(){
+            const time = document.querySelector(".time");
+            const now = new Date();
+
+            time.innerHTML = now.getFullYear() + "년 " +
+            (now.getMonth()+1) + "월 " +
+            now.getDate() + "일 " +
+            now.getHours() + "시 " +
+            now.getMinutes() + "분 "
+            setTimeout("printTime()", 1000);
+        };
+    
 
         //현재 시간
-        const printTime = () => {
-            const now = new Date();
-            const options = {
-                year: 'numeric',
-                month: 'long',   //month 옵션에서는 'numeric'이 아닌 'long' 값을 사용하면 해당 월을 한글로 표현할 수 있다.
-                day: '2-digit',  //long,2-digit로 바꾸면 한글이 나온다.
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric',
-                hour12: false, // 24시간제로 표시
-            };
-            const dateTimeString = now.toLocaleString('ko-KR', options);
-            document.querySelector(".time").innerHTML = dateTimeString
-        };
+        // const printTime = () => {
+        //     const now = new Date();
+        //     const options = {
+        //         year: 'numeric',
+        //         month: 'long',   //month 옵션에서는 'numeric'이 아닌 'long' 값을 사용하면 해당 월을 한글로 표현할 수 있다.
+        //         day: '2-digit',  //long,2-digit로 바꾸면 한글이 나온다.
+        //         hour: 'numeric',
+        //         minute: 'numeric',
+        //        // second: 'numeric',
+        //         hour12: false, // 24시간제로 표시
+        //     };
+        //     const dateTimeString = now.toLocaleString('ko-KR', options);
+        //     document.querySelector(".time").innerHTML = dateTimeString
+        // };
         printTime();
         setInterval(printTime, 1000);
     </script>
