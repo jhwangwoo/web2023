@@ -59,7 +59,7 @@ const musicArtist = musicWrap.querySelector(".music__control .title p");
 const musicView = musicWrap.querySelector(".music__view .image img");
 const musicAudio = musicWrap.querySelector("#main-audio");
 const musicPlay = musicWrap.querySelector("#control-play");
-let musicIndex = 1; //현재 음악 인덱스
+let musicIndex = 7; //현재 음악 인덱스
 
 //음악 재생
 const loadMusic = (num) => {
@@ -67,14 +67,14 @@ const loadMusic = (num) => {
     musicArtist.innerText = allMusic[num-1].artist;         //뮤직 아티스트
     musicView.src = `img/${allMusic[num-1].img}.png`;       //뮤직 이미지
     musicView.alt = allMusic[num-1].name;                   //뮤직 이미지 alt
-    musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`   //뮤직 파일
+    musicAudio.src = `audio/${allMusic[num-1].audio}.mp3`;   //뮤직 파일
 };
 
 
 //플레이 버튼 클릭
-musicPlay.addEventListener("click", () => {
-    musicAudio.play();
-});
+// musicPlay.addEventListener("click", () => {
+//     musicAudio.play();
+// });
 
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
