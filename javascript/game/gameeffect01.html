@@ -205,34 +205,34 @@
         }
         printAgent();
 
-        function printTime(){
-            const time = document.querySelector(".time");
-            const now = new Date();
+        // function printTime(){
+        //     const time = document.querySelector(".time");
+        //     const now = new Date();
 
-            time.innerHTML = now.getFullYear() + "년 " +
-            (now.getMonth()+1) + "월 " +
-            now.getDate() + "일 " +
-            now.getHours() + "시 " +
-            now.getMinutes() + "분 "
-            setTimeout("printTime()", 1000);
-        };
+        //     time.innerHTML = now.getFullYear() + "년 " +
+        //     (now.getMonth()+1) + "월 " +
+        //     now.getDate() + "일 " +
+        //     now.getHours() + "시 " +
+        //     now.getMinutes() + "분 "
+        //     setTimeout("printTime()", 1000);
+        // };
     
 
-        //현재 시간
-        // const printTime = () => {
-        //     const now = new Date();
-        //     const options = {
-        //         year: 'numeric',
-        //         month: 'long',   //month 옵션에서는 'numeric'이 아닌 'long' 값을 사용하면 해당 월을 한글로 표현할 수 있다.
-        //         day: '2-digit',  //long,2-digit로 바꾸면 한글이 나온다.
-        //         hour: 'numeric',
-        //         minute: 'numeric',
-        //        // second: 'numeric',
-        //         hour12: false, // 24시간제로 표시
-        //     };
-        //     const dateTimeString = now.toLocaleString('ko-KR', options);
-        //     document.querySelector(".time").innerHTML = dateTimeString
-        // };
+        // 현재 시간
+        const printTime = () => {
+            const now = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',   //month 옵션에서는 'numeric'이 아닌 'long' 값을 사용하면 해당 월을 한글로 표현할 수 있다.
+                day: '2-digit',  //long,2-digit로 바꾸면 한글이 나온다.
+                hour: 'numeric',
+                minute: 'numeric',
+               // second: 'numeric',
+                hour12: false, // 24시간제로 표시
+            };
+            const dateTimeString = now.toLocaleString('ko-KR', options);
+            document.querySelector(".time").innerHTML = dateTimeString
+        };
         printTime();
         setInterval(printTime, 1000);
     </script>

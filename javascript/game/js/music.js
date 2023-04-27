@@ -53,6 +53,7 @@ const allMusic = [
     
 ];
 
+//선택자
 const musicWrap = document.querySelector(".music__wrap");
 const musicName = musicWrap.querySelector(".music__control .title h3");
 const musicArtist = musicWrap.querySelector(".music__control .title p");
@@ -68,7 +69,7 @@ const musicProgressDuration = musicWrap.querySelector(".progress .timer .duratio
 
 let musicIndex = 1; //현재 음악 인덱스
 
-//음악 재생
+//음악 재생 파일
 const loadMusic = (num) => {
     musicName.innerText = allMusic[num-1].name;             //뮤직 이름
     musicArtist.innerText = allMusic[num-1].artist;         //뮤직 아티스트
@@ -116,7 +117,7 @@ const nextMusic = () => {
 musicAudio.addEventListener("timeupdate", e => {
     const currentTime = e.target.currentTime;           //재생되는시간
     const duration = e.target.duration;                 //오디오의 총길이
-    let progressWidth = (currentTime/duration) * 100 ;  //전체길이에서 현재 진행되는 시간을 백분위 단위로 나누는
+    let progressWidth = (currentTime/duration) * 100 ;  //전체길이에서 현재 진행되는 시간을 백분위 단위로 나누면 그값의 width값을 알수 있다.
 
     musicProgressBar.style.width = `${progressWidth}%`
 
@@ -168,7 +169,7 @@ musicNextbtn.addEventListener("click", () => {
     nextMusic();
 });
 
-
+//윈도우 로드시 발생
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
 });
