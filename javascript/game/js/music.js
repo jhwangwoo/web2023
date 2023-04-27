@@ -149,7 +149,6 @@ musicProgress.addEventListener("click", (e) => {
     
 });
 
-
 // 플레이 버튼
 musicPlay.addEventListener("click", () => {
     const isMUsicPaused = musicWrap.classList.contains("paused");//클라스가 있는지 확인하는contains 음악재생중
@@ -164,19 +163,10 @@ musicPrevbtn.addEventListener("click", () => {
 });
 
 
-
 //다음곡 듣기 버튼
 musicNextbtn.addEventListener("click", () => {
     nextMusic();
 });
-
-
-
-
-
-
-
-
 
 
 window.addEventListener("load", () => {
