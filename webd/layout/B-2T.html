@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 타입02(B-2)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #ccc;
+        }
+        #header .container {
+            display: flex;
+        }
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #f72585;
+        }
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #b5179e;
+        }
+        #slider .container{
+            height: 300px;
+            background-color: #7209b7;
+
+        }
+        #section .container {
+            display: flex;
+        }
+        #section .container .cont1{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #480ca8;
+        }
+        #section .container .cont2{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #3a0ca3;
+        }
+        #section .container .cont3{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #3f37c9;
+        }
+        #footer {
+            background-color: #ccc;
+        }
+        #footer .container {
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #footer .container .cont1 {
+            width: 80%;
+            height: 100px;
+            background-color: #4361ee;
+        }
+        #footer .container .cont2 {
+            width: 20%;
+            height: 50px;
+            background-color: #4895ef;
+        }
+        #footer .container .cont3 {
+            width: 20%;
+            height: 50px;
+            background-color: #4cc9f0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">로고</div>
+            <nav class="nav">메뉴</nav>
+        </div>
+    </header>
+    <!--//header-->
+    <article id="slider">
+        <div class="container">
+        슬라이드
+        </div>
+    </article>
+    <!--//slider-->
+    <section id="section">
+        <div class="container">
+            <article class="cont1">공지사항/갤러리</article>
+            <article class="cont2">배너</article>
+            <article class="cont3">바로가기</article>
+        </div>
+    </section>
+    <!--//contents-->
+    <footer id="footer">
+        <div class="container">
+            <div class="cont1">로고</div>
+            <div class="cont2">하단메뉴</div>
+            <div class="cont3">카피라이터</div>
+        </div>
+    </footer>
+    <!--//footer-->
+</body>
+</html>

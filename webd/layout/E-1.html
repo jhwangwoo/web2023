@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E-1유형실기 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            background-color: #d3c9c9;
+        }
+        #main {
+            width: 100%;    
+            height: calc(100vh - 120px);
+            background-color: #b16060;
+            display: flex;
+        }
+        .aside {
+            width: 200px;
+            height: calc(100vh - 120px);
+            background-color: #af8d8d;
+        }
+        .aside h1 {
+            width: 200px;
+            height: 22%;
+            background-color: #614242;
+        }
+        .aside nav {
+            width: 200px;
+            height: 78%;
+            background-color: #b35c5c;
+        }
+        .section {
+            width: 400px;
+            height: calc(100vh - 120px);
+            background-color: #e66868;
+        }
+        .section .banner {
+            height: 25%; 
+            background-color: #f0c5c5;
+        }
+        .section .text {
+            height: 30%; 
+            background-color: #978d8d;
+        }
+        .section .gall {
+            height: 30%;
+            background-color: #fff;
+        }
+        .section .link {
+            height: 15%;
+            background-color: #976969;
+        }
+        .img {
+            width: calc(100% - 600px);
+            height: calc(100vh - 120px);
+            background-color: #d88a8a;
+        }
+        #footer {
+            width: 100%;
+            height: 120px;
+            background-color: #dfb6b6;
+            display: flex;
+        }
+        #footer h2 {
+            width: 200px;
+            height: 120px;
+            background-color: #555252;
+        }
+        #footer .f1 {
+            width: calc(100% - 200px);
+            height: 120px;
+        }
+        #footer .f1 .fi_1 {
+            height: 60px;
+            background-color: #a08888;
+        }
+        #footer .f1 .fi_2 {
+            height: 60px;
+            background-color: #b99a9a;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <aside class="aside">
+                <h1></h1>
+                <nav></nav>
+            </aside>
+            <section class="section">
+                <div class="banner"></div>
+                <div class="text"></div>
+                <div class="gall"></div>
+                <div class="link"></div>
+            </section>
+            <div class="img"></div>
+        </main>
+        <footer id="footer">
+            <h2></h2>
+            <div class="f1">
+                <div class="fi_1"></div>
+                <div class="fi_2"></div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

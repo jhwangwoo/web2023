@@ -1,116 +1,119 @@
 <!DOCTYPE html>
-<html lang= "ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 타입02(B-1)</title>
+    <title>B-1</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #a75858ee;
+        }
+        #wrap {}
         #header {
             width: 100%;
             height: 100px;
-            background-color: #ccc;
+            background-color: #945454;
         }
         #header .container {
             display: flex;
         }
-        #header .container .logo {
-            width: 20%;
+        #header .container h1 {
+            width: 10%;
             height: 100px;
-            background-color: #a05353;
+            background-color: #0a0808;
         }
-        #header .container .nav {
-            width: 80%;
+        #header .container nav {
+            width: 90%;
             height: 100px;
-            background-color: #a23e3e;
+            background-color: #39c5c5;
         }
-        #slider .container{
+        #main {
+            width: 100%;
+            height: 500px;
+        }
+        #main .container .banner {
+            width: 100%;
             height: 300px;
-            background-color: #7f3c3c;
-
+            background-color: #a74646;
         }
-        #section .container {
+        #main .container > div {
             display: flex;
-        }
-        #section .container .cont1{
-            width: 33.3333%;
+            width: 100%;
             height: 200px;
-            background-color: #bd2d2d;
         }
-        #section .container .cont2{
-            width: 33.3333%;
-            height: 200px;
-            background-color: #ab3d3d;
+        #main .container > div .t1 {
+            width: 33.333%;
+            background-color: #e43333;
         }
-        #section .container .cont3{
-            width: 33.3333%;
-            height: 200px;
-            background-color: #dd2929;
+        #main .container > div .t2 {
+            width: 33.333%;
+            background-color: #2c8288;
+        }
+        #main .container > div .t3 {
+            width: 33.333%;
+            background-color: #86ccd1;
         }
         #footer {
-            background-color: #ccc;
+            width: 100%;
+            height: 100px;
+            background-color: #883131;
         }
         #footer .container {
-            height: 100px;
             display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
         }
-        #footer .container .cont1 {
-            width: 20%;
+        #footer .container h2 {
+            width: 10%;
             height: 100px;
-            background-color: #683535;
+            background-color: #302a2a;
         }
-        #footer .container .cont2 {
-            width: 80%;
+        #footer .container > div {
+            width: 90%;
+        }
+        #footer .f1 {
             height: 50px;
-            background-color: #b76f6f;
-        }
-        #footer .container .cont3 {
-            width: 80%;
+            background-color: #b34343;
+        } 
+        #footer .f2 {
             height: 50px;
-            background-color: #ab5353;
-        }
-        .container {
-            width: 1200px;
-            margin: 0 auto;
-        }
-
+            background-color: #fab0b0;
+        } 
     </style>
 </head>
 <body>
-    <header id="header">
-        <div class="container">
-            <div class="logo">로고</div>
-            <nav class="nav">메뉴</nav>
-        </div>
-    </header>
-    <!--//header-->
-    <article id="slider">
-        <div class="container">
-        슬라이드
-        </div>
-    </article>
-    <!--//slider-->
-    <section id="section">
-        <div class="container">
-            <article class="cont1">공지사항/갤러리</article>
-            <article class="cont2">배너</article>
-            <article class="cont3">바로가기</article>
-        </div>
-    </section>
-    <!--//contents-->
-    <footer id="footer">
-        <div class="container">
-            <div class="cont1">로고</div>
-            <div class="cont2">하단메뉴</div>
-            <div class="cont3">카피라이터</div>
-        </div>
-    </footer>
-    <!--//footer-->
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1></h1>
+                <nav></nav>
+            </div>
+        </header>
+        <main id="main">
+            <div class="container">
+                <section class="banner"></section>
+                <div>
+                    <section class="t1"></section>
+                    <section class="t2"></section>
+                    <section class="t3"></section>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <h2></h2>
+                <div>
+                    <div class="f1"></div>
+                    <div class="f2"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
 </body>
 </html>

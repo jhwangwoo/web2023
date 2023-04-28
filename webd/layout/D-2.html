@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D-2유형실기 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%; 
+            background-color: #cccc;  
+            display: flex;       
+            flex-wrap: wrap;      
+        }
+        #aside {
+            width: 200px;
+            height: 650px;
+            background-color: #4fb15c;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 650px;
+            background-color: #8f2d2d;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .banner {
+            width: calc(100% - 230px);
+            height: 400px;
+            background-color: #65c0b1af;
+        }
+        .img {
+            width: 230px;
+            height: 400px;
+            background-color: #81da39;
+        }
+        .text {
+            width: 100%;
+            height: 250px;
+            background-color: #52bd87;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #db3636;
+            display: flex;
+        }
+        .footer1 {
+            width: 200px;
+            background-color: #d16161;
+        }
+        .footer2 {
+            width: calc(100% - 430px);
+            background-color: #cf1c1ccc;
+        }
+        .footer3 {
+            width: 230px;
+            background-color: #35c06f;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h2></h2>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section class="banner"></section>
+            <section class="img"></section>
+            <section class="text"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+    
+</body>
+</html>
