@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 D-2 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 800px;
+            background-color: #9e4444;
+        }
+        #aside .logo {
+            height: 100px;
+            background-color: #d67a7a;
+        }
+        #aside .nav {
+            height: 700px;
+            background-color: #777517;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 800px;
+            background-color: #a6dd81;
+        }
+        #main .img {
+            height: 400px;
+            background-color: #b4d4f1;
+        }
+        #main .imgs {
+            height: 150px;
+            background-color: #8beee1;
+        }
+        #main .cont {
+            height: 250px;
+            background-color: #6ab89e;
+        }
+        #footer {
+            width: 100%;
+            height: 120px;
+            background-color: #86d461;
+            display: flex;
+        }
+        #footer .f1 {
+            width: 200px;
+            background-color: #dbd469;
+        }
+        #footer .f2 {
+            width: calc(100% - 200px);
+            background-color: #c78e8e;
+            display: flex;
+        }
+        #footer .f2 .f2_1 {
+            width: 80%;
+            background-color: #fff;
+        }
+        #footer .f2 .f2_1 .f2_1_1 {
+            height: 60px;
+            background-color: #ce5555;
+        }
+        #footer .f2 .f2_1 .f2_1_2 {
+            height: 60px;
+            background-color: #6b2d2d;
+        }
+        #footer .f2 .f2_2 {
+            width: 20%;
+            background-color: #9bb48a;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <div class="logo"></div>
+            <nav class="nav"></nav>
+        </aside>
+        <main id="main">
+            <article class="img"></article>
+            <article class="imgs"></article>
+            <article class="cont"></article>
+        </main>
+        <footer id="footer">
+            <div class="f1"></div>
+            <div class="f2">
+                <div class="f2_1">
+                    <div class="f2_1_1"></div>
+                    <div class="f2_1_2"></div>
+                </div>
+                <div class="f2_2"></div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

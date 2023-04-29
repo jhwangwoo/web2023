@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 A-2 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+            background-color: #eee;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #header h2{
+            width: 10%;
+            background-color: #795353;
+        }
+        #header nav{
+            width: 90%;
+            background-color: #a56767;
+        }
+        #main {
+            width: 100%;
+            height: 500px;
+            background-color: #e4cbcb;
+        }
+        #main .slider {
+            height: 300px;
+            background-color: #e9c76a;
+        }
+        #main .section {
+            height: 200px;
+            display: flex;
+        }
+        .section .text {
+            width: 33.333%;
+            background-color: #b48b8b;
+        }
+        .section .gall {
+            width: 33.333%;
+            background-color: #bb7979;
+        }
+        .section .banner {
+            width: 33.333%;
+            background-color: #b66e6e;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            display: flex;
+        }
+        #footer h3 {
+            width: 10%;
+            background-color: #b9e086;
+        }
+        #footer .f1 {
+            width: 77%;
+            background-color: #d0e77e;
+        }
+        #footer .f2 {
+            width: 13%;
+            background-color: #86e45a;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h2>로고</h2>
+            <nav>메뉴</nav>
+        </header>
+        <main id="main">
+            <article class="slider">이미지슬라이드</article>
+            <section class="section">
+                <article class="text">공지사항</article>
+                <article class="gall">갤러리</article>
+                <article class="banner">배너</article>
+            </section>
+        </main>
+        <footer id="footer">
+            <h3>로고</h3>
+            <div class="f1">copy</div>
+            <div class="f2">패밀리사이트</div>
+        </footer>
+    </div>
+    
+</body>
+</html>

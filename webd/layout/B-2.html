@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>웹디자인 기능사 B-2 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #wrap {}
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #e9a9a9;
+        }
+        #header .container {
+            display: flex;
+        }
+        #header .container h2{
+            width: 15%;
+            height: 100px;
+            background-color: #60ac21;
+        }
+        #header .container nav{
+            width: 85%;
+            height: 100px;
+            background-color: #81c24b;
+        }
+        #main {
+            width: 100%;
+            height: 500px;
+        }
+        #main .container .slider {
+            width: 100%;
+            height: 300px;
+            background-color: #eb9898;
+        }
+        #main .container .section{
+            height: 200px;
+            display: flex;
+        }
+        #main .container .section .text{
+            width: 33.333%;
+            background-color: #7cca74;
+        }
+        #main .container .section .gall{
+            width: 33.333%;
+            background-color: #61eb51;
+        }
+        #main .container .section .link{
+            width: 33.333%;
+            background-color: #55b34a;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #50dd8b;
+        }
+        #footer .container{
+            height: 100px;
+            display: flex;
+        }
+        #footer .container .f1{
+            width: 85%;
+            background-color: #62b1c9;
+        }
+        #footer .container .f2{
+            width: 15%;
+        }
+        #footer .container .f2 .f2_1{
+            height: 50px;
+            background-color: #681c1c;
+        }
+        #footer .container .f2 .f2_2{
+            height: 50px;
+            background-color: #1e7542
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h2></h2>
+                <nav></nav>
+            </div>
+        </header>
+        <main id="main">
+            <div class="container">
+                <article class="slider"></article>
+                <section class="section">
+                    <article class="text"></article>
+                    <article class="gall"></article>
+                    <article class="link"></article>
+                </section>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <div class="f1"></div>
+                <div class="f2">
+                    <div class="f2_1"></div>
+                    <div class="f2_2"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 E-3 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #main {
+            height: 700px;
+            display: flex;
+        }
+        #main .aside {
+            width: 200px;
+            background-color: #6ed46e;
+        }
+        #main .aside .logo {
+            height: 100px;
+            background-color: #ade298;
+        }
+        #main .aside .nav {
+            height: 600px;
+            background-color: #51c069;
+        }
+        #main .section {
+            width: 400px;
+            background-color: #6ac280;
+        }
+        #main .section .cont1 {
+            height: 130px;
+            background-color: #a1c956;
+        }
+        #main .section .cont2 {
+            height: 285px;
+            background-color: #3f580e;
+        }
+        #main .section .cont3 {
+            height: 285px;
+            background-color: #1fb333;
+        }
+        #main .article {
+            width: calc(100% - 600px);
+            background-color: #65b9d3;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #a55c5c;
+            display: flex;
+        }
+        #footer .f1 {
+            width: 200px;
+            background-color: #59c0aa;
+        }
+        #footer .f2 {
+            width: calc(100% - 200px);
+            display: flex;
+        }
+        #footer .f2 .f_1 {
+            width: 80%;
+            background-color: #b1c95a;
+        }
+        #footer .f2 .f_2 {
+            width: 20%;
+            background-color: #60c731;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <aside class="aside">
+                <div class="logo"></div>
+                <nav class="nav"></nav>
+            </aside>
+            <section class="section">
+                <article class="cont1"></article>
+                <article class="cont2"></article> 
+                <article class="cont3"></article>
+            </section>
+            <article class="article"></article>
+        </main>
+        <footer id="footer">
+            <div class="f1"></div>
+            <div class="f2">
+                <div class="f_1"></div>
+                <div class="f_2"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
