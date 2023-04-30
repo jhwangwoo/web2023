@@ -108,8 +108,7 @@
             width: 100%;
             display: none;
         }
-        .nav > ul > li > ul > li {
-        }
+        .nav > ul > li > ul > li {}
         .nav > ul > li > ul > li > a {
             padding: 10px;
             display: block;
@@ -181,22 +180,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         const listAll = document.querySelectorAll(".nav > ul > li");
-
-        //하나만 잡는법
+        const submenus = document.querySelectorAll(".nav > ul > li > ul");
+        
+        //전체 잡기
         // $(".nav > ul > li").mouseover(function(){
-        //     $(this).find(".submenu").stop().slideDown();
+        //     $(".nav > ul > li").find(".submenu").stop().slideDown();
         // });
         // $(".nav > ul > li").mouseout(function(){
-        //     $(this).find(".submenu").stop().slideUp();
+        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
         // });
 
-        //script
         listAll.forEach(li => {
-            li.addEventListener("mouseover", () => {     
-                li.querySelector("ul").style.display = "block";
+            li.addEventListener("mouseover", () => {
+                submenus.forEach(e => {
+                    e.style.display = "block"
+                });
             });
-            li.addEventListener("mouseout", () => {     
-                li.querySelector("ul").style.display = "none";
+            li.addEventListener("mouseout", () => {
+                submenus.forEach(e => {
+                    e.style.display = "none"
+                });
             });
         });
     </script>
