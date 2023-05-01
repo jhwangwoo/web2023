@@ -68,9 +68,9 @@ const musicProgressCurrent = musicWrap.querySelector(".progress .timer .current"
 const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
 const musicRepeat = musicWrap.querySelector("#control-repeat");
 const musicListBtn = musicWrap.querySelector("#control-list");
-const musicList = musicWrap.querySelector(".music_list");
-const musicListUl = musicWrap.querySelector(".music_list ul");
-const musicListClose = musicWrap.querySelector(".music_list h3 .close");
+const musicList = musicWrap.querySelector(".music__list");
+const musicListUl = musicWrap.querySelector(".music__list ul");
+const musicListClose = musicWrap.querySelector(".music__list h3 .close");
 
 let musicIndex = 1; //현재 음악 인덱스
 

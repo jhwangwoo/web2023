@@ -140,12 +140,12 @@
 .music__control .control span i.stop {
     background-position: -200px 0;
 }
-.music_list {
+.music__list {
     /* background-color: #ccc; */
     border-radius: 0 0 15px 15px;
     padding: 20px;
 }
-.music_list {
+.music__list {
     position: absolute;
     width: 306px;
     height: 500px;
@@ -157,16 +157,16 @@
     display: none;
 
 }
-.music_list.show {
+.music__list.show {
     display: block;
 }
-.music_list h3 {
+.music__list h3 {
     color: #fff;
     position: relative;
     margin-bottom: 10px;
     font-size: 15px;
 }
-.music_list h3 .close {
+.music__list h3 .close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -175,23 +175,23 @@
     width: 40px;
     height: 40px;
 }
-.music_list ul {
+.music__list ul {
     height: 360px;
     overflow-y: scroll;
     border-radius: 15px;
 }
-.music_list ul::-webkit-scrollbar {
+.music__list ul::-webkit-scrollbar {
     width: 5px;
 }
-.music_list ul::-webkit-scrollbar-thumb {
+.music__list ul::-webkit-scrollbar-thumb {
     height: 30%;
     background: #363b41;
     border-radius: 10px;
 }
-.music_list::-webkit-scrollbar-track {
+.music__list::-webkit-scrollbar-track {
     background: rgba(33, 122, 244, .1);
 }
-.music_list ul li {
+.music__list ul li {
     height: 60px;
     margin-right: 5px;
     background-color: rgba(255, 224, 224, 0.119);
@@ -200,33 +200,33 @@
     display: flex;
     align-items: center;
 }
-.music_list ul li.playing {
+.music__list ul li.playing {
     background-color: rgba(255, 224, 224, 0.4);
 }
-.music_list ul li:hover {
+.music__list ul li:hover {
     background-color: rgba(233, 64, 64, 0.4);
 }
-.music_list ul li.active {
+.music__list ul li.active {
     background-color: rgba(255, 224, 224, 0.4);
 }
-.music_list ul li .img img {
+.music__list ul li .img img {
     padding: 3px;
     width: 60px;
     height: 60px;
-    border-radius: 15px;
+    border-radius: 13px;
 }
-.music_list ul li .title  {
+.music__list ul li .title  {
     width: 60%;
     padding-left: 5px;
 }
-.music_list ul li strong  {
+.music__list ul li strong  {
     display: block;
 }
-.music_list ul li em {
-    font-size: 14px;
+.music__list ul li em {
+    font-size: 12px;
 }
 .music__list ul li .audio-duration {
     /* width: 20%; */
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
 }
