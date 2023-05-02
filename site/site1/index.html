@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +22,13 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+
+
 </head>
+
 <body>
     <div id="skip">
         <a href="#">헤더 영역 바로가기</a>
@@ -46,27 +51,66 @@
         <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
-                    <div class="slider__info container">
-                        <span class="small">event</span>
-                        <h3 class="title">쿠키의 정보를 모아놓은 사이트</h3>
-                        <p class="desc">다양한 쿠키들에 대한 정보를 제공합니다. 쿠키의 기원부터, 다양한 종류와 특징, 그리고 제조 방법에 이르기 까지 상세한 정보를 제공합니다.</p>
-                        <div class="btn">
-                            <a href="#">자세히 보기</a>
-                            <a href="#">상담 신청</a>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">쿠키의 정보를 모아놓은 사이트</h3>
+                                    <p class="desc">다양한 쿠키들에 대한 정보를 제공합니다. 쿠키의 기원부터, 다양한 종류와 특징, 그리고 제조 방법에 이르기 까지 상세한 정보를 제공합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="slider__arrow">
+                                    <a href="#"><span class="blind">이전 이미지</span></a>
+                                    <a href="#"><span class="blind">다음 이미지</span></a>
+                                </div> -->
+                                <!-- <div class="slider__dot">
+                                    <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                                    <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                                    <a href="#" class="play"><span class="blind">플레이</span></a>
+                                    <a href="#" class="stop"><span class="blind">정지</span></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">쿠키의 정보를 모아놓은 사이트</h3>
+                                    <p class="desc">다양한 쿠키들에 대한 정보를 제공합니다. 쿠키의 기원부터, 다양한 종류와 특징, 그리고 제조 방법에 이르기 까지 상세한 정보를 제공합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">쿠키의 정보를 모아놓은 사이트</h3>
+                                    <p class="desc">다양한 쿠키들에 대한 정보를 제공합니다. 쿠키의 기원부터, 다양한 종류와 특징, 그리고 제조 방법에 이르기 까지 상세한 정보를 제공합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="slider__arrow">
-                        <a href="#"><span class="blind">이전 이미지</span></a>
-                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><sapn class="ir">play</sapn></div>
+                        <div class="swiper-button-stop"><sapn class="ir">stop</sapn></div>
                     </div>
-                    <div class="slider__dot">
-                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
-                        <a href="#" class="play"><span class="blind">플레이</span></a>
-                        <a href="#" class="stop"><span class="blind">정지</span></a>
-                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
@@ -135,38 +179,42 @@
             <div class="container">
                 <h2 class="blind">카드 영역</h2>
                 <h2 class="section__h2">쿠키 만드는 방법</h2>
-                <p class="section__desc">쿠키 만드는 방법은 다양하며, 재료나 조리 방법을 바꿔서 다양한 종류의 쿠키를 만들 수 있습니다. 레시피를 찾아보거나 실험을 해보면서 자신만의 맛있는 쿠키를 만들어보세요!</p>
+                <p class="section__desc">쿠키 만드는 방법은 다양하며, 재료나 조리 방법을 바꿔서 다양한 종류의 쿠키를 만들 수 있습니다. 레시피를 찾아보거나 실험을 해보면서 자신만의
+                    맛있는 쿠키를 만들어보세요!</p>
                 <div class="card__inner">
-                <article class="card">
-                    <figure class="card__header">
-                        <img src="assets/img/cardtype01_01.jpg" alt="오레오 쿠키">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="title">오레오 쿠키</h3>
-                        <p class="desc">코코아 가루, 밀가루, 설탕, 식용유, 코코아 크림 등으로 만든 쿠키입니다.미국의 대표적인 스낵 중 하나로 세계 각국에서 판매되고 있습니다. 대표 적인 쿠키중 하나 입니다.</p>
-                        <a href="#" class="btn">자세히 보기</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <figure class="card__header">
-                        <img src="assets/img/cardtype01_02.jpg" alt="오레오 쿠키">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="title">마카롱</h3>
-                        <p class="desc">아몬드 가루, 설탕, 계란 흰자 등으로 만든 프렌치 쿠키입니다.컬러와 맛을 다양하게 만들 수 있어 남녀노소 누구나 맛있게 먹어 인기가 매우 높습니다. </p>
-                        <a href="#" class="btn">자세히 보기</a>
-                    </div>
-                </article>
-                <article class="card">
-                    <figure class="card__header">
-                        <img src="assets/img/cardtype01_03.jpg" alt="오레오 쿠키">
-                    </figure>
-                    <div class="card__body">
-                        <h3 class="title">초코칩 쿠키</h3>
-                        <p class="desc">설탕, 버터, 박력분, 베이킹 소다, 소금, 달걀, 바닐라 추출물, 초콜릿 칩 등으로 만든 쿠키입니다.세계적으로 가장 유명한 쿠키 중 하나입니다. 대표 적인 쿠키 중 하나입니다.</p>
-                        <a href="#" class="btn">자세히 보기</a>
-                    </div>
-                </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardtype01_01.jpg" alt="오레오 쿠키">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">오레오 쿠키</h3>
+                            <p class="desc">코코아 가루, 밀가루, 설탕, 식용유, 코코아 크림 등으로 만든 쿠키입니다.미국의 대표적인 스낵 중 하나로 세계 각국에서 판매되고
+                                있습니다. 대표 적인 쿠키중 하나 입니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardtype01_02.jpg" alt="오레오 쿠키">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">마카롱</h3>
+                            <p class="desc">아몬드 가루, 설탕, 계란 흰자 등으로 만든 프렌치 쿠키입니다.컬러와 맛을 다양하게 만들 수 있어 남녀노소 누구나 맛있게 먹어 인기가
+                                매우 높습니다. </p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="assets/img/cardtype01_03.jpg" alt="오레오 쿠키">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">초코칩 쿠키</h3>
+                            <p class="desc">설탕, 버터, 박력분, 베이킹 소다, 소금, 달걀, 바닐라 추출물, 초콜릿 칩 등으로 만든 쿠키입니다.세계적으로 가장 유명한 쿠키 중
+                                하나입니다. 대표 적인 쿠키 중 하나입니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -189,32 +237,38 @@
             <div class="text__inner">
                 <div class="text t1">
                     <h3 class="text__title">재료의 품질 확인하기</h3>
-                    <p class="text__desc">좋은 품질의 재료를 사용하는 것이 맛있는 쿠키를 만드는 핵심입니다. 신선한 재료를 사용하고, 유통기한을 확인하고, 가능한 경우 유기농 또는 천연 재료를 사용하는 것이 좋습니다.</p>
+                    <p class="text__desc">좋은 품질의 재료를 사용하는 것이 맛있는 쿠키를 만드는 핵심입니다. 신선한 재료를 사용하고, 유통기한을 확인하고, 가능한 경우 유기농 또는
+                        천연 재료를 사용하는 것이 좋습니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t2">
                     <h3 class="text__title">정확한 양 계산하기</h3>
-                    <p class="text__desc">쿠키를 만들 때 정확한 양과 비율을 잘 지켜서 재료를 사용해야 합니다. 레시피에서 지정한 양과 비율을 잘 지켜서 누구든지 쉽게 따라할 수 있는 쿠키를 만들어보아요. </p>
+                    <p class="text__desc">쿠키를 만들 때 정확한 양과 비율을 잘 지켜서 재료를 사용해야 합니다. 레시피에서 지정한 양과 비율을 잘 지켜서 누구든지 쉽게 따라할 수
+                        있는 쿠키를 만들어보아요. </p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t3">
                     <h3 class="text__title">반죽을 과하게 섞지 않기</h3>
-                    <p class="text__desc">반죽을 과하게 섞으면 쿠키가 딱딱해지거나 지루해질 수 있습니다. 반죽이 잘 섞이도록 믹서기나 주걱 등을 사용해서 부드럽게 섞어주시기 바랍니다.</p>
+                    <p class="text__desc">반죽을 과하게 섞으면 쿠키가 딱딱해지거나 지루해질 수 있습니다. 반죽이 잘 섞이도록 믹서기나 주걱 등을 사용해서 부드럽게 섞어주시기
+                        바랍니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t4">
                     <h3 class="text__title">오븐 온도와 시간 조절하기 </h3>
-                    <p class="text__desc">오븐의 온도와 굽는 시간은 쿠키의 맛과 질감에 큰 영향을 미칩니다. 레시피에서 지정한 온도와 시간을 지켜야 합니다. 시간에 따라 쿠키가 타거나 덜 익을수 있습니다.</p>
+                    <p class="text__desc">오븐의 온도와 굽는 시간은 쿠키의 맛과 질감에 큰 영향을 미칩니다. 레시피에서 지정한 온도와 시간을 지켜야 합니다. 시간에 따라 쿠키가
+                        타거나 덜 익을수 있습니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t5">
                     <h3 class="text__title">쿠키를 굽는 시트 조절하기</h3>
-                    <p class="text__desc">쿠키를 굽는 시트의 간격을 충분히 띄워서 균등하게 굽히도록 하세요. 시트의 크기와 모양에 따라 쿠키의 모양이 바뀔 수 있으므로 주의해야 합니다.</p>
+                    <p class="text__desc">쿠키를 굽는 시트의 간격을 충분히 띄워서 균등하게 굽히도록 하세요. 시트의 크기와 모양에 따라 쿠키의 모양이 바뀔 수 있으므로 주의해야
+                        합니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t6">
                     <h3 class="text__title">쿠키를 굽은 후 식히기</h3>
-                    <p class="text__desc">쿠키를 굽은 후에는 오븐에서 꺼내서 식히기 전에 5분 정도 시간을 두세요. 그 후에는 완전히 식히기 전에 쿠키를 빼지 마세요. 쿠키가 완전히 식으면 구리거나 크리스피해집니다.</p>
+                    <p class="text__desc">쿠키를 굽은 후에는 오븐에서 꺼내서 식히기 전에 5분 정도 시간을 두세요. 그 후에는 완전히 식히기 전에 쿠키를 빼지 마세요. 쿠키가 완전히
+                        식으면 구리거나 크리스피해집니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
             </div>
@@ -289,6 +343,47 @@
         </div>
     </footer>
     <!-- //footerType -->
-    
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: false,
+        },
+        
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+
+    });
+    const btnStop = document.querySelector(".swiper-button-stop");
+    const btnStart = document.querySelector(".swiper-button-play");
+    btnStart.style.display = "none";
+
+    btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+        btnStart.style.display = "none";
+        btnStop.style.display = "block";
+    });
+    btnStop.addEventListener("click", () => {
+        swiper.autoplay.stop();
+        btnStart.style.display = "block";
+        btnStop.style.display = "none";
+    });
+</script>
+
 </html>
