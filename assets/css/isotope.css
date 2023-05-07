@@ -73,7 +73,8 @@
   float: left;
 
   border-bottom: 3px solid #a5d5fa;
-  background-color: #fff;
+  background-color: #ffffff;
+  border-radius: 50px;
 }
 .color-shape:first-child:hover {
     border-bottom: 3px solid #a92c76;

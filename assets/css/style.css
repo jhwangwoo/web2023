@@ -213,7 +213,7 @@
 ================================================== */
 
 #contents_tit {
-	background-color: #fff;
+	/* background-color: #fff; */
 	text-align: center; 
 	height: 90px;
 	
@@ -223,7 +223,7 @@
 	font-family: 'Gaegu', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#ffffff; 
 }
 
 
@@ -274,15 +274,15 @@
 }
 .gridly li a {
 	text-decoration: none; 
-	color:#494e51; 
+	color:#ffffff; 
 	display: block; 
 	margin-right: 20px; 
 }
 
 .gridly .webstandard a {
-	color: #157ed3;
+	color: #ffffff;
 	display: block;
-	border-bottom: 3px solid #a5d5fa;
+	border-bottom: 3px solid #cbe4f7;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
@@ -334,6 +334,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	height: 100%;
+	border-radius: 50px;
 }
 
 .image-wrap img {
@@ -394,10 +395,10 @@
 	padding-top:130px; 
 	opacity: 1;
 	filter: alpha(opacity=100);
+	border-radius: 50px;
 }
 
 .image-wrap .hover-wrap .overlay-img-donut.black {
-
 	background: #000;
 
 }

@@ -208,16 +208,16 @@ body {
   font-family: 'Abel',"나눔고딕", Nanum Gothic,"맑은고딕", Malgun Gothic, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: #666;
+  color: #ffffff;
   background-color: #ffffff;
 }
 a {
-  color: #3fbf79;
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2c8555;
+  color: #8d8a8a;
   text-decoration: none;
 }
 .img-rounded {
@@ -3696,7 +3696,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
     font-size: 33px;
-  color: #000;
+  color: #e7e5e5;
     font-family: Abel;;
 }
 .navbar .brand:hover,

@@ -1,503 +1,213 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선택자</title>
+    <title>Document</title>
     <style>
-        /* css
-        summary {
-            transition: background-color 0.1s, color 0.3s;
+        @font-face {
+            src: url('https://res.cloudinary.com/dr6lvwubh/raw/upload/v1529908256/CompressaPRO-GX.woff2');
+            font-family: 'Compressa VF';
+            font-style: normal;
         }
-        summary:hover {
-            background-color: #6e4141;
-        } */
 
+        html {
+            height: 100%;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #967ab8;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Compressa VF';
+            text-rendering: optimizeSpeed;
+            color: #e77e91;
+            width: 100%;
+            user-select: none;
+            line-height: 0.8em;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-weight: 100;
+            text-align: center;
+            width: 100vw;
+        }
+
+        h1 span {
+            transform: translateY(-10px);
+            user-select: none;
+        }
+
+        h1.flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1.stroke span {
+            position: relative;
+            color: #211D26;
+            line-height: inherit;
+        }
+
+        h1.stroke span:after {
+            content: attr(data-char);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: #FE6730;
+            position: absolute;
+            left: 0;
+            line-height: inherit;
+            color: transparent;
+            z-index: -1;
+        }
+        
     </style>
 </head>
 
 <body>
-    <!-- html -->
-    <details>
-        <summary>결과</summary>
-        <div>dddwww</div>
-    </details>
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-
-        // for(let i=1; i<=8; i++){
-
-        //     console.log(i)
-        // }
-
-        // for(let i=1; i<=100; i++){
-        //     if(i%2==0){
-        //         console.log(i)
-        //     }
-        // }
-
-        // for(let i=1; i<=100; i++){
-        //     if(i%4==0){
-        //         console.log(i)
-        //     }
-        // }
-
-        // for(let i=8; i<=8; i++){
-        //     document.write(i,"단","<br>");
-
-        //     for(let j=1; j<=9; j++){
-        //         document.write(i + "*" + j + "=" + i*j);
-        //         document.write("<br>")
-        //     }    
-        //         document.write("<br>","<br>")     
-        // }
-
-        // const arr = [1,2,3,4,5,6,7,8,9];
-        // {
-        // for(let i = 0; i<9; i++){    //i는0부터시작하며 i>9 조건이 맞으면 출력 후 i를 하나를 더하고 다시계산한다
-        //         console.log(arr[i])      //  
-        //     }
-        // }
-
-        // for(let i=1; i<=8; i++){
-        //     document.write(i)
-        // }
-
-        // for(let i=0; i<=100; i+=2){
-        //         document.write(i)
-        //     }
-        // for(let i=1; i<=100; i++){
-        //     if(i%2==1){
-        //         document.write(i)
-        //     }
-        // }
-        // for(let i=1; i<=9; i++){
-        //     document.write(i,"<br>");
-
-        //     for(let j=0; j<=9; j++){
-        //         document.write(i+"*"+j+"="+i*j);
-        //         document.write("<br>");
-        //     }
-        //         document.write("<br>");
-        // }
-        //
-        // for(let i=1; i<=9; i++){
-        //     document.write(i,"<br>");
-        //     for(let j=1; j<=9; j++){
-        //         document.write(i+"*"+j+"="+i*j);
-        //         document.write("<br>");
-        //     }
-        //     document.write("<br>");
-        // }
-
-
-        // const arr = [1,3,5,7,9,11,13,15,17,19];
-
-        // for(let i=0; i<=arr.length; i++){
-        //     if(arr[i] > 10){
-        //         document.write(arr[i]); 
-        //     }
-        // }
-
-        // const arr =  [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-
-        // for(let i=0; i<=arr.length; i++){
-        //   if(arr[i] > 10){
-        //     document.write(arr[i]);
-        //   }
-        // }
-
-        // let num = prompt("1보다 큰 숫자를 입력하세요.");
-        // let sum = 0;
-
-        // if (num > 1){
-        //     for(let i = 1; i <= num; i++){
-        //         sum++;
-        //         document.write(sum+i);
-        //         }
-        //     }
-
-        
-
-        // const num = prompt("1보다 큰 수를 입력하세요.");
-        // let sum = 0;
-
-        // for (let i = 2; i <= num; i += 2) {
-        //     sum += i;
-
-        // }
-
-
-        // alert(`1부터 ${num}까지의 짝수의 합은 ${sum}입니다.`);
-
-        // let table = "<table border='1'>";
-
-        // for(let i=0; i<5; i++){
-        //     table += "<tr>";
-        //     for(let j=0; j<5; j++){
-        //         table += "<td>"+j+"</td>";
-        //     }
-        //     table += "</tr>";
-        // }
-        // document.write(table);
-
-        // 1~25까지 출력 
-        // let table = "<table border='1'>";
-        // let num = 1;
-
-        // for(let i=1; i<25; i++){
-        //     table += "<tr>";
-        //     document.write(num++);
-
-
-        // }
-        // document.write("<br>");
-        // document.write(num);
-
-        // let table = "<table border='1'>";
-        // let num = 1;
-
-        // for(let i=1; i<=5; i++){
-        //     table += "<tr>";
-        //         for(let j=1; j<=5; j++){
-        //         table += "<td>"+j+"</td>";
-        //     }
-        //     table += "</tr>";
-        // }
-        // document.write(table)
-
-
-
-        // let table = "<table border='1'>";
-
-        // for (let i=1; i<=10; i++){
-        //     table +="<tr>";
-        //         for (let j=1; j<=10; j++){
-        //             table+="<td>"+j+"</td>";
-        //         }
-        //     table +="</tr>"
-        // }
-        // document.write(table);
-
-        // function func (){
-        //     document.write("실행");
-        // }
-        // func();
-
-        // const func = function(){
-        //     document.write("실행");
-        // }
-        // func();
-
-        // function func (str){
-        //     document.write(str);
-        // }
-        // func("실행");
-
-        // function func (){
-        //     const str ="실행";
-        //     return str;
-        // }
-        // document.write(func());
-
-        // for (let i=16; i<=16; i++){
-        //     document.write(i+"<br>");
-        //     for (let j=1; j<=9; j++){
-        //         document.write(i+"*"+j+"="+i*j);
-        //         document.write("<br>");
-        //     }
-        // }
-
-
-
-        //if문사용 홀수짝수
-        // for(let i=1; i<=arr.length; i++){
-        //     if( arr[i] % 2 == 0){
-        //         document.write(arr[i])
-        //     }
-        // }
-        // document.write("<br>")
-
-        // for(let i=1; i<=arr.length; i++){
-        //     if( i % 2 == 1){
-        //         document.write(i)
-        //     }
-        // }
-
-        // for(let i=0; i<=arr.length; i++){
-        //     if( arr[i] % 2 == 0){
-        //         document.write("<span style='color:red'>"+arr[i]+"</span>");
-        //     } else {
-        //         document.write(`<span style='color:blue'>${arr[i]}</span>`);
-        //     }
-        // }
-
-        // 테이블 for문으로 만들기
-        // let table = "<table border='1'>";
-
-        // for(let i=0; i<5; i++){
-        //     table += "<tr>";
-        //     for(let j=0; j<5; j++){
-        //         table += "<td>"+j+"</td>";
-        //     }
-        //     table += "</tr>";
-        // }
-        // document.write(table);
-
-        //1~25까지 출력 
-        // let num = 0;
-
-        // for(let i=1; i<=25; i++){
-        //     document.write(i);
-        //     num++;
-        //  
-        // }
-        // document.write("<br>");
-        // document.write(num);
-
-        // for (let i=1; i<=10; i++){
-        //     if(i % 2 ==0);
-        //     document.write("<>")
-        // }
-
-
-
-        // 테이블 25칸(3의 배수(5의 배수는 빨간색)) 
-        // {
-        //     let table = "<table border='1'>";
-        //     let count = 0;
-
-        //     for(let i=1; i<=5; i++){
-        //         table += "<tr>";
-        //         for(let j=1; j<=5; j++){
-        //             count+=3;
-        //             if(count % 5 === 0){
-        //                 table += "<td style='color:red'>"+count+"</td>";
-        //             } else {
-        //                 table += "<td>"+count+"</td>";
-        //             }  
-        //         }
-        //         table += "</tr>";
-        //     }           
-        //     table +="</table>"
-
-        //     document.write(table)
-        // }
-
-        // {
-        //     function func (num){
-        //         if(num>=1){
-        //             document.write("양수입니다.");                
-        //         }  else if(num<=-1){
-        //             document.write("음수입니다.");
-        //         }  else document.write((0));
-        //     }
-
-        //     const num = parseInt(prompt("숫자를 입력하세요"));
-
-        //     if(!isNaN(num)) {  //!isNaN은 매개변수가 숫자임을 검사하는 함수입니다. 
-        //         func(num);
-        //     }
-        // }
-
-        // function isPositive(n) {
-        //   if (n > 0) {
-        //     alert(`${n}은 양수입니다.`);
-        //   } else if (n < 0) {
-        //     alert(`${n}은 음수입니다.`);
-        //   } else {
-        //     alert(`${n}은 0입니다.`);
-        //   }
-        // }
-
-        // const number = parseInt(prompt('숫자를 입력하세요.'));
-        // // parseInt() 는 숫자가 아닐 경우 NaN을 반환함
-        // if(!isNaN(number)) {  // 숫자일 경우에만 실행
-        //   isPositive(number);
-        // }
-
-
-
-
-        // // {
-
-    // {
-    //     function func(num,sum) {
-    //         let max = sum > num ? sum : num;
-    //         let GCD = 0;
-    //         for (let i = 1; i <= max; i++) {
-    //             if (sum % i === 0 && num % i === 0) {
-    //                 GCD = i;   // 최대공약수
-    //             }
-    //         }
-    //         return GCD;
-    //     }
-
-    //     const num = prompt("숫자를 입력하세요");
-    //     const sum = prompt("두번째 숫자를 입력하세요");
-
-     
-
-    //     document.write(func(num,sum));
-    // }
-
-
-
-    // {
-    //     const arr = new Object();   //
-
-    //     arr[0] = 100;               
-    //     arr[1] = 200;               
-    //     arr[2] = "javascript";     
-
-    //     console.log(arr[0]);
-    //     console.log(arr[1]);
-    //     console.log(arr[2]);
-
-    //     //100
-    //     //200
-    //     //javascript
-    // }
-    // {
-    //     let a=1, b=1, num;
-
-    //     for(let i=0; i<6; i++){
-    //         num = a + b;
-    //         a = b;
-    //         b = num;
-    //     }
-    //     console.log(num)
-    // }
-
-{
-    let num, i;
-    for(num=2; num<=10; num++){
-        for(i=2; i<num; i++){
-            if(num % i == 0) break;
-        }
-        if(i==num){
-            console.log(num)
-        }
-    }
-}
-{
-    let num = [56, 4, 3, 65, 78];
-    let temp;
-
-    for(let i=0; i<1; i++){
-        for(let j=0; j<num.length-i-1; j++){
-            if(num[j]>num[j+1]){
-                temp = num[j];
-                num[j] = num[j+1];
-                num[j+1] = temp;
-            }
-        }
-    }
-
-    console.log(num)
-}
-{
-    let arr = [1,2,3,4,5];
-    let temp = [1,2,4,6,8];
-    let idx = 0;
-    let flag = true;
-
-    for(let i=0; i<arr.length; i++){
-        flag = false;
-        if(arr[i] == temp[i]){
-            flag = true;
-        }
-        if(!flag){
-            temp[idx] = arr[i];
-            console.log(temp[idx]);
-        }
-    }
-}
-{
-    let i = 0;
-    let sum = 0;
-    
-    while(i < 10){
-        i = i+1;
-        if( i % 4 == 0) sum -= i;
-        if( i % 4 == 1) sum += i;
-        if( i % 4 == 2) sum *= i 
-    }
-
-    console.log(sum) 
-}
-{
-    function func(begin, diff, n){
-        cnt = 1;
-        ret = begin;
-        while(0){
-            cnt += 1;
-            ret *= diff;
-            if(cnt == n) return ret;
-        }
-        return ret
-    }
-
-    console.log(func(1, 3, 4));
-}
-{
-    let x = 1;
-
-    console.log( !(x>0) );
-    console.log( x>0 || x<4 );
-    console.log( x<<2 );
-    console.log( x&2 );
-    console.log( x%3 );
-} 
-{
-    let arr = [1,2,3,4,5];
-    let temp = [1,2,4,6,8];
-    let idx = 0;
-    let flag = true;
-
-    for(let i=0; i<arr.length; i++){
-        flag = false;
-        if(arr[i] == temp[i]){
-            flag = true;
-        }
-        if(!flag){
-            temp[idx] = arr[i];
-            console.log(temp[idx]);
-        }
-    }
-}
-
-    </script>
-
-
-
-
-
-
+    <div id="main">
+        <h1 id="title"><span>Jung</span><p>Hwang</p>Woo</h1>
+    </div>
 </body>
+<script>
+    var maxDist;
+var mouse = { x: 0, y: 0 };
+var cursor = {
+    x: window.innerWidth,
+    y: window.innerHeight
+};
+
+Math.dist = function(a, b) {
+    var dx = b.x - a.x;
+    var dy = b.y - a.y;
+    return Math.sqrt(Math.pow(dx, 2), Math.pow(dy, 2));
+}
+
+window.addEventListener("mousemove", function(e) {
+    cursor.x = e.clientX;
+    cursor.y = e.clientY;
+});
+
+window.addEventListener("touchmove", function(e) {
+    var t = e.touches[0];
+    cursor.x = t.clientX;
+    cursor.y = t.clientY;
+}, {
+    passive: false
+});
+
+var Char = function(container, char) {
+    var span = document.createElement("span");
+    span.setAttribute('data-char', char);
+    span.innerText = char;
+    container.appendChild(span);
+    this.getDist = function() {
+        this.pos = span.getBoundingClientRect();
+        return Math.dist(mouse, {
+            x: this.pos.x + (this.pos.width / 1.75),
+            y: this.pos.y
+        });
+    }
+    this.getAttr = function(dist, min, max) {
+        var wght = max - Math.abs((max * dist / maxDist));
+        return Math.max(min, wght + min);
+    }
+    this.update = function(args) {
+        var dist = this.getDist();
+        this.wdth = args.wdth ? ~~this.getAttr(dist, 5, 200) : 100;
+        this.wght = args.wght ? ~~this.getAttr(dist, 100, 800) : 400;
+        this.alpha = args.alpha ? this.getAttr(dist, 0, 1).toFixed(2) : 1;
+        this.ital = args.ital ? this.getAttr(dist, 0, 1).toFixed(2) : 0;
+        this.draw();
+    }
+    this.draw = function() {
+        var style = "";
+        style += "opacity: " + this.alpha + ";";
+        style += "font-variation-settings: 'wght' " + this.wght + ", 'wdth' " + this.wdth + ", 'ital' " + this.ital + ";";
+        span.style = style;
+    }
+    return this;
+}
+
+var VFont = function() {
+    this.scale = false;
+    this.flex = true;
+    this.alpha = false;
+    this.stroke = false;
+    this.width = true;
+    this.weight = true;
+    this.italic = true;
+    var title, str, chars = [];
+
+    this.init = function() {
+        title = document.getElementById("title");
+        str = title.innerText;
+        title.innerHTML = "";
+        for (var i = 0; i < str.length; i++) {
+            var _char = new Char(title, str[i]);
+            chars.push(_char);
+        }
+        this.set();
+        window.addEventListener("resize", this.setSize.bind(this));
+    }
+
+    this.set = function() {
+        title.className = "";
+        title.className += this.flex ? " flex" : "";
+        title.className += this.stroke ? " stroke" : "";
+        this.setSize();
+    }
+
+    this.setSize = function() {
+        var fontSize = window.innerWidth / (str.length / 2);
+        title.style = "font-size: " + fontSize + "px;";
+        if (this.scale) {
+            var scaleY = (window.innerHeight / title.getBoundingClientRect().height).toFixed(2);
+            var lineHeight = scaleY * 0.8;
+            title.style = "font-size: " + fontSize + "px; transform: scale(1," + scaleY + "); line-height: " + lineHeight + "em;"
+        }
+    }
+
+    this.animate = function() {
+        mouse.x += (cursor.x - mouse.x) / 20;
+        mouse.y += (cursor.y - mouse.y) / 20;
+        requestAnimationFrame(this.animate.bind(this));
+        this.render();
+    }
+
+    this.render = function() {
+        maxDist = title.getBoundingClientRect().width / 2;
+        for (var i = 0; i < chars.length; i++) {
+            chars[i].update({
+                wght: this.weight,
+                wdth: this.width,
+                ital: this.italic,
+                alpha: this.alpha
+            });
+        }
+    }
+    this.init();
+    this.animate();
+    return this;
+}
+
+var txt = new VFont();
+var gui = new dat.GUI();
+gui.add(txt, 'flex').onChange(txt.set.bind(txt));
+gui.add(txt, 'scale').onChange(txt.set.bind(txt));
+gui.add(txt, 'alpha').onChange(txt.set.bind(txt));
+gui.add(txt, 'stroke').onChange(txt.set.bind(txt));
+// gui.add(txt, 'width').onChange(txt.set.bind(txt));
+gui.add(txt, 'weight').onChange(txt.set.bind(txt));
+gui.add(txt, 'italic').onChange(txt.set.bind(txt));
+</script>
 
 </html>
