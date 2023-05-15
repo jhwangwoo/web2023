@@ -5,51 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>패럴렉스 이펙트03</title>
+    <title>패럴렉스 이펙트05</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/Parallax.css">
     <style>
-        .Parallax__nav {
-            top: -100px;
-            transition: all 0.6s;
-        }
-        .Parallax__nav.show {
-            top: 10px;
-        }
-
     </style>
 
 </head class>
 <body class="img05 bg01 font09">
     <header id="header">
-        <h1>Javascript Parallax Effect03</h1>
-        <p>패럴렉스 이펙트 : 숨김 메뉴 / 탑 버튼</p>
+        <h1>Javascript Parallax Effect05</h1>
+        <p>패럴렉스 이펙트 : 이질감 효과</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
             <li><a href="parallaxEffect02.html">2</a></li>
-            <li class="active"><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
-            <li><a href="parallaxEffect05.html">5</a></li>
+            <li class="active"><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
             <li><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- header -->
-
-    <nav class="Parallax__nav show">
-        <ul>
-            <li class="active"><a href="#section1">메뉴1</a></li>
-            <li><a href="#section2">메뉴2</a></li>
-            <li><a href="#section3">메뉴3</a></li>
-            <li><a href="#section4">메뉴4</a></li>
-            <li><a href="#section5">메뉴5</a></li>
-            <li><a href="#section6">메뉴6</a></li>
-            <li><a href="#section7">메뉴7</a></li>
-            <li><a href="#section8">메뉴8</a></li>
-            <li><a href="#section9">메뉴9</a></li>
-        </ul>
-    </nav>
     <main id="main">
         <div class="Parallax__wrap">
             <section id="section1" class="Parallax__item">
@@ -145,10 +123,6 @@
 
     </main>
     <!-- main -->
-    <aside class="Parallax__info">
-        <div class="scroll">scrollTop : <span>0</span>px</div>
-    </aside>
-    <!-- Parallax__info -->
 
     <div class="parallax__top">
         <a href="#header">Top</a>
@@ -159,78 +133,32 @@
     </footer>
     <!-- footer -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-        // 01 메뉴
-        // window.addEventListener("scroll", () => {
-        //     let scrollTop = window.pageYOffset || window.scrollY;
+        function scroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        //     if(scrollTop > 20){
-        //         document.querySelector(".Parallax__nav").classList.add("show");
-        //     } else {
-        //         document.querySelector(".Parallax__nav").classList.remove("show");
-        //     }    
-        //     //문서의 높이 구하는 방법
-        //     // console.log(document.body.scrollHeight);
-        //     // console.log(document.body.offsetHeight);
-        //     // 창까지 합해서의 높이
-        //     // console.log(document.documentElement.scrollHeight);
-        //     // console.log(document.documentElement.offsetHeight);
-        //     document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+            document.querySelectorAll(".Parallax__item").forEach(item => {
+                // const target1 = item.querySelector(".Parallax__item__imgWrap");
+                const target1 = item.querySelector(".Parallax__item__img");
+                const target2 = item.querySelector(".Parallax__item__desc");
+                const target3 = item.querySelector(".Parallax__item__num");
 
-        // });
-        // 02 메뉴 탑버튼 나오게 하는것
-        window.addEventListener("scroll", () => { 
-            let scrollTop = window.pageYOffset || window.scrollY;
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.15;
+                let offset3 = (scrollTop - item.offsetTop) * 0.2;
 
-            if(scrollTop > document.body.scrollHeight - 1000){
-                document.querySelector(".parallax__top").classList.add("show");
-            } else {
-                document.querySelector(".parallax__top").classList.remove("show");
-            }
-        });
-        // 탑 버튼 애니메이션
-        document.querySelector(".parallax__top a").addEventListener("click", (e)=>{
-            e.preventDefault();
-            let target = document.querySelector(e.target.getAttribute('href'));
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                // target1.style.transform = `translateY(${offset2}px)`
+                // target2.style.transform = `translateX(${offset1}px)`
+                
+                gsap.to(target1, {duration: .3, y: offset1});
+                gsap.to(target2, {duration: .3, x: offset2});
+                gsap.to(target3, {duration: .3, x: offset3, ease:"expo.out"});
             });
-        });
-        // document.querySelector(".parallax_top a").addEventListener("click", function(e) {
-        //     e.preventDefault();
-        //     window.scrollTo({
-        //         top: 0,
-        //         behavior: "smooth"
-        //     });
-        // });
 
-        // 03 메뉴
-        let nowScroll = true;
-        let lastScroll = 0;
-
-        function scrollProgress (){
-            nowScroll = true;
-            setInterval(() => {
-                if(nowScroll){
-                    nowScroll = false;
-                    hasScroll();
-                }
-            }, 300);
-        }    
-        function hasScroll (){
-            let scrollTop = window.pageYOffset || window.scrollY;
-
-            if(scrollTop < lastScroll){
-                document.querySelector(".Parallax__nav").classList.add("show");
-            } else {
-                document.querySelector(".Parallax__nav").classList.remove("show");
-            }
-            lastScroll = scrollTop;
-
-            document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+            requestAnimationFrame(scroll);
         }
-        window.addEventListener("scroll", scrollProgress);
+        scroll()
     </script>
 </body>
 </html> 
