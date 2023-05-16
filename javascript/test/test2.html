@@ -10,58 +10,72 @@
     
 </body>
 <script>
+    // {
+    //     for(let i=1; i<=10; i++){
+    //         document.write(i);
+    //     }    
+    // }
+    // document.write("<br>");
+    // {
+    //     for(let i=1; i<=10; i++){
+    //         if(i % 2 == 0){
+    //             document.write(i);
+    //         }
+    //     }
+    // }
+    // document.write("<br>");
+    // {
+    //     for(let i=1; i<=10; i++){
+    //         if(i % 2 == 0){
+    //             document.write("<span style='color:blue'>"+i+"</span>")
+    //         } else document.write("<span style='color:red'>"+i+"</span>")
+    //     }
+    // }
+    // document.write("<br>");
+    // {
+    //     const num=[100,200,300,400,500,600,700,800,900];
+        
+    //     for(let i=0; i<num.length; i++){
+    //         document.write(num[i]);
+    //     }
+    // }
+    // document.write("<br>");
+    // {
+    //     const num=[100,200,300,400,500,600,700,800,900];
+        
+    //     num.forEach(function(a){
+    //         document.write(a);
+    //     });
+    // }
+    // document.write("<br>");
+    // {
+    //     const num=[100,200,300,400,500,600,700,800,900];
+        
+    //     for(let i in num){
+    //         document.write(num[i]);
+    //     }
+    // }
+    // document.write("<br>");
+    // {
+    //     const num=[100,200,300,400,500,600,700,800,900];
+        
+    //     for(let i of num){
+    //         document.write(i);
+    //     }
+    // }
+
+    
+
     {
-        for(let i=1; i<=10; i++){
-            document.write(i);
-        }    
-    }
-    document.write("<br>");
-    {
-        for(let i=1; i<=10; i++){
-            if(i % 2 == 0){
-                document.write(i);
+        function solution(num1, num2) {
+            if(num1 === num2){
+                return 1;
+            } else {
+                return -1;
             }
         }
-    }
-    document.write("<br>");
-    {
-        for(let i=1; i<=10; i++){
-            if(i % 2 == 0){
-                document.write("<span style='color:blue'>"+i+"</span>")
-            } else document.write("<span style='color:red'>"+i+"</span>")
-        }
-    }
-    document.write("<br>");
-    {
-        const num=[100,200,300,400,500,600,700,800,900];
-        
-        for(let i=0; i<num.length; i++){
-            document.write(num[i]);
-        }
-    }
-    document.write("<br>");
-    {
-        const num=[100,200,300,400,500,600,700,800,900];
-        
-        num.forEach(function(a){
-            document.write(a);
-        });
-    }
-    document.write("<br>");
-    {
-        const num=[100,200,300,400,500,600,700,800,900];
-        
-        for(let i in num){
-            document.write(num[i]);
-        }
-    }
-    document.write("<br>");
-    {
-        const num=[100,200,300,400,500,600,700,800,900];
-        
-        for(let i of num){
-            document.write(i);
-        }
+        console.log(solution(11,11))
+        //1
     }
 </script>
 </html>
