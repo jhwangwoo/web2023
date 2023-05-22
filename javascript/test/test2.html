@@ -69,11 +69,27 @@
 
 
     {
-        function solution(numbers) {
-            return numbers.map(v => v * 2)
+        function solution(my_string, letter) {
+        let reg = new RegExp(letter, 'g');
+            return my_string.replace(reg, '');
         }
-        console.log(solution([1, 2, 3, 4, 5]));
-        //[2, 4, 6, 8, 10]
+        console.log(solution("BCBdbe", "B"));
+        //Cdbe
+    }
+    {
+        function solution(my_string, letter) {
+        let reg = new RegExp(letter, 'g');
+            return my_string.replace(reg, '');
+        }
+        console.log(solution("abcdef", "f"));
+        //abcde
+    }
+    {
+        function solution(my_string) {
+            return my_string.split('').reverse().join('')
+        }
+        console.log(solution("bread"));
+        //daerb
     }
 
     {
