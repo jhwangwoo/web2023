@@ -68,13 +68,28 @@
 
 
 
+    // {
+    //     function solution(s1, s2) {
+    //         return s1.length + s2.length - new Set([...s1, ...s2]).size
+    //     }
+    //     console.log(solution(["a","b","c"], ["com", "b", "d", "p", "c"]));
+    //     //2
+    // }
     {
-        function solution(my_string, letter) {
-        let reg = new RegExp(letter, 'g');
-            return my_string.replace(reg, '');
+        function solution(rsp) {
+            var answer = {'0':'5', '2':'0', '5':'2'};
+            return [...rsp].map(v=>answer[v]).join('')
         }
-        console.log(solution("BCBdbe", "B"));
-        //Cdbe
+        console.log(solution("2"));
+        //0
+    }
+    {
+        function solution(rsp) {
+            var answer = {'0':'5', '2':'0', '5':'2'};
+            return [...rsp].map(v=>answer[v]).join('')
+        }
+        console.log(solution("205"));
+        //052
     }
     {
         function solution(my_string, letter) {
