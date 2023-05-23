@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
     // {
@@ -34,7 +36,7 @@
     // document.write("<br>");
     // {
     //     const num=[100,200,300,400,500,600,700,800,900];
-        
+
     //     for(let i=0; i<num.length; i++){
     //         document.write(num[i]);
     //     }
@@ -42,7 +44,7 @@
     // document.write("<br>");
     // {
     //     const num=[100,200,300,400,500,600,700,800,900];
-        
+
     //     num.forEach(function(a){
     //         document.write(a);
     //     });
@@ -50,7 +52,7 @@
     // document.write("<br>");
     // {
     //     const num=[100,200,300,400,500,600,700,800,900];
-        
+
     //     for(let i in num){
     //         document.write(num[i]);
     //     }
@@ -58,20 +60,52 @@
     // document.write("<br>");
     // {
     //     const num=[100,200,300,400,500,600,700,800,900];
-        
+
     //     for(let i of num){
     //         document.write(i);
     //     }
     // }
 
-    
+
 
     {
-        function solution(n) {
-            return Array(n).fill().map((v, i) => i+1).filter(v => v % 2 === 0).reduce((a,c) => a + c ,0)
+        function solution(my_string, letter) {
+        let reg = new RegExp(letter, 'g');
+            return my_string.replace(reg, '');
         }
-        console.log(solution(4));
-        //6
+        console.log(solution("BCBdbe", "B"));
+        //Cdbe
     }
+    {
+        function solution(my_string, letter) {
+        let reg = new RegExp(letter, 'g');
+            return my_string.replace(reg, '');
+        }
+        console.log(solution("abcdef", "f"));
+        //abcde
+    }
+    {
+        function solution(my_string) {
+            return my_string.split('').reverse().join('')
+        }
+        console.log(solution("bread"));
+        //daerb
+    }
+
+    {
+        function solution(numbers) {
+            return numbers.map(v => v * 2)
+        }
+        console.log(solution([1, 2, 100, -99, 1, 2, 3]	));
+        //[2, 4, 200, -198, 2, 4, 6]
+    }
+    // {
+    //     function solution(numbers){
+    //         return numbers.reduce((a,c) => a + c ,0) / numbers.length;
+    //     }
+    //     console.log(solution([89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]));
+    //     //94
+    // }
 </script>
+
 </html>
