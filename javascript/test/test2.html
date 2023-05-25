@@ -76,6 +76,13 @@
     //     //2
     // }
     {
+        function solution(my_string) {
+            return [...new Set(my_string)].join('');
+        }
+        console.log(solution("We are the world"));
+        //We arthwold
+    }
+    {
         function solution(numbers, direction) {
             if (direction === 'right') {
                 numbers = [numbers.pop(), ...numbers]
@@ -96,12 +103,19 @@
         //"cd"
     }
     {
-        function solution(age) {
-            let chr = 'abcdefghij';
-            return Array.from(age.toString()).map(v => chr [v]).join('');
+        function solution(order) {
+            let value = order.toString().match(/[369]/g) ?? []
+            return value.length;
         }
-        console.log(solution(51));
-        //"fb"
+        console.log(solution(3));
+        //1
+    }
+    {
+        function solution(order) {
+           return order.toString().split('').filter(v => v == '3' || v == '6' || v == '9' ? true : false).length
+        }
+        console.log(solution(29423));
+        //2
     }
     {
         function solution(rsp) {
