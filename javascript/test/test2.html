@@ -76,24 +76,58 @@
     //     //2
     // }
     {
-        function solution(rsp) {
-            var answer = {'0':'5', '2':'0', '5':'2'};
-            return [...rsp].map(v=>answer[v]).join('')
+        function solution(my_string) {
+            return [...new Set(my_string)].join('');
         }
-        console.log(solution("2"));
-        //0
+        console.log(solution("We are the world"));
+        //We arthwold
+    }
+    {
+        function solution(numbers, direction) {
+            if (direction === 'right') {
+                numbers = [numbers.pop(), ...numbers]
+            } else {
+                numbers = [...numbers.slice(1), numbers.shift()]
+            }
+            return numbers
+        }
+        console.log(solution([1,2,3],"right"));
+        //[3, 1. 2]
+    }
+    {
+        function solution(age) {
+            let chr = 'abcdefghij';
+            return Array.from(age.toString()).map(v => chr [v]).join('');
+        }
+        console.log(solution(23));
+        //"cd"
+    }
+    {
+        function solution(order) {
+            let value = order.toString().match(/[369]/g) ?? []
+            return value.length;
+        }
+        console.log(solution(3));
+        //1
+    }
+    {
+        function solution(order) {
+           return order.toString().split('').filter(v => v == '3' || v == '6' || v == '9' ? true : false).length
+        }
+        console.log(solution(29423));
+        //2
     }
     {
         function solution(rsp) {
-            var answer = {'0':'5', '2':'0', '5':'2'};
-            return [...rsp].map(v=>answer[v]).join('')
+            var answer = { '0': '5', '2': '0', '5': '2' };
+            return [...rsp].map(v => answer[v]).join('')
         }
         console.log(solution("205"));
         //052
     }
     {
         function solution(my_string, letter) {
-        let reg = new RegExp(letter, 'g');
+            let reg = new RegExp(letter, 'g');
             return my_string.replace(reg, '');
         }
         console.log(solution("abcdef", "f"));
@@ -111,7 +145,7 @@
         function solution(numbers) {
             return numbers.map(v => v * 2)
         }
-        console.log(solution([1, 2, 100, -99, 1, 2, 3]	));
+        console.log(solution([1, 2, 100, -99, 1, 2, 3]));
         //[2, 4, 200, -198, 2, 4, 6]
     }
     // {
