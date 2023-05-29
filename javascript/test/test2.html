@@ -75,12 +75,144 @@
     //     console.log(solution(["a","b","c"], ["com", "b", "d", "p", "c"]));
     //     //2
     // }
+{
+    function solution(my_str, n) {
+        let result = [];
+        for (let i = 0; i < my_str.length; i += n) result.push(my_str.slice(i, i+n));
+        return result;
+    }
+    console.log(solution("abc1Addfggg4556b", 6));
+    //['abc1Ad', 'dfggg4', '556b']
+}
+{
+    function solution(my_str, n) {
+        let result = [];
+        for (let i = 0; i < my_str.length; i += n) result.push(my_str.slice(i, i+n));
+        return result;
+    }
+    console.log(solution("abcdef123", 3));
+    //['abc', 'def', '123']
+}
+{
+    function solution(s) {
+        return [...s].filter(c => s.match(new RegExp(c, 'g')).length == 1).sort().join('');
+    }
+    console.log(solution("abcabcadc"));
+    //d
+}
+{
+    function solution(s) {
+        return [...s].filter(c => s.match(new RegExp(c, 'g')).length == 1).sort().join('');
+    }
+    console.log(solution("abdc"));
+    //abcd
+
+}
+
+{
+    function solution(array, n) {
+        array.sort((a,b) => a - b)
+        let Difference = Infinity;
+        let result = 0;
+    
+        for(let i of array){
+            if(Math.abs(n-i) < Difference){
+                Difference = Math.abs(n-i)
+                result = i
+            }
+        }
+        return result
+    }
+    console.log(solution([3, 10, 28],20));
+    //28
+}
+{
+    function solution(array, n) {
+        array.sort((a,b) => a - b)
+        let Difference = Infinity;
+        let result = 0;
+    
+        for(let i of array){
+            if(Math.abs(n-i) < Difference){
+                Difference = Math.abs(n-i)
+                result = i
+            }
+        }
+        return result
+    }
+    console.log(solution([10, 11, 12],13));
+    //12
+}
+{
+    function solution(i, j, k) {
+        return Array(j-i+1).fill(i).map((v,index) =>  v + index).join('').split(k).length -1
+    }
+    console.log(solution(1,13,1));
+    //6
+}
+{
+    function solution(i, j, k) {
+        return Array(j-i+1).fill(i).map((v,index) =>  v + index).join('').split(k).length -1
+    }
+    console.log(solution(10,50,5));
+    //5
+}
+    {
+        function solution(n) {
+            let i = 1;
+            let factorial = 1;
+            while (factorial <= n){
+                i += 1
+                factorial *= i
+            }
+            return i-1;
+        }
+    console.log(solution(3628800));
+    //10
+    }
+    {
+        function solution(n) {
+            let i = 1;
+            let factorial = 1;
+            while (factorial <= n){
+                i += 1
+                factorial *= i
+            }
+            return i-1;
+        }
+    console.log(solution(7));
+    //3
+    }
+    {
+        function solution(before, after) {
+            return before.split('').sort().join() === after.split('').sort().join() ? 1 : 0;
+        }
+        console.log(solution("olleh","hello"));
+        //1
+    }
+    {
+        function solution(before, after) {
+            return before.split('').sort().join() === after.split('').sort().join() ? 1 : 0;
+        }
+        console.log(solution("allpe","apple"));
+        //0
+        
+    }
+
+
     {
         function solution(my_string) {
             return [...new Set(my_string)].join('');
         }
         console.log(solution("We are the world"));
-        //We arthwold
+        //1
+    }
+    {
+        function solution(my_string) {
+            return [...new Set(my_string)].join('');
+        }
+        console.log(solution("We are the world"));
+        //1
     }
     {
         function solution(numbers, direction) {

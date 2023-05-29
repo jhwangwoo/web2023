@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        #wrap {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            background-image: url("https://i.ibb.co/YTN069M/tetris.jpg");
+            padding-top: 1em;
+            background-size: cover;
+        }
+        h2 {
+            font-size: 3em;
+            font-family: "DungGeunMo";
+            color: white;
+        }
+        h3 {
+            font-size: 2em;
+            font-family: "DungGeunMo";
+            color: white;
+        }
+
+        p {
+            font-family: "DungGeunMo";
+            line-height: 1.5;
+            color: white;
+            font-size: 15px;
+        }
+
+        #name {
+            padding: 0 50px 20px 0;
+        }
+        #tetris__wrap {
+            width: 60%;
+            text-align-last: right;
+        }
+        #tetris {
+            border: solid 0.2em white;
+            background-color: black;
+        }
+
+        #button-container {
+            padding-top: 45px;
+            width: 40%;
+        }
+
+
+        #start {
+            background-color: blue;
+            color: white;
+            padding: 0.5em;
+            margin: 25px;
+            font-size: 1.2em;
+            font-family: "DungGeunMo";
+            display: block;
+        }
+
+        #reset {
+            background-color: red;
+            color: white;
+            padding: 0.5em;
+            margin: 25px;
+            font-size: 1.2em;
+            font-family: "DungGeunMo";
+        }
+        .next__box {
+            width: 100px;
+            height: 100px;
+            border: 0.2em solid #fff;
+            background-color: #000;
+            margin: 25px;
+        }
+        #score {
+            font-family: "DungGeunMo";
+            color: white;
+        }
+        .scoreBox {
+            display: block;
+            padding: 20px;
+        }
+
+
+
+
+
+
+
+        #instructions {
+            background-color: purple;
+            color: white;
+            padding: 0.5em;
+            margin: 0px 0px 25px 0px;
+            font-family: "DungGeunMo";
+        }
+
+
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: white;
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: black;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        
+        <!-- <button id="instructions">Instructions</button> -->
+        <!--Button for instructions -->
+        <!-- <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>⬅️ Left Arrow: moves the block left<br><br> ➡️ Right Arrow: moves the
+              block right<br><br>
+              ⬇️ Down Arrow: Accelerates the block's fall<br><br>
+              A & D Keys: Rotate the block <br><br> Score as many points as possible
+              by clearing horizontal lines of Blocks. <br><br> You must rotate,
+              move, and drop the falling Tetriminos inside the playing field. <br><br>
+              Lines are cleared when they are filled with Blocks and have no empty
+              spaces.
+            </p>
+          </div>
+        </div> -->
+        <div id="tetris__wrap">
+            <h2 id="name">Tetris</h2>
+            <canvas id="tetris" width="240" height="400">
+        </div>
+        <div id="button-container">
+            <div class="next__box"></div>
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+            <div class="scoreBox">
+                <h3>Score:<span id="score">0</span></h3>
+            </div>
+        </div>
+    </div>
+</body>
+  
+
+</html>
