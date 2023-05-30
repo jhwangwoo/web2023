@@ -75,6 +75,35 @@
     //     console.log(solution(["a","b","c"], ["com", "b", "d", "p", "c"]));
     //     //2
     // }
+    {
+        function solution(numbers) {
+            const obj = {
+                zero: 0,
+                one: 1,
+                two: 2,
+                three: 3,
+                four: 4,
+                five: 5,
+                six: 6,
+                seven: 7,
+                eight: 8,
+                nine: 9,
+            }
+            return +numbers.replace(/zero|one|two|three|four|five|six|seven|eight|nine/g, (v) => {
+                return obj[v]
+            })
+        }
+        console.log(solution("onefourzerosixseven"));
+        //14067
+    }
+    {
+        function solution(emergency) {
+            let order = emergency.slice().sort((a, b) => b - a)
+            return emergency.map(v => order.indexOf(v) + 1);
+        }
+        console.log(solution([1, 2, 3, 4, 5, 6, 7]));
+        //[7, 6, 5, 4, 3, 2, 1]
+    }
 {
     function solution(my_str, n) {
         let result = [];
