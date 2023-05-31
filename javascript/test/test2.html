@@ -76,6 +76,20 @@
     //     //2
     // }
     {
+        function solution(A, B) {
+            return (B+B).indexOf(A);
+        }
+        console.log(solution("apple", "elppa"));
+        //-1
+    }
+    {
+        function solution(spell, dic) {
+            return dic.some((v) => [...v].sort().toString() === [...spell].sort().toString())? 1 : 2;
+        }
+        console.log(solution(["z", "d", "x"], ["def", "dww", "dzx", "loveaw"]))
+        //1
+    }
+    {
         function solution(numbers) {
             const obj = {
                 zero: 0,
