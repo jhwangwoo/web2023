@@ -109,19 +109,14 @@
             const parallaxCont = document.querySelector(".parallaxs__wrap");
             function scroll(){
                 let scrollTop = window.pageYOffset;
-                
                 let parallaxWidth = parallaxCont.offsetWidth;
 
                 document.body.style.height = parallaxWidth + 'px';
-
                 let viewWidth = parallaxWidth - window.innerWidth;
-
                 let viewHeight = parallaxWidth - window.innerHeight;
-
                 let goLeft = scrollTop * (viewWidth / viewHeight);
 
                 gsap.to(parallaxCont, {left: -goLeft, ease: "power2.out"});
-
                 document.querySelector(".scroll span").innerText = Math.round(scrollTop);
 
                 requestAnimationFrame(scroll);
