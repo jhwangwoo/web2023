@@ -76,6 +76,31 @@
     //     //2
     // }
     {
+        function solution(score) {
+            let total = score.map(v => v[0] + v[1])
+            let array = total.slice().sort((a,b) => b - a)
+            return total.map((v) => array.indexOf(v) + 1);
+        }
+        console.log(solution([[80, 70], [70, 80], [30, 50], [90, 100], [100, 90], [100, 100], [10, 30]]));
+        //[4, 4, 6, 2, 2, 1, 7]
+    }
+    {
+        function solution(s) {
+            s = s.split(' ')
+            let result = [];
+            for (let i of s){
+                if(i === 'Z'){
+                    result.pop()    
+                } else {
+                    result.push(+i)
+                }
+            }
+            return result.reduce((a, c) => a + c, 0)
+        }
+        console.log(solution("10 20 30 40"));
+        //100
+    }
+    {
         function solution(A, B) {
             return (B+B).indexOf(A);
         }
