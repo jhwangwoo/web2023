@@ -76,6 +76,149 @@
     //     //2
     // }
     {
+        function solution(n) {
+            const result = Array.from({ length: n }, () => []);
+            let num = 1;
+            let top = 0;
+            let bottom = n - 1;
+            let left = 0;
+            let right = n - 1;
+            while (num <= n * n) {
+                for (let i = left; i <= right; i++) {
+                    result[top][i] = num++;
+                }
+                top++;
+                for (let i = top; i <= bottom; i++) {
+                    result[i][right] = num++;
+                }
+                right--;
+                for (let i = right; i >= left; i--) {
+                    result[bottom][i] = num++;
+                }
+                bottom--;
+                for (let i = bottom; i >= top; i--) {
+                    result[i][left] = num++;
+                }
+                left++;
+            }
+            return result;
+        }
+        console.log(solution(5));
+        //[[1, 2, 3, 4, 5], [16, 17, 18, 19, 6], [15, 24, 25, 20, 7], [14, 23, 22, 21, 8], [13, 12, 11, 10, 9]]
+    }
+    {
+        function solution(babbling) {
+            const validSounds = new Set(["aya", "ye", "woo", "ma"]);
+
+            return babbling.reduce((count, word) => {
+                let isValid = true;
+                let remainingWord = word;
+
+                while (remainingWord.length > 0) {
+                    let foundValidSound = false;
+
+                    for (let sound of validSounds) {
+                        if (remainingWord.startsWith(sound)) {
+                            remainingWord = remainingWord.slice(sound.length);
+                            foundValidSound = true;
+                            break;
+                        }
+                    }
+
+                    if (!foundValidSound) {
+                        isValid = false;
+                        break;
+                    }
+                }
+
+                return isValid ? count + 1 : count;
+            }, 0);
+        }
+        console.log(solution(["ayaye", "uuuma", "ye", "yemawoo", "ayaa"]));
+        //3
+    }
+    {
+        function solution(lines) {
+            let line = new Array(200).fill(0)
+            lines.forEach(([min, max]) => {
+                for (; min < max; min++){
+                    line[min+100]++
+                }
+            })
+            return line.filter(v => v > 1).length;
+        }
+        console.log(solution([[-1, 1], [1, 3], [3, 9]]));
+        //0
+    }
+    {
+        function solution(board) {
+            const n = board.length
+            const d = [
+                [0, 0],
+                [0, 1],
+                [0, -1],
+                [1, 1],
+                [1, 0],
+                [1, -1],
+                [-1, -1],
+                [-1, 0],
+                [-1, 1],
+            ]
+            let dangerZone = new Set()
+            for (let i = 0; i < n; i++){
+                for (let j = 0; j < n; j++){
+                    if (board[i][j] === 1){
+                        d.forEach(v =>{
+                            let [col, row] = [i + v[0], j + v[1]]
+                            if (col >= 0 && col < n && row >=0 && row < n){
+                                dangerZone.add(col + " " + row)
+                            }
+                        })
+                    }
+                }
+            }
+            return n*n - dangerZone.size
+        }
+        console.log(solution([[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 1, 0], [0, 0, 0, 0, 0]]));
+        //13
+    }
+    {
+        function solution(polynomial) {
+            const arr = polynomial.split(' + ')
+            const x = arr.filter(v => v.includes('x')).map(v => parseInt(v.replace('x', '')) || 1).reduce((a, c) => a + c, 0)
+            const nomal = arr.filter(v => !v.includes('x')).reduce((a, c) => a + parseInt(c), 0)
+            const answer = [];
+            if(x){
+                if (x === 1){
+                    answer.push('x')
+                } else {
+                    answer.push(`${x}x`)
+                }
+            }
+            if (nomal){
+                answer.push(nomal)
+            }
+            return answer.join(' + ');
+        }
+        console.log(solution("x + x + x"));
+        //"3x"
+    }
+    {
+        function solution(n) {
+            let answer = 0;
+            let arr = []
+            for (let i = 0; i < n; i++){
+                answer += 1;
+                while (answer % 3 == 0 || answer.toString().split('').includes('3')){
+                    answer += 1;
+                }
+            }
+            return answer;
+        }
+        console.log(solution(40));
+        //76
+    }
+    {
         function solution(score) {
             let total = score.map(v => v[0] + v[1])
             let array = total.slice().sort((a,b) => b - a)
