@@ -76,6 +76,21 @@
         .parallaxs__item:nth-child(9) .parallaxs__item__img {
             background-image: url(img/parallaxEffect03-min.jpg);
         }
+        #section7 .parallaxs__item {
+            position: relative;
+        }
+        #section7 .parallaxs__item__img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .parallaxs__item__img.t1 {z-index: 6;}
+        .parallaxs__item__img.t2 {z-index: 5;}
+        .parallaxs__item__img.t3 {z-index: 4;}
+        .parallaxs__item__img.t4 {z-index: 3;}
+        .parallaxs__item__img.t5 {z-index: 2;}
+        .parallaxs__item__img.t6 {z-index: 1;}
         .parallaxs__item__text {
             font-size: 10vw;
             font-weight: 800;
@@ -130,7 +145,7 @@
             <!-- //section4 -->
             <section id="section5" class="parallaxs__item">
                 <span class="parallaxs__item__num">05</span>
-                <div class="parallaxs__item__img"></div>
+                <div class="parallaxs__item__text">section5</div>
             </section>
             <!-- //section5 -->
             <section id="section6" class="parallaxs__item">
@@ -140,7 +155,12 @@
             <!-- //section6 -->
             <section id="section7" class="parallaxs__item">
                 <span class="parallaxs__item__num">07</span>
-                <div class="parallaxs__item__img"></div>
+                <div class="parallaxs__item__img t1"></div>
+                <div class="parallaxs__item__img t2"></div>
+                <div class="parallaxs__item__img t3"></div>
+                <div class="parallaxs__item__img t4"></div>
+                <div class="parallaxs__item__img t5"></div>
+                <div class="parallaxs__item__img t6"></div>
             </section>
             <!-- //section7 -->
             <section id="section8" class="parallaxs__item">
@@ -162,12 +182,13 @@
     <!-- //main -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    
     <script>
         const box1 = document.querySelector("#section1 .parallaxs__item__img");
         const box2 = document.querySelector("#section2 .parallaxs__item__text");
         const box3 = document.querySelector("#section3 .parallaxs__item__img");
         const box4 = document.querySelector("#section4 .parallaxs__item__img");
-        const box5 = document.querySelector("#section5 .parallaxs__item__img");
+        const box5 = document.querySelector("#section5 .parallaxs__item__text");
         const box6 = document.querySelector("#section6 .parallaxs__item__img");
         const box7 = document.querySelector("#section7 .parallaxs__item__img");
         const box8 = document.querySelector("#section8 .parallaxs__item__img");
@@ -228,11 +249,10 @@
         })
 
         const ani4 = gsap.timeline();
-        ani3.fromTo("#section4 .parallaxs__item__img",
+        ani4.fromTo("#section4 .parallaxs__item__img",
             {y:-200, autoAlpha: 0},
             {y: 0, autoAlpha: 1}
         )
-            
         ScrollTrigger.create({
             animation: ani4,
             trigger: "#section4",
@@ -242,7 +262,135 @@
             pin: true,
             anticipatePin: 1,
             markers : true,
+        });
+
+        const ani5 = gsap.timeline();
+        ani5.fromTo(box5, 
+            {x:-900, y:-200},
+            {x:-500, y:0}
+        )
+        ani5.to(box5, {x:-300, y:-100, duration: 2, })
+        ani5.to(box5, {x:-100, y:0, duration: 2})
+        ani5.to(box5, {x:-50, y:-50, duration: 2})
+        ani5.to(box5, {x:-30, y:0, duration: 2})
+        ani5.to(box5, {x:-10, y:-10, duration: 2})
+        ani5.to(box5, {x:0, y:0, duration: 2})
+        ani5.to(box5, {x:0, y:0, duration: 2})
+        ani5.to(box5, {x:0, y:0, duration: 2})
+
+        // ani5.to(box5, {x:-500, y:-200})
+        ScrollTrigger.create({
+            animation: ani5,
+            trigger: "#section5",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers : true,
         })
+        
+
+        const ani6 = gsap.timeline();
+        ani6.fromTo(box6, 
+            {x:-900},
+            {x:200, rotation:30}
+        )
+        ani6.to(box6, {x:250, rotation:30, duration: 2})
+        ani6.to(box6, {x:300, rotation:30, duration: 2})
+        ani6.to(box6, {x:350, rotation:30, duration: 2})
+        ani6.to(box6, {x:200,y:-70})
+        ani6.to(box6, {x:100,y:-0})
+        ani6.to(box6, {x:50,y:-50})
+        ani6.to(box6, {x:30,y:0, rotation:10})
+        ani6.to(box6, {x:10,y:-10, rotation:0})
+        ani6.to(box6, {x:0,y:0, rotation:0})
+
+        ScrollTrigger.create({
+            animation: ani6,
+            trigger: "#section6",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers : true,
+        })
+
+
+        //샤샤샥
+        const ani7 = gsap.timeline();
+
+        ani7.fromTo(["#section7 .parallaxs__item__img.t1",
+         "#section7 .parallaxs__item__img.t2",
+         "#section7 .parallaxs__item__img.t3",
+         "#section7 .parallaxs__item__img.t4",
+         "#section7 .parallaxs__item__img.t5",
+         "#section7 .parallaxs__item__img.t6"], 
+            {x:-900, y:-200 },
+            {x:-60, y:-0, stagger: 0.15}
+        );
+        ani7.to(["#section7 .parallaxs__item__img.t1",
+         "#section7 .parallaxs__item__img.t2",
+         "#section7 .parallaxs__item__img.t3",
+         "#section7 .parallaxs__item__img.t4",
+         "#section7 .parallaxs__item__img.t5",
+         "#section7 .parallaxs__item__img.t6"], 
+            {x:850, y:-100, stagger: 0.15}
+        );
+        ani7.to(["#section7 .parallaxs__item__img.t1",
+         "#section7 .parallaxs__item__img.t2",
+         "#section7 .parallaxs__item__img.t3",
+         "#section7 .parallaxs__item__img.t4",
+         "#section7 .parallaxs__item__img.t5",
+         "#section7 .parallaxs__item__img.t6"], 
+            {x:500, y:-300, stagger: 0.15}
+        );
+        ani7.to(["#section7 .parallaxs__item__img.t1",
+         "#section7 .parallaxs__item__img.t2",
+         "#section7 .parallaxs__item__img.t3",
+         "#section7 .parallaxs__item__img.t4",
+         "#section7 .parallaxs__item__img.t5",
+         "#section7 .parallaxs__item__img.t6"], 
+            {x:0, y:0, stagger: 0.15}
+        );
+
+        ani7.timeScale(1.5);
+
+
+        ScrollTrigger.create({
+            animation: ani7,
+            trigger: "#section7",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers : true,
+            strength: 0.6,
+            squash: 3,
+        })
+
+
+        const ani8 = gsap.timeline();
+        ani8.fromTo(box8, 
+            {width:50, height:50, borderRadius:50},
+            {width:50, height:50,}
+        )
+        ani8.to(box8, {width:750, height:750, duration: 2})
+
+
+        ScrollTrigger.create({
+            animation: ani8,
+            trigger: "#section8",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers : true,
+        })
+        
         
         
 
