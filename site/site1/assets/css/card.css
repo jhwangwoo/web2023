@@ -1,7 +1,4 @@
 /* card type */
-.card__wrap {
-    /* background-color: #ccc; */
-}
 .card__inner {
     display: flex;
     justify-content: space-between;

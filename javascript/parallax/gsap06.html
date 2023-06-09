@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/Parallax.css">
     <style>
+
         #header {
             position: fixed;
             z-index: 10000;
         }
         .parallaxs__item {
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             position: relative;
             display: flex;
@@ -40,23 +41,14 @@
             font-weight: 100;
         }
         .parallaxs__item__img {
-            width: 100%;
-            height: 100vh;
+            width: 200px;
+            height: 200px;
             background-size: cover;
+            border-radius: 20px;
         }
-        .parallaxs__item__img::after{
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: rgba(0,0,0,0.3);
-            z-index: 1;
-        }
-        /* .parallaxs__item__img.active{
+        .parallaxs__item__img.active{
             border-radius: 50%;
-        } */
+        }
         .parallaxs__item:nth-child(1) .parallaxs__item__img {
             background-image: url(img/parallaxEffect04-min.jpg);
         }
@@ -84,23 +76,34 @@
         .parallaxs__item:nth-child(9) .parallaxs__item__img {
             background-image: url(img/parallaxEffect03-min.jpg);
         }
-        .Parallax__item__title {
-            font-size: 10vw;
-            font-weight: 100;
+
+        /*option*/
+        #main {
+            /* overflow: auto;  *//*히든푸는법*/
+        }
+        body {
+            overscroll-behavior: none; /**/
+            height: 100vh;
+        }
+        .parallaxs__wrap {
+            width: 900%;   /*가로값폭*/
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
         }
     </style>
 </head>
 <body class="img01 bg01 font01">
     <header id="header">
-        <h1>GSAP Parallax Effect04</h1>
-        <p>GSAP 패럴랙스 이펙트 : pin 효과</p>
+        <h1>GSAP Parallax Effect06</h1>
+        <p>GSAP 패럴랙스 이펙트 : 가로효과</p>
         <ul>
             <li><a href="gsap01.html">1</a></li>
             <li><a href="gsap02.html">2</a></li>
             <li><a href="gsap03.html">3</a></li>
-            <li class="active"><a href="gsap04.html">4</a></li>
+            <li><a href="gsap04.html">4</a></li>
             <li><a href="gsap05.html">5</a></li>
-            <li><a href="gsap06.html">6</a></li>
+            <li class="active"><a href="gsap06.html">6</a></li>
             <li><a href="gsap07.html">7</a></li>
             <li><a href="gsap08.html">8</a></li>
             <li><a href="gsap09.html">9</a></li>
@@ -155,24 +158,45 @@
                 <div class="parallaxs__item__img"></div>
             </section>
             <!-- //section9 -->
-            <section id="section10" class="parallaxs__item">
+            <!-- <section id="section10" class="parallaxs__item">
                 <span class="parallaxs__item__num">end</span>
                 <div class="parallaxs__item__img"></div>
-            </section>
-            <!-- //sectionend -->
+            </section> -->
+            <!-- //section9 -->
         </div>
     </main>
     <!-- //main -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script>
-        gsap.utils.toArray(".parallaxs__item__img").forEach((item,i) => {
-            ScrollTrigger.create({
-                trigger: item,
-                start: "top top",
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+        
+        let sections =  gsap.utils.toArray(".parallaxs__item");
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length -1), 
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".parallaxs__wrap", 
                 pin: true,
-            })
-        });
+                scrub: 1,
+                snap: 1 / 8,//각영역에서 알아서 멈추는 전체 갯수에서 1빼고 나누기
+                // end: document.querySelector(".parallaxs__wrap").offsetWidth,
+                end: "+=5000" //속도 컨트롤을위해
+            }
+        })
+        
     </script>
 </body>
 </html>
