@@ -1,107 +1,1113 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>슬라이드 이펙트</title>
-
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <style>
-        /* slider__wrap */
-        .slider__wrap {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .slider__img {
-            position: relative;
-            width: 800px;
-            height: 450px;
-            overflow: hidden;
-        }
-        .slider {
-            position: absolute;
-            left: 0;
-            top: 0;
-            transition: all 0.5s;
-        }
-        .slider::before {
-            position: absolute;
-            left: 5px;
-            top: 5px;
-            background: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 5px 10px;
-        }
-        .slider:nth-child(1)::before {content: '이미지1';}
-        .slider:nth-child(2)::before {content: '이미지2';}
-        .slider:nth-child(3)::before {content: '이미지3';}
-        .slider:nth-child(4)::before {content: '이미지4';}
-        .slider:nth-child(5)::before {content: '이미지5';}
-        .slider:nth-child(1) {z-index: 5;}
-        .slider:nth-child(2) {z-index: 4;}
-        .slider:nth-child(3) {z-index: 3;}
-        .slider:nth-child(4) {z-index: 2;}
-        .slider:nth-child(5) {z-index: 1;}
-    </style>
-
+    <title>Document</title>
+    <link rel="stylesheet" href="../site2/assets/css/style.css">
 </head>
-<body class="img01 bg04 font01">
-    <header id="header">
-        <h1>Javascript Slider Effect01</h1>
-        <p>슬라이드 이펙트</p>
-        <ul>
-            <li class="active"><a href="sliderEffect01.html">1</a></li>
-            <li><a href="sliderEffect02.html">2</a></li>
-            <li><a href="sliderEffect03.html">3</a></li>
-            <li><a href="sliderEffect04.html">4</a></li>
-            <li><a href="sliderEffect05.html">5</a></li>
-            <li><a href="sliderEffect06.html">6</a></li>
-        </ul>
-    </header>
-    <!-- header -->
 
-    <main id="main">
-        <div class="slider__wrap">
-            <div class="slider__img">
-                <div class="slider"><img src="./img/sliderEffect01-min.jpg" alt="이미지1"></div>
-                <div class="slider"><img src="./img/sliderEffect02-min.jpg" alt="이미지2"></div>
-                <div class="slider"><img src="./img/sliderEffect03-min.jpg" alt="이미지3"></div>
-                <div class="slider"><img src="./img/sliderEffect04-min.jpg" alt="이미지4"></div>
-                <div class="slider"><img src="./img/sliderEffect05-min.jpg" alt="이미지5"></div>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <h1 class="brand"><a href="#">PARIS BAGUETTE</a></h1>
+                <nav id="nav">
+                    <div class="gnb">
+                        <div class="gnb-left">
+                            <ul id="menu-left-primary-menu" class="primary-menu">
+                                <li class="">
+                                    <a href="#"><span>파바의 약속</span></a>
+                                </li>
+                                <li class=""><a href="#"><span>파바 매거진</span></a></li>
+                                <li class=""><a href="#"><span>파바 스토리</span></a></li>
+                                <li class=""><a href="#"><span>상품 안내</span></a>
+                                    <div class="mega-menu">
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-81"
+                                                class="sub-menu-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81">
+                                                <a href="#"><span>product-col-1</span></a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-68"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68">
+                                                        <a href="/products/?cat1=전체"><span>전체</span></a>
+                                                    </li>
+                                                    <li id="menu-item-69"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                                        <a href="/products/?cat1=브레드"><span>브레드</span></a>
+                                                    </li>
+                                                    <li id="menu-item-70"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                                        <a href="/products/?cat1=케이크"><span>케이크</span></a>
+                                                    </li>
+                                                    <li id="menu-item-72"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72">
+                                                        <a href="/products/?cat1=샌드위치-샐러드"><span>샌드위치/샐러드</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li id="menu-item-82"
+                                                class="sub-menu-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-82">
+                                                <a href="#"><span>product-col-2</span></a>
+                                                <ul class="sub-menu">
+                                                    <li id="menu-item-71"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                                        <a href="/products/?cat1=선물"><span>선물</span></a>
+                                                    </li>
+                                                    <li id="menu-item-73"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73">
+                                                        <a href="/products/?cat1=디저트-스낵"><span>디저트/스낵</span></a>
+                                                    </li>
+                                                    <li id="menu-item-74"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                                        <a href="/products/?cat1=음료-아이스"><span>음료/아이스</span></a>
+                                                    </li>
+                                                    <li id="menu-item-32936"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32936">
+                                                        <a href="/products/?cat1=퍼스트클래스키친"><span>간편식</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul> <a href="#promotion/delicious/" class="banner"><img
+                                                src="https://cdn.paris.spl.li/wp-content/uploads/deliciousproductcategoryimg.jpeg"></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gnb-right">
+                            <ul id="menu-right-primary-menu" class="primary-menu">
+                                <li id="menu-item-42"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
+                                        href="#store/"><span>매장 정보</span></a></li>
+                                <li id="menu-item-62385"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62385"><a
+                                        href="#order/delivery/"><span>주문 정보</span></a></li>
+                                <li id="menu-item-40"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a
+                                        href="#promotion/"><span>프로모션</span></a></li>
+                            </ul> <a href="#" class="btn-search"><i class="material-icons">search</i></a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="mobile-nav-toggle"> <button class="hamburger hamburger--slider js-hamburger"
+                        type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+                </div>
             </div>
+        </header>
+        <nav id="mobileNav">
+            <div class="mobile-nav-inner">
+                <div class="mobile-nav-header">
+                    <div class="mobile-nav-toggle"> <button class="hamburger hamburger--slider js-hamburger is-active"
+                            type="button"><span class="hamburger-box"><span
+                                    class="hamburger-inner"></span></span></button></div>
+                </div>
+                <div class="mobile-nav-body">
+                    <div class="nav-block">
+                        <ul id="menu-left-primary-menu-1" class="primary-menu">
+                            <li
+                                class="em-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-81695">
+                                <a href="#pb-promise/"><span>파바의 약속</span></a>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a
+                                    href="#pbmagazine/"><span>파바 매거진</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a
+                                    href="#bread-now/"><span>파바 스토리</span></a></li>
+                            <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37">
+                                <a href="#products/"><span>상품 안내</span></a>
+                                <div class="mega-menu">
+                                    <ul class="sub-menu">
+                                        <li
+                                            class="sub-menu-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-81">
+                                            <a href="#"><span>product-col-1</span></a>
+                                            <ul class="sub-menu">
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68">
+                                                    <a href="/products/?cat1=전체"><span>전체</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                                    <a href="/products/?cat1=브레드"><span>브레드</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                                    <a href="/products/?cat1=케이크"><span>케이크</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-72">
+                                                    <a href="/products/?cat1=샌드위치-샐러드"><span>샌드위치/샐러드</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li
+                                            class="sub-menu-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-82">
+                                            <a href="#"><span>product-col-2</span></a>
+                                            <ul class="sub-menu">
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                                    <a href="/products/?cat1=선물"><span>선물</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73">
+                                                    <a href="/products/?cat1=디저트-스낵"><span>디저트/스낵</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                                    <a href="/products/?cat1=음료-아이스"><span>음료/아이스</span></a>
+                                                </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32936">
+                                                    <a href="/products/?cat1=퍼스트클래스키친"><span>간편식</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul> <a href="#promotion/delicious/" class="banner"><img
+                                            src="https://cdn.paris.spl.li/wp-content/uploads/deliciousproductcategoryimg.jpeg"></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-block">
+                        <ul id="menu-right-primary-menu-1" class="primary-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a
+                                    href="#store/"><span>매장 정보</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62385"><a
+                                    href="#order/delivery/"><span>주문 정보</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a
+                                    href="#promotion/"><span>프로모션</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="follow-us">
+                        <h4>Follow Us</h4>
+                        <div class="sns"> <a style="text-align:center;"
+                                href="https://www.facebook.com/loveparisbaguette/" target="_blank"
+                                class="facebook"><span><img style="width:16px; margin:0 auto; padding-top:7px;"
+                                        src="/wp-content/uploads/sns_ico_01.svg" /></span><span
+                                    class="label">facebook</span></a> <a href="https://instagram.com/parisbaguette_kr"
+                                target="_blank" class="instagram"><img
+                                    style="width:24px; margin:0 auto; padding-top:11px;"
+                                    src="/wp-content/uploads/sns_ico_02.svg" /><span class="label">instagram</span></a>
+                            <a href="https://www.youtube.com/user/loveparisbaguette" target="_blank"
+                                class="youtube"><img style="width:27px; margin:0 auto; padding-top:14px;"
+                                    src="/wp-content/uploads/sns_ico_03.svg" /><span class="label">youtube</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="main">
+            <section class="pb-section" id="homeFeaturedSlider">
+                <div class="pb-section-inner p-t-0">
+                    <div class="slider with-large-arrow">
+                        <div class="slide"> <a href="#promotion/cherry-bingsu/" class="home-featured-item">
+                                <div class="img"><img
+                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/아마레-체리빙수_메인배너.jpg">
+                                </div>
+                                <div class="desc">
+                                    <h3 class="txt-yellow"></h3>
+                                    <h2 class="font-pbgothic"><strong></strong></h2>
+                                </div>
+                                <div class="gradient-container" style="background-color: #000; opacity: 0.3;"></div>
+                            </a></div>
+                        <div class="slide"> <a href="#promotion/paba-tarte/" class="home-featured-item">
+                                <div class="img"><img
+                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230530_파리바게뜨_타르트-메인배너-1600x2000_v2.png">
+                                </div>
+                                <div class="desc">
+                                    <h3 class="txt-yellow"></h3>
+                                    <h2 class="font-pbgothic"><strong></strong></h2>
+                                </div>
+                                <div class="gradient-container" style="background-color: #000; opacity: 0.3;"></div>
+                            </a></div>
+                        <div class="slide"> <a href="#promotion/creamcheese-fair/" class="home-featured-item">
+                                <div class="img"><img
+                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/크림치즈페어-메인배너.jpg"></div>
+                                <div class="desc">
+                                    <h3 class="txt-yellow"></h3>
+                                    <h2 class="font-pbgothic"><strong></strong></h2>
+                                </div>
+                                <div class="gradient-container" style="background-color: #000; opacity: 0.3;"></div>
+                            </a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homePresentation">
+                <div class="pb-section-inner">
+                    <div class="container">
+                        <div class="pb-section-header">
+                            <h2 class="section-title"><a href="/pbmagazine"><strong class="font-pbgothic">PB
+                                        MAGAZINE</strong></a></h2> <a href="/pbmagazine" class="btn-more"><span>SHOW
+                                    MORE</span></a>
+                        </div>
+                        <div class="pb-section-body">
+                            <div class="list list-3">
+                                <ul>
+                                    <li>
+                                        <div class="presentation-list-item"> <a
+                                                href="#presentation/%eb%85%bc%ec%82%b0-%eb%94%b8%ea%b8%b0/">
+                                                <div class="img"><img width="600" height="750"
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/논산딸기-PB매거진_썸네일-600x750-1-600x750.png"
+                                                        class="attachment-pb-thumbnail-2 size-pb-thumbnail-2 wp-post-image"
+                                                        alt="" /></div>
+                                            </a>
+                                            <div class="desc"> <a
+                                                    href="#presentation/%eb%85%bc%ec%82%b0-%eb%94%b8%ea%b8%b0/">
+                                                    <h3 class="post-title"><strong class="font-pbgothic">논산 딸기</strong>
+                                                    </h3>
+                                                    <div class="post-excerpt font-pbgothic">
+                                                        <p>논산 딸기 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="presentation-list-item"> <a href="#presentation/mungyeong-omija/">
+                                                <div class="img"><img width="600" height="750"
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/문경오미자-매거진_썸네일-600x750.png"
+                                                        class="attachment-pb-thumbnail-2 size-pb-thumbnail-2 wp-post-image"
+                                                        alt="" /></div>
+                                            </a>
+                                            <div class="desc"> <a href="#presentation/mungyeong-omija/">
+                                                    <h3 class="post-title"><strong class="font-pbgothic">문경 오미자</strong>
+                                                    </h3>
+                                                    <div class="post-excerpt font-pbgothic">
+                                                        <p>문경 오미자 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="presentation-list-item"> <a href="#presentation/gyeongsan-jujube/">
+                                                <div class="img"><img width="600" height="750"
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/0830_경산대추-PB매거진_썸네일-600x750.png"
+                                                        class="attachment-pb-thumbnail-2 size-pb-thumbnail-2 wp-post-image"
+                                                        alt="" /></div>
+                                            </a>
+                                            <div class="desc"> <a href="#presentation/gyeongsan-jujube/">
+                                                    <h3 class="post-title"><strong class="font-pbgothic">경산 대추</strong>
+                                                    </h3>
+                                                    <div class="post-excerpt font-pbgothic">
+                                                        <p>경산 대추 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+                                                    </div>
+                                                </a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pb-section-footer"> <a href="/pbmagazine" class="btn-more"><span>SHOW
+                                    MORE</span></a></div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homeBreadNow">
+                <div class="pb-section-inner">
+                    <div class="container">
+                        <div class="pb-section-header">
+                            <h2 class="section-title"><a href="/bread-now"><strong class="font-pbgothic">PB
+                                        STORY</strong></a></h2> <a href="/bread-now" class="btn-more"><span>SHOW
+                                    MORE</span></a>
+                        </div>
+                        <div class="pb-section-body">
+                            <div class="bread-now-list list list-2">
+                                <ul>
+                                    <li>
+                                        <div class="bread-now-list-item"> <a
+                                                href="#bread-now/%ed%8c%8c%eb%a6%ac%eb%b0%94%ea%b2%8c%eb%9c%a8%ec%97%90-%eb%b2%a8%eb%a6%ac%ea%b3%b0%ec%9d%b4-%eb%96%b4%eb%8b%a4-2/"
+                                                class="img"><img width="600" height="600"
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일-600x600.png"
+                                                    class="attachment-pb-thumbnail-1 size-pb-thumbnail-1 wp-post-image"
+                                                    alt=""
+                                                    srcset="https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일.png 600w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일-400x400.png 400w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일-500x500.png 500w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></a>
+                                            <div class="desc"> <a
+                                                    href="#bread-now/%ed%8c%8c%eb%a6%ac%eb%b0%94%ea%b2%8c%eb%9c%a8%ec%97%90-%eb%b2%a8%eb%a6%ac%ea%b3%b0%ec%9d%b4-%eb%96%b4%eb%8b%a4-2/">
+                                                    <div class="post-category">
+                                                        <p class="txt-blue">광고</p>
+                                                    </div>
+                                                    <h3 class="post-title"><strong class="font-pbgothic">폼 미쳤다❤️생글탱글
+                                                            과일가득 프리미엄 치즈 타르트</strong></h3>
+                                                    <div class="post-excerpt">
+                                                        <p>달콤상큼한 과일과 풍미가득 크림치즈! 폼 제대로 오른 프리미엄 치즈 타르트의 등장!</p>
+                                                    </div>
+                                                </a>
+                                                <div class="post-date">2023-05-19</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bread-now-list-item"> <a
+                                                href="#bread-now/%ed%8c%8c%eb%a6%ac%eb%b0%94%ea%b2%8c%eb%9c%a8%ec%97%90-%eb%b2%a8%eb%a6%ac%ea%b3%b0%ec%9d%b4-%eb%96%b4%eb%8b%a4/"
+                                                class="img"><img width="600" height="600"
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일_핑크곰-600x600.png"
+                                                    class="attachment-pb-thumbnail-1 size-pb-thumbnail-1 wp-post-image"
+                                                    alt=""
+                                                    srcset="https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일_핑크곰.png 600w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일_핑크곰-400x400.png 400w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/파바스토리_썸네일_핑크곰-500x500.png 500w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></a>
+                                            <div class="desc"> <a
+                                                    href="#bread-now/%ed%8c%8c%eb%a6%ac%eb%b0%94%ea%b2%8c%eb%9c%a8%ec%97%90-%eb%b2%a8%eb%a6%ac%ea%b3%b0%ec%9d%b4-%eb%96%b4%eb%8b%a4/">
+                                                    <div class="post-category">
+                                                        <p class="txt-blue">BREAD VIDEO</p>
+                                                    </div>
+                                                    <h3 class="post-title"><strong class="font-pbgothic">파리바게뜨에 벨리곰이
+                                                            떴다!</strong></h3>
+                                                    <div class="post-excerpt">
+                                                        <p>벨리곰 케이크가 나왔다?! 소식 듣고 찾아온 벨리곰🐻 귀여움 한도초과 랩 오브 파리바게뜨 습격 현장 💕
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                                <div class="post-date">2023-05-19</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bread-now-list-item"> <a
+                                                href="#bread-now/%ec%9d%b8%ec%83%9d%ed%81%ac%eb%a6%bc%eb%b9%b5-%eb%89%b4%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%93%b1%ec%9e%a5/"
+                                                class="img"><img width="600" height="600"
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230511_파리바게뜨_홈페이지썸네일PB-VIDEO_title-600x600.png"
+                                                    class="attachment-pb-thumbnail-1 size-pb-thumbnail-1 wp-post-image"
+                                                    alt=""
+                                                    srcset="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230511_파리바게뜨_홈페이지썸네일PB-VIDEO_title.png 600w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/230511_파리바게뜨_홈페이지썸네일PB-VIDEO_title-400x400.png 400w, https://cdn.paris.spl.li/wp-content/uploads/2023/05/230511_파리바게뜨_홈페이지썸네일PB-VIDEO_title-500x500.png 500w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></a>
+                                            <div class="desc"> <a
+                                                    href="#bread-now/%ec%9d%b8%ec%83%9d%ed%81%ac%eb%a6%bc%eb%b9%b5-%eb%89%b4%ed%8e%98%ec%9d%b4%ec%8a%a4-%eb%93%b1%ec%9e%a5/">
+                                                    <div class="post-category">
+                                                        <p class="txt-blue">BREAD VIDEO</p>
+                                                    </div>
+                                                    <h3 class="post-title"><strong class="font-pbgothic">인생크림빵 뉴페이스
+                                                            등장!</strong></h3>
+                                                    <div class="post-excerpt">
+                                                        <p>※빵덕후 시청 필수※ 인생크림빵 뉴페이스 등장!</p>
+                                                    </div>
+                                                </a>
+                                                <div class="post-date">2023-05-16</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="bread-now-list-item"> <a
+                                                href="#bread-now/%ec%8b%a4%ed%8c%a8%ec%97%86%eb%8a%94-%ec%9d%b8%ec%83%9d%ed%81%ac%eb%a6%bc%eb%b9%b5-3%eb%8c%80%ec%9e%a5/"
+                                                class="img"><img width="600" height="600"
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/파바스토리_인생크림빵-3종_썸네일-600x600.png"
+                                                    class="attachment-pb-thumbnail-1 size-pb-thumbnail-1 wp-post-image"
+                                                    alt=""
+                                                    srcset="https://cdn.paris.spl.li/wp-content/uploads/2023/04/파바스토리_인생크림빵-3종_썸네일.png 600w, https://cdn.paris.spl.li/wp-content/uploads/2023/04/파바스토리_인생크림빵-3종_썸네일-400x400.png 400w, https://cdn.paris.spl.li/wp-content/uploads/2023/04/파바스토리_인생크림빵-3종_썸네일-500x500.png 500w"
+                                                    sizes="(max-width: 600px) 100vw, 600px" /></a>
+                                            <div class="desc"> <a
+                                                    href="#bread-now/%ec%8b%a4%ed%8c%a8%ec%97%86%eb%8a%94-%ec%9d%b8%ec%83%9d%ed%81%ac%eb%a6%bc%eb%b9%b5-3%eb%8c%80%ec%9e%a5/">
+                                                    <div class="post-category">
+                                                        <p class="txt-blue">BREAD VIDEO</p>
+                                                    </div>
+                                                    <h3 class="post-title"><strong class="font-pbgothic">실패없는 인생크림빵
+                                                            3대장</strong></h3>
+                                                    <div class="post-excerpt">
+                                                        <p>인생크림빵이 필요해? 실패 없는 인생크림빵 3대장!</p>
+                                                    </div>
+                                                </a>
+                                                <div class="post-date">2023-04-11</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pb-section-footer"> <a href="/bread-now" class="btn-more"><span>SHOW MORE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homePromotion">
+                <div class="pb-section-inner">
+                    <div class="container">
+                        <div class="pb-section-header">
+                            <h2 class="section-title"><a href="/promotion"><strong
+                                        class="font-pbgothic">PROMOTION</strong></a></h2> <a href="/promotion"
+                                class="btn-more"><span>SHOW MORE</span></a>
+                        </div>
+                        <div class="pb-section-body">
+                            <div class="promotion-list">
+                                <div class="slider with-arrow">
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a
+                                                href="#promotion/%ec%98%a4%eb%8a%98%eb%8f%84-%ec%8b%a0%ec%84%a0%ed%95%9c-%ec%8b%9d%eb%b9%b5-20-%ed%98%9c%ed%83%9d/"
+                                                class="img"> <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/프로모션-썸네일_1000_1000-600x600.jpg">
+                                                <span class="badge">예정</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-06-13 ~ 2023-06-15 <strong>(D-1)</strong> </span></div>
+                                                <h3 class="post-title"><a
+                                                        href="#promotion/%ec%98%a4%eb%8a%98%eb%8f%84-%ec%8b%a0%ec%84%a0%ed%95%9c-%ec%8b%9d%eb%b9%b5-20-%ed%98%9c%ed%83%9d/"><strong
+                                                            class="font-pbgothic">오늘도 신선한 식빵 20% 혜택✨</strong></a></h3>
+                                                <span class="readmore"><a
+                                                        href="#promotion/%ec%98%a4%eb%8a%98%eb%8f%84-%ec%8b%a0%ec%84%a0%ed%95%9c-%ec%8b%9d%eb%b9%b5-20-%ed%98%9c%ed%83%9d/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a href="#promotion/coolweekly-1/"
+                                                class="img"> <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/KakaoTalk_20230530_160937384_01-600x600.jpg">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-06-06 ~ 2023-06-19 </span></div>
+                                                <h3 class="post-title"><a href="#promotion/coolweekly-1/"><strong
+                                                            class="font-pbgothic">쿨 위클리 시원하게 최대 3천원 혜택❄</strong></a>
+                                                </h3> <span class="readmore"><a href="#promotion/coolweekly-1/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a href="#promotion/paba-tarte/" class="img">
+                                                <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/1000x1000_수정-600x600.png">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-05-01 ~ 2023-06-30 </span></div>
+                                                <h3 class="post-title"><a href="#promotion/paba-tarte/"><strong
+                                                            class="font-pbgothic">파리바게뜨 프리미엄 치즈 타르트🧀</strong></a></h3>
+                                                <span class="readmore"><a href="#promotion/paba-tarte/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a href="#promotion/cherry-bingsu/"
+                                                class="img">
+                                                <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/프로모션_썸네일-600x600.jpg">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-04-19 ~ 2023-08-31 </span></div>
+                                                <h3 class="post-title"><a href="#promotion/cherry-bingsu/"><strong
+                                                            class="font-pbgothic">사랑하는 사람과 함께 아마레 체리빙수🍒</strong></a>
+                                                </h3> <span class="readmore"><a href="#promotion/cherry-bingsu/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a
+                                                href="#promotion/%ed%92%8d%eb%af%b8%ec%9d%98-%ec%b0%a8%ec%9d%b4-100-%ec%8a%a4%ed%8e%98%ec%85%9c%ed%8b%b0-%ec%bb%a4%ed%94%bc%eb%a1%9c%eb%b6%80%ed%84%b0%e2%98%95/"
+                                                class="img"> <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/아다지오-아메리카노_썸네일_230426-600x600.png">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-06-01 ~ 2023-06-30 </span></div>
+                                                <h3 class="post-title"><a
+                                                        href="#promotion/%ed%92%8d%eb%af%b8%ec%9d%98-%ec%b0%a8%ec%9d%b4-100-%ec%8a%a4%ed%8e%98%ec%85%9c%ed%8b%b0-%ec%bb%a4%ed%94%bc%eb%a1%9c%eb%b6%80%ed%84%b0%e2%98%95/"><strong
+                                                            class="font-pbgothic">풍미의 차이, 100% 스페셜티 커피로부터☕</strong></a>
+                                                </h3> <span class="readmore"><a
+                                                        href="#promotion/%ed%92%8d%eb%af%b8%ec%9d%98-%ec%b0%a8%ec%9d%b4-100-%ec%8a%a4%ed%8e%98%ec%85%9c%ed%8b%b0-%ec%bb%a4%ed%94%bc%eb%a1%9c%eb%b6%80%ed%84%b0%e2%98%95/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a
+                                                href="#promotion/%ed%8c%8c%eb%b0%94%ec%99%80-%eb%ac%b8%ea%b2%bd%ec%98%a4%eb%af%b8%ec%9e%90%ec%9d%98-%eb%a7%8c%eb%82%a8-%ec%98%a4%eb%af%b8%ec%9e%90%ec%97%90%ec%9d%b4%eb%93%9c-%ed%95%9c%ec%a0%95%ed%8a%b9%ea%b0%80/"
+                                                class="img"> <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230530_파리바게뜨_오미자에이드_썸네일_1000x1000_v2-600x600.png">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-06-01 ~ 2023-06-30 </span></div>
+                                                <h3 class="post-title"><a
+                                                        href="#promotion/%ed%8c%8c%eb%b0%94%ec%99%80-%eb%ac%b8%ea%b2%bd%ec%98%a4%eb%af%b8%ec%9e%90%ec%9d%98-%eb%a7%8c%eb%82%a8-%ec%98%a4%eb%af%b8%ec%9e%90%ec%97%90%ec%9d%b4%eb%93%9c-%ed%95%9c%ec%a0%95%ed%8a%b9%ea%b0%80/"><strong
+                                                            class="font-pbgothic">파바와 문경오미자의 만남! 오미자에이드
+                                                            한정특가❤️</strong></a></h3> <span class="readmore"><a
+                                                        href="#promotion/%ed%8c%8c%eb%b0%94%ec%99%80-%eb%ac%b8%ea%b2%bd%ec%98%a4%eb%af%b8%ec%9e%90%ec%9d%98-%eb%a7%8c%eb%82%a8-%ec%98%a4%eb%af%b8%ec%9e%90%ec%97%90%ec%9d%b4%eb%93%9c-%ed%95%9c%ec%a0%95%ed%8a%b9%ea%b0%80/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a href="#promotion/1qpay-may/" class="img">
+                                                <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/04/KakaoTalk_20230531_140800922-600x600.png">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-06-01 ~ 2023-06-30 </span></div>
+                                                <h3 class="post-title"><a href="#promotion/1qpay-may/"><strong
+                                                            class="font-pbgothic">하나원큐페이 QR결제로 1만2천원 이상 결제 시 3천원
+                                                            즉시혜택!</strong></a></h3> <span class="readmore"><a
+                                                        href="#promotion/1qpay-may/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slide">
+                                        <div class="promotion-list-item"> <a href="#promotion/pabaxoatly/" class="img">
+                                                <img
+                                                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/03/그린페어-썸네일_230316-600x600.jpg">
+                                                <span class="badge">진행 중</span> </a>
+                                            <div class="desc">
+                                                <div class="period"> <span class="txt-blue" style="display: none;">
+                                                        2023-04-20 ~ 2023-12-31 </span></div>
+                                                <h3 class="post-title"><a href="#promotion/pabaxoatly/"><strong
+                                                            class="font-pbgothic">파바와 오틀리가 함께한 제품 3종</strong></a></h3>
+                                                <span class="readmore"><a href="#promotion/pabaxoatly/">READ
+                                                        MORE</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-section-footer"> <a href="/promotion" class="btn-more"><span>SHOW MORE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homeProducts">
+                <div class="pb-section-inner">
+                    <div class="container">
+                        <div class="pb-section-header">
+                            <h2 class="section-title"><a href="/products"><strong
+                                        class="font-pbgothic">PRODUCTS</strong></a></h2> <a href="/products"
+                                class="btn-more"><span>SHOW MORE</span></a>
+                        </div>
+                        <div class="pb-section-body">
+                            <div class="product-slide-list-container">
+                                <div class="product-slide-list">
+                                    <div class="slider with-arrow">
+                                        <div class="slide"> <a
+                                                href="#product/%eb%8d%b0%ec%9d%bc%eb%a6%ac%ec%a3%bc%ec%8a%a4-%ed%8c%8c%ec%9d%b8%ec%95%a0%ed%94%8c%ec%98%a4%eb%a0%8c%ec%a7%80/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/파인애플오렌지-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">데일리주스 파인애플오렌지</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%8b%9c%ec%b9%a0%eb%a6%ac%ec%95%84-%eb%a0%88%eb%aa%ac%ec%97%90%ec%9d%b4%eb%93%9c/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/레몬-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">시칠리아 레몬에이드</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%a3%a8%eb%b9%84-%ec%9e%90%eb%aa%bd%ec%97%90%ec%9d%b4%eb%93%9c/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/자몽-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">루비 자몽에이드</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%82%98%ec%a3%bc%eb%b0%b0-%ec%8a%a4%eb%ac%b4%eb%94%94/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/나주배-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">나주배 스무디</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%94%b8%ea%b8%b0-%eb%a0%88%ec%96%b4%ec%b9%98%ec%a6%88-%ed%83%80%eb%a5%b4%ed%8a%b8%ec%a1%b0%ea%b0%81/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/딸기-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">딸기 레어치즈 타르트(조각)</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%b2%ad%ed%8f%ac%eb%8f%84-%eb%a0%88%ec%96%b4%ec%b9%98%ec%a6%88-%ed%83%80%eb%a5%b4%ed%8a%b8%ec%a1%b0%ea%b0%81/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/청포도-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">청포도 레어치즈 타르트(조각)</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%98%a4%eb%a0%8c%ec%a7%80%ec%9e%90%eb%aa%bd-%eb%a0%88%ec%96%b4%ec%b9%98%ec%a6%88-%ed%83%80%eb%a5%b4%ed%8a%b8%ec%a1%b0%ea%b0%81/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/오렌지자몽-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">오렌지&#038;자몽 레어치즈 타르트(조각)</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%a1%b0%ea%b0%81%eb%b8%94%eb%a3%a8%eb%b2%a0%eb%a6%ac%ec%b9%98%ec%a6%88%ed%83%80%eb%a5%b4%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/블루베리-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">블루베리 레어치즈 타르트(조각)</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%94%84%eb%a6%ac%ed%8b%b0%eb%b0%94-%ed%82%a4%ec%9c%84%ed%95%98%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/230609_파리바게뜨_키위하트포장-1-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">프리티바 키위하트</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%94%84%eb%a6%ac%ed%8b%b0%eb%b0%94-%eb%a7%9d%ea%b3%a0%ed%95%98%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/230609_파리바게뜨_망고하트포장-1-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">프리티바 망고하트</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%9d%b8%ec%a0%88%eb%af%b8%ec%89%90%ec%9d%b4%ed%81%ac/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/그림4-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">인절미쉐이크</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%9d%91%ec%9e%84%ec%9e%90-%ec%89%90%ec%9d%b4%ed%81%ac/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/그림5-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">흑임자쉐이크</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%89%b4%ec%9a%95%ec%b9%98%ec%a6%88%ed%83%80%eb%a5%b4%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/뉴욕치즈타르트_썸네일1-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">뉴욕치즈타르트</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ea%b0%93%ea%b5%ac%ec%9a%b4-%ec%ab%80%eb%93%9d%eb%b0%94%ec%82%ad-%ec%95%bd%ea%b3%bc%ec%bf%a0%ed%82%a4/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/KakaoTalk_20230523_153231483-crop-1-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">갓구운 쫀득바삭 약과쿠키</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ea%b0%93%ea%b5%ac%ec%9a%b4-%ec%ab%80%eb%93%9d%eb%b0%94%ec%82%ad-%ec%8a%a4%eb%aa%a8%ec%96%b4-%ec%bf%a0%ed%82%a4/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/06/KakaoTalk_20230523_153231483_08-crop-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">갓구운 쫀득바삭 스모어 쿠키</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%b3%84%ec%9d%b4-%eb%b9%9b%eb%82%98%eb%8a%94-%eb%b0%a4%ec%97%90/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/520476-별이-빛나는-밤에-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">별이 빛나는 밤에</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%94%84%eb%a6%ac%ed%8b%b0%eb%b0%94-%eb%94%b8%ea%b8%b0%ed%95%98%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230530_파리바게뜨_프리티바딸기하트블루-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">프리티바 딸기하트</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%95%91%ed%81%ac%ed%90%81%ea%b3%bc-%ec%83%81%ec%96%b4%ea%b0%80%ec%a1%b1-%ec%a0%a4%eb%a1%9c%eb%af%b8-%eb%a1%a4%eb%a6%ac%ed%8c%9d/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230530_파리바게뜨_상어가족2-확대-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">상어가족 젤로미 롤리팝</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%9a%b0%eb%a6%ac%ec%8c%80-%eb%a7%89%ea%b1%b8%eb%a6%ac%eb%a1%9c-%eb%a7%8c%eb%93%a0-%ec%b4%88%eb%8b%b9%ec%98%a5%ec%88%98%ec%88%98%eb%b9%b5/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/초당옥수수-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">우리쌀 막걸리로 만든 초당옥수수빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%9a%b0%eb%a6%ac%ec%8c%80-%eb%a7%89%ea%b1%b8%eb%a6%ac%eb%a1%9c-%eb%a7%8c%eb%93%a0-%ec%9a%b0%eb%a6%ac-%ec%98%a4%eb%af%b8%ec%9e%90%eb%b9%b5/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/우리오미자-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">우리쌀 막걸리로 만든 우리 오미자빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%9a%b0%eb%a6%ac%ec%8c%80-%eb%a7%89%ea%b1%b8%eb%a6%ac%eb%a1%9c-%eb%a7%8c%eb%93%a0-%ea%b0%95%eb%82%ad%ec%bd%a9%ec%b0%b8%ec%91%a5%eb%b9%b5-2/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/강낭콩참쑥-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">우리쌀 막걸리로 만든 강낭콩참쑥빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%b8%94%eb%a3%a8%eb%b2%a0%eb%a6%ac%eb%b2%a0%ec%9d%b4%ea%b8%80%ed%97%88%eb%8b%88%ec%9c%8c%eb%84%9b%ed%81%ac%eb%a6%bc%ec%b9%98%ec%a6%88/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/블루베리-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">두번쫄깃 블루베리 베이글 &#038; 허니윌넛크림치즈</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%91%90-%eb%b2%88-%ec%ab%84%ea%b9%83-%eb%b8%94%eb%a3%a8%eb%b2%a0%eb%a6%ac-%eb%b2%a0%ec%9d%b4%ea%b8%80/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/qmffn-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">두번쫄깃 블루베리 베이글</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%95%a0%ed%94%8c%eb%a7%9d%ea%b3%a0-%ec%83%9d%ed%81%ac%eb%a6%bc%eb%b9%b5/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/애플망고-크림빵-제품합성GR-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">애플망고 생크림빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%b4%89%ec%b4%89%ed%95%9c-%ed%94%84%eb%a0%8c%ec%b9%98-%ed%86%a0%ec%8a%a4%ed%8a%b8/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/촉촉한프렌치토스트-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">촉촉한 프렌치 토스트</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%bd%98%ed%8f%ac%ed%85%8c%ec%9d%b4%ed%86%a0%eb%84%9b-2/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/콘포테이토넛-600x600.jpg"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">콘포테이토넛</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%ab%80%eb%93%9d%ea%b3%a0%ec%86%8c%ed%95%9c-%ec%b6%94%ec%96%b5%ec%9d%98-%ec%b0%b0%ea%b9%a8%eb%b9%b5/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230518_파리바게뜨_제품합성_찰깨빵-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">쫀득고소한 추억의 찰깨빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%b6%94%ec%96%b5%ec%9d%98-%ec%83%9d%eb%8f%84%eb%82%98%ec%8a%a4/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230518_파리바게뜨_제품합성_추억의생도나스-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">추억의 생도나스</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%b4%88%ec%bd%94%eb%b8%94%eb%9d%bc%ec%8d%b8%ec%bc%80%ec%9d%b4%ed%81%ac/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/홀-이미지-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">초코블라썸케이크</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ed%97%88%eb%8b%88%eb%a0%88%eb%aa%ac%eb%a7%88%eb%93%a4%eb%a0%8c/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/230515_파리바게뜨_허니레몬마들렌01-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">허니레몬마들렌</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%eb%b3%b4%ec%8a%ac%eb%b3%b4%ec%8a%ac-%ec%98%a5%ec%88%98%ec%88%98-%ed%81%ac%eb%a6%bc%eb%b9%b5/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/정방향1-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">보슬보슬 옥수수 크림빵</h3>
+                                                </div>
+                                            </a></div>
+                                        <div class="slide"> <a
+                                                href="#product/%ec%98%a5%ec%88%98%ec%88%98%ec%bd%98%ed%81%ac%eb%a6%bc%ec%83%8c%eb%93%9c/"
+                                                class="product-list-item">
+                                                <div class="img"> <img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                                        class="guide"> <img
+                                                        src="https://cdn.paris.spl.li/wp-content/uploads/2023/05/옥수수크림샌드2-600x600.png"
+                                                        class="product-tb"></div>
+                                                <div class="desc">
+                                                    <h3 class="product-name">옥수수콘크림샌드</h3>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-section-footer"> <a href="/products" class="btn-more"><span>SHOW MORE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homeInstagram">
+                <div class="pb-section-inner">
+                    <div class="pb-section-header">
+                        <h2 class="section-title text-center"><strong class="font-pbgothic"><a
+                                    href="https://www.instagram.com/parisbaguette_kr/"
+                                    target="_blank">@parisbaguette_kr</a></strong><br><small>Instagram</small></h2>
+                    </div>
+                    <div class="pb-section-body">
+                        <div class="instagram-feed">
+                            <div class="elfsight-widget-instagram-feed elfsight-widget"
+                                data-elfsight-instagram-feed-options="%7B%22apiChangesMessage%22%3Anull%2C%22sourceType%22%3A%22businessAccount%22%2C%22source%22%3A%5B%22%40parisbaguette_kr%22%5D%2C%22personalAccessToken%22%3A%2227aa92af-6882-4b44-b8c4-42124ddc55e1%22%2C%22businessAccessToken%22%3A%2279c16f69-f23a-4f36-9baf-9da2d8127b28%22%2C%22businessAccount%22%3A%7B%22name%22%3A%22%5Cu1111%5Cu1161%5Cu1105%5Cu1175%5Cu1107%5Cu1161%5Cu1100%5Cu1166%5Cu1104%5Cu1173%22%2C%22value%22%3A%2217841400247672838%22%2C%22username%22%3A%22parisbaguette_kr%22%2C%22profile_picture_url%22%3A%22https%3A%5C%2F%5C%2Fscontent-nrt1-1.xx.fbcdn.net%5C%2Fv%5C%2Ft51.2885-15%5C%2F25014310_1947175515500133_992963397651791872_n.jpg%3F_nc_cat%3D102%26ccb%3D1-7%26_nc_sid%3D86c713%26_nc_ohc%3Dlaqy4ELubXsAX8GQ9MX%26_nc_ht%3Dscontent-nrt1-1.xx%26edm%3DAGaHXAAEAAAA%26oh%3D00_AfDSS4lZDB2-03wet4vSgzkuNtwEKoKUkX3sbLvXGT2-Sw%26oe%3D64504721%22%7D%2C%22position%22%3A%22%22%2C%22businessHashtag%22%3A%22%23eiffeltower%22%2C%22filterOnly%22%3A%5B%5D%2C%22filterExcept%22%3A%5B%5D%2C%22limit%22%3A6%2C%22order%22%3A%22date%22%2C%22layout%22%3A%22slider%22%2C%22postTemplate%22%3A%22tile%22%2C%22columns%22%3A6%2C%22rows%22%3A1%2C%22gutter%22%3A1%2C%22responsive%22%3A%5B%7B%22minWidth%22%3A375%2C%22columns%22%3A%223%22%2C%22rows%22%3A%222%22%2C%22gutter%22%3A%221%22%7D%2C%7B%22minWidth%22%3A768%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22gutter%22%3A%221%22%7D%5D%2C%22width%22%3A%22auto%22%2C%22callToActionButtons%22%3A%5B%7B%22postUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.instagram.com%5C%2Fp%5C%2FBmr7eH0nyxQ%5C%2F%22%2C%22buttonLabel%22%3A%22Install%20Instagram%20Feed%20now%22%2C%22buttonLink%22%3A%22https%3A%5C%2F%5C%2Felfsight.com%5C%2Finstagram-feed-instashow%5C%2F%22%7D%2C%7B%22postUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.instagram.com%5C%2Fp%5C%2FBmgZy5FnnQB%5C%2F%22%2C%22buttonLabel%22%3A%22Install%20Instagram%20Feed%20now%22%2C%22buttonLink%22%3A%22https%3A%5C%2F%5C%2Felfsight.com%5C%2Finstagram-feed-instashow%5C%2F%22%7D%2C%7B%22postUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.instagram.com%5C%2Fp%5C%2FBmbbCfBndRU%5C%2F%22%2C%22buttonLabel%22%3A%22Install%20Instagram%20Feed%20now%22%2C%22buttonLink%22%3A%22https%3A%5C%2F%5C%2Felfsight.com%5C%2Finstagram-feed-instashow%5C%2F%22%7D%5D%2C%22postElements%22%3A%5B%22user%22%2C%22date%22%2C%22instagramLink%22%2C%22likesCount%22%2C%22commentsCount%22%2C%22share%22%2C%22text%22%5D%2C%22popupElements%22%3A%5B%22user%22%2C%22location%22%2C%22followButton%22%2C%22instagramLink%22%2C%22likesCount%22%2C%22share%22%2C%22text%22%2C%22comments%22%2C%22date%22%5D%2C%22imageClickAction%22%3A%22popup%22%2C%22sliderArrows%22%3Atrue%2C%22sliderDrag%22%3Atrue%2C%22sliderSpeed%22%3A0.6%2C%22sliderAutoplay%22%3A%22%22%2C%22colorScheme%22%3A%22default%22%2C%22colorPostOverlayBg%22%3A%22rgba%280%2C%200%2C%200%2C%200.8%29%22%2C%22colorPostOverlayText%22%3A%22rgb%28255%2C%20255%2C%20255%29%22%2C%22colorPostBg%22%3A%22rgb%28255%2C%20255%2C%20255%29%22%2C%22colorPostText%22%3A%22rgb%280%2C%200%2C%200%29%22%2C%22colorPostLinks%22%3A%22rgb%280%2C%2053%2C%20107%29%22%2C%22colorSliderArrows%22%3A%22rgb%28255%2C%20255%2C%20255%29%22%2C%22colorSliderArrowsBg%22%3A%22rgba%280%2C%200%2C%200%2C%200.9%29%22%2C%22colorGridLoadMoreButton%22%3A%22rgb%2856%2C%20151%2C%20240%29%22%2C%22colorPopupOverlay%22%3A%22rgba%2843%2C%2043%2C%2043%2C%200.9%29%22%2C%22colorPopupBg%22%3A%22rgb%28255%2C%20255%2C%20255%29%22%2C%22colorPopupText%22%3A%22rgb%280%2C%200%2C%200%29%22%2C%22colorPopupLinks%22%3A%22rgb%280%2C%2053%2C%20105%29%22%2C%22colorPopupFollowButton%22%3A%22rgb%2856%2C%20151%2C%20240%29%22%2C%22colorPopupCtaButton%22%3A%22rgb%2856%2C%20151%2C%20240%29%22%2C%22widgetTitle%22%3A%22%22%2C%22lang%22%3A%22ko%22%2C%22apiUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.paris.co.kr%5C%2Fwp-json%5C%2Felfsight-instagram-feed%5C%2Fapi%22%2C%22apiProxyUrl%22%3A%22https%3A%5C%2F%5C%2Fwww.paris.co.kr%5C%2Fwp-json%5C%2Felfsight-instagram-feed%22%2C%22widgetId%22%3A%221%22%7D"
+                                data-elfsight-instagram-feed-version="4.0.1"
+                                data-elfsight-widget-id="elfsight-instagram-feed-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-section" id="homeBanners">
+                <div class="home-banners"> <a href="#cs/praise/" class="home-banner-item"
+                        style="background-color:#ffffff">
+                        <h3 style="color:#1e73be">고객센터</h3>
+                        <h2 style="color: #515151;"><strong class="font-pbgothic">고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로
+                                실천합니다.</strong></h2> <i class="arrow"
+                            style="border: 2px solid #515151; border-left: 0; border-bottom: 0;"></i>
+                    </a>
+                    <? if ($k + 1 < $footer_banners_length) { ?>
+                    <div class="desktop separator"></div>
+                    <hr class="mobile">
+                    <? } ?> <a href="#partner-cards/" class="home-banner-item" style="background-color:#ffffff">
+                        <h3 style="color:#1e73be">제휴 안내</h3>
+                        <h2 style="color: #515151;"><strong class="font-pbgothic">다양한 온라인 제휴와 카드 정보를 확인하세요.</strong>
+                        </h2> <i class="arrow" style="border: 2px solid #515151; border-left: 0; border-bottom: 0;"></i>
+                    </a>
+                    <? if ($k + 1 < $footer_banners_length) { ?>
+                    <div class="desktop separator"></div>
+                    <hr class="mobile">
+                    <? } ?> <a href="#notice/" class="home-banner-item" style="background-color:#ffffff">
+                        <h3 style="color:#1e73be">공지사항</h3>
+                        <h2 style="color: #515151;"><strong class="font-pbgothic">파리바게뜨 공지내용을 확인하세요.</strong></h2> <i
+                            class="arrow" style="border: 2px solid #515151; border-left: 0; border-bottom: 0;"></i>
+                    </a>
+                    <? if ($k + 1 < $footer_banners_length) { ?>
+                    <div class="desktop separator"></div>
+                    <hr class="mobile">
+                    <? } ?>
+                </div>
+            </section>
         </div>
-    </main>
-    <!-- main -->
-
-    <footer id="footer">
-        <a href="mailto:ghkddn132@naver.com">ghkddn132@naver.com</a>
-    </footer>
-    <!-- footer -->
-
-    
-    <script>
-        // 선택자
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = sliderWrap.querySelector(".slider__img");
-        const slider = sliderWrap.querySelectorAll(".slider");
-        
-        let currentIndex = 0;               //현재 보이는 이미지
-        let sliderCount = slider.length;    //이미지 갯수
-        let sliderInterval = 3000;          //이미지 변경 간격 시간
-    </script>
-
-    <!-- javascript -->
-
-    </script>
-
-
-    
-</body>
+        <footer id="footer">
+            <div class="container">
+                <div class="widgets">
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3 class="font-pbgothic"><strong>Info</strong></h3>
+                        </div>
+                        <div class="widget-body">
+                            <ul id="menu-info-menu" class="info-menu">
+                                <li id="menu-item-53"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a
+                                        href="#about/"><span>브랜드소개</span></a></li>
+                                <li id="menu-item-4335"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4335"><a
+                                        href="#franchise/"><span>창업안내</span></a></li>
+                                <li id="menu-item-66442"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66442"><a
+                                        href="#health-safety/"><span>안전보건경영방침</span></a></li>
+                                <li id="menu-item-6112"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6112"><a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="http://happy.spc.co.kr/indexframe.jsp"><span>거래희망사전등록</span></a></li>
+                                <li id="menu-item-6113"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6113"><a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://www.spc.co.kr/csr/right-mng/spc-operation/"><span>윤리신고센터</span></a>
+                                </li>
+                                <li id="menu-item-4382"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4382"><a
+                                        target="_blank" rel="noopener noreferrer"
+                                        href="https://spc.recruiter.co.kr/appsite/company/index"><span>채용</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3 class="font-pbgothic"><strong>Contact Us</strong></h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="cs-info">
+                                <p><a href="/cs/praise">고객센터</a></p>
+                                <p><a href="tel:080-731-2027">080-731-2027</a></p>
+                                <p><span>평일 09:00 - 17:00</span> <span>(점심 12:00 - 13:00)</span></p>
+                                <p><a href="/cs/praise">고객칭찬</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div class="footer-logos"> <a href="http://www.spc.co.kr/contributionAll"
+                                    target="_blank"><img
+                                        src="#wp-content/themes/paris/assets/img/footer/footer-logo-img-01.png"
+                                        alt="SPC그룹 사회공헌활동 SPC 행복한 이야기" class="logo1"></a> <a
+                                    href="https://www.kca.go.kr/ccm/" target="_blank"><img
+                                        src="/wp-content/uploads/footer-logo-img-06.png" alt="CCM" class="logo2"></a> <a
+                                    href="http://www.ncsi.or.kr/" target="_blank"><img
+                                        src="#wp-content/themes/paris/assets/img/footer/footer-logo-img-02.png"
+                                        alt="NCSI" class="logo2"></a> <a
+                                    href="https://www.kmac.co.kr/certify/cert_sys03.asp" target="_blank"><img
+                                        src="#wp-content/themes/paris/assets/img/footer/footer-logo-img-03.png"
+                                        alt="KCSI" class="logo3"></a> <a
+                                    href="https://demo.ksa.or.kr/ks-sqi/3363/subview.do" target="_blank"><img
+                                        src="#wp-content/themes/paris/assets/img/footer/footer-logo-img-04.png"
+                                        alt="KS-SQI" class="logo3"></a> <a href="http://www.brand.or.kr/"
+                                    target="_blank"><img
+                                        src="#wp-content/themes/paris/assets/img/footer/footer-logo-img-05.png"
+                                        alt="NBCI" class="logo3"></a></div>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h3 class="font-pbgothic"><strong>Follow Us</strong></h3>
+                        </div>
+                        <div class="widget-body">
+                            <div class="sns"> <a style="text-align:center;"
+                                    href="https://www.facebook.com/loveparisbaguette/" target="_blank"
+                                    class="facebook"><span><img style="width:16px; margin:0 auto; padding-top:7px;"
+                                            src="/wp-content/uploads/sns_ico_01.svg" /></span><span
+                                        class="label">facebook</span></a> <a
+                                    href="https://instagram.com/parisbaguette_kr" target="_blank" class="instagram"><img
+                                        style="width:24px; margin:0 auto; padding-top:11px;"
+                                        src="/wp-content/uploads/sns_ico_02.svg" /><span
+                                        class="label">instagram</span></a> <a
+                                    href="https://www.youtube.com/user/loveparisbaguette" target="_blank"
+                                    class="youtube"><img style="width:27px; margin:0 auto; padding-top:14px;"
+                                        src="/wp-content/uploads/sns_ico_03.svg" /><span
+                                        class="label">youtube</span></a></div>
 
 </html>

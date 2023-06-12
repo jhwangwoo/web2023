@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+}
+.container {
+    max-width: 1420px;
+    padding: 0 25px;
+    position: relative;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    background-color: #023586;
+    width: 100%;
+}
+
+header .container h1 a {
+    text-align: center;
+    display: block;
+    width: 30%;
+}
+header .container .nav {}
+header .container .nav .nav_left {
+    display: block;
+    text-align: left;
+}
+header .container .nav .nav_left li {}
+header .container .nav .nav_right {
+    display: block;
+    text-align: right;
+}
+header .container .nav .nav_right li {
+    
+}
+
