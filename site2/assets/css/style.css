@@ -10,3 +10,6 @@
 
 /* layout */
 @import "./header.css";
+@import "./slider.css";
+@import "./image.css";
+@import "./story.css";

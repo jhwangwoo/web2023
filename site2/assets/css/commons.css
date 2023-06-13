@@ -1,5 +1,6 @@
 .container {
     max-width: 1420px;
+    padding: 0 25px;
     /* position: relative; */
     margin: 0 auto;
 }
@@ -25,7 +26,12 @@
 
 /* hover */
 .hover:hover {
-    background-color: rgba(0, 0, 0, 0);
+    text-decoration: underline;
+    text-underline-position: under;
+}
+/* break */
+.break {
+    word-break :keep-all;
 }
 
 /* //skip */

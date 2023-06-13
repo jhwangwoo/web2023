@@ -20,9 +20,10 @@ li, ul, ol {
 }
 img {
     vertical-align: top;
-    width: 100%;
+    
+    max-width: 100%;
 }
-em {
+em,i {
     font-style: normal;
 }
 #main {

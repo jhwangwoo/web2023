@@ -1,0 +1,86 @@
+#storySection {
+    padding: 80px 0;
+}
+.stoty__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.stoty__title > h3 {
+    width: 92%;
+}
+.stoty__title > a {
+    width: 8%;
+    text-align: end;
+    /* border-bottom: 3px solid #111; */
+}
+.stoty__title > a span {
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 3px solid #111
+}
+.stoty__title h3 a {
+    color: #111;
+    font-weight: 500;
+    font-size: 24px;
+}
+.stoty__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stoty__inner .stoty__cont {
+    display: flex;
+    width: 49.2222%;
+    margin-bottom: 50px;
+}
+.stoty__inner .stoty__cont .stoty__img {
+    width: 50%;
+    margin-right: 24px;
+    position: relative;
+}
+.stoty__inner .stoty__cont .stoty__img:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    content: '';
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+    transition: all 0.2s;
+}
+.stoty__inner .stoty__cont .stoty__img:hover::after {
+    height: 90%;
+}
+.stoty__inner .stoty__cont .stoty__desc {
+    width: 50%;
+}
+.stoty__inner .stoty__cont .stoty__desc a p {
+    font-size: 14px;
+    display:block;
+    color: #023586;
+    margin-bottom: 16px;
+}
+.stoty__inner .stoty__cont .stoty__desc a strong{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    display:block;
+    color: #111;
+    margin-bottom: 16px;
+}
+.stoty__inner .stoty__cont .stoty__desc a span{
+    font-size: 14px;
+    display: block;
+    color: #4a4a4a;;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+.stoty__inner .stoty__cont .stoty__desc a i {
+    font-size: 10px;
+    display: block;
+    color: #111;
+}

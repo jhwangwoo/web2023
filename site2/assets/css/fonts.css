@@ -73,3 +73,14 @@
   .font-pbgothic {
       font-family: "font-pbgothic";
   }
+
+  @font-face {
+    font-family: "font-pbgothic2";
+    src: url("../font/PBGothicOTFBd.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .font-pbgothic2 {
+      font-family: "font-pbgothic2";
+  }
+  
