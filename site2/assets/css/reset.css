@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     color: #fff;
-    font-family: "EsaManru";
+    font-family: 'NotoSansKR';
 }
 *, *::before, *::after {
     box-sizing: border-box;
@@ -25,3 +25,7 @@ img {
 em {
     font-style: normal;
 }
+#main {
+    padding-top: 90px;
+    /* 생략 */
+  }

@@ -64,3 +64,12 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/Noto/NotoSansKR-Black.ttf') format("truetype");
     font-display: swap;
 } 
+@font-face {
+    font-family: "font-pbgothic";
+    src: url("../font/PBGothicOTFRg.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .font-pbgothic {
+      font-family: "font-pbgothic";
+  }

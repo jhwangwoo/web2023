@@ -1,0 +1,15 @@
+#main {
+    margin-top: 90px;
+}
+#sldierSection {
+    width: 100%;
+}
+#sldierSection .slider__inner {
+    width: 33.3333%;
+}
+#sldierSection .slider__inner .slider__img a {
+    width: 33.3333%;
+}
+#sldierSection .slider__inner .slider__img a img {
+    width: 33.3333%;
+}

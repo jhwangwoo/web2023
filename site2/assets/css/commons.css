@@ -23,6 +23,11 @@
     text-indent: -9999px;
 }
 
+/* hover */
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 /* //skip */
 #skip {
     position: relative;
