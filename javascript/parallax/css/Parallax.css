@@ -31,6 +31,22 @@
     background: #fff;
     color: #000;
 }
+#header > a {
+    margin-top: 10px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    border: 2px solid #fff;
+    transition: all 0.3s;
+}
+#header > a:hover {
+    background-color: #fff;
+    color: #000;
+}
 
 /* footer */
 #footer {
@@ -88,7 +104,7 @@
     position: relative;
     padding-top: 8vw;
 }
-.Parallax__item:nth-child(even){
+.Parallax__item:nth-child(even) {
     margin-left: 0;
     text-align: right;
 }
@@ -102,7 +118,7 @@
     opacity: 0.07;
     z-index: -2;
 }
-.Parallax__item:nth-child(even) .Parallax__item__num{
+.Parallax__item:nth-child(even) .Parallax__item__num {
     left: auto;
     right: -5vw;
 }
@@ -193,8 +209,9 @@
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 10px;
     border-radius: 30px;
+    z-index: 500;
 }
-.Parallax__dot li{
+.Parallax__dot li {
     position: relative;
     width: 20px;
     height: 20px;
@@ -202,7 +219,7 @@
     margin: 12px 8px;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
     text-indent: -9999px;
-    transition: box-shadow .2 ease ;
+    transition: box-shadow 0.2 ease;
 }
 .Parallax__dot li a {
     background: #fff;
@@ -212,8 +229,7 @@
     left: 0;
     top: 0;
     border-radius: 50%;
-    transition: transform .2s ease;
-
+    transition: transform 0.2s ease;
 }
 .Parallax__dot li.active {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
@@ -244,14 +260,13 @@
     font-size: 14px;
     cursor: pointer;
     transition: all 0.5s;
-
 }
 .parallax__top a:hover {
     background-color: #000;
     color: #fff;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
     .Parallax__nav {
         padding: 10px;
         background-color: rgba(0, 0, 0, 0.9);
@@ -261,12 +276,11 @@
         border-radius: 5px;
         text-align: center;
     }
-    .Parallax__nav li{
+    .Parallax__nav li {
         margin: 2px;
     }
     .Parallax__nav li a {
         font-size: 12px;
         padding: 0px 14px;
     }
-    
 }
