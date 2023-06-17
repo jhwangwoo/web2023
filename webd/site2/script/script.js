@@ -7,6 +7,20 @@ $(function(){
         $(".nav > ul > li > ul").stop().fadeOut(100);
         $("#header .container").removeClass("on");
     });
+
+    // $(".nav > ul > li").mouseover(function(){
+    //     $(this).find(".submenu").stop().slideDown(200);
+    // });
+    // $(".nav > ul > li").mouseout(function(){
+    //     $(this).find(".submenu").stop().slideUp(200);
+    // });
+    // $(".nav > ul > li").focusin(function(){
+    //     $(this).find(".submenu").stop().slideDown(200);
+    // });
+    // $(".nav > ul > li").focusout            (function(){
+    //     $(this).find(".submenu").stop().slideUp(200);
+    // });
+    
     
 
     //슬라이드
