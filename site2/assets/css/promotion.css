@@ -1,0 +1,16 @@
+#promotionSection {
+    padding: 80px 0;
+}
+.promotion__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.promotion__title > h3 {
+    width: 92%;
+}
+.promotion__title > a {
+    width: 8%;
+    text-align: end;
+    /* border-bottom: 3px solid #111; */
+}
