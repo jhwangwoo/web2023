@@ -1,0 +1,170 @@
+:root {
+
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+body,
+div,
+dl,
+dd,
+dt,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+p,
+table,
+th,
+td,
+input,
+figure,
+figcaption,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body, input, textarea, select, button, table {
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: "GmarketSans";
+    font-weight: 500;
+    letter-spacing: -0.4px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li,
+ol,
+ul {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+em,
+address {
+    font-style: normal;
+}
+img,
+svg,
+video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+img,
+fieldset,
+button {
+    border: 0;
+}
+body {
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+body::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.portfolio__desc {
+    width: 130vw;
+    height: 70vw;
+    position: relative;
+    border: 2px solid #fff;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); */
+    
+}
+.portfolio__desc::after, 
+.portfolio__desc::before {
+    position: absolute;
+    content: '';
+    width: 22.4%;
+    height: 2px;
+    background-color: #fff;
+} 
+.portfolio__desc::after {
+    top: 0;
+    left: 0;
+    transform: rotate(30.3deg);
+    transform-origin: left top;
+}
+.portfolio__desc::before {
+    top: 0;
+    right: 0;
+    transform: rotate(329.7deg);
+    transform-origin: right top;
+}
+
+.portfolio__line {
+    width: 61.5%;
+    height: 58%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border: 2px solid #fff;
+}
+.portfolio__line::after, 
+.portfolio__line::before {
+    position: absolute;
+    content: '';
+    width: 36.7%;
+    height: 2px;
+    background-color: #fff;
+} 
+.portfolio__line::after {
+    bottom: 0;
+    left: 0;
+    transform: rotate(149.7deg);
+    transform-origin: left bottom;
+}
+.portfolio__line::before {
+    bottom: 0;
+    right: 0;
+    transform: rotate(210.3deg);
+    transform-origin: right bottom;
+}
+
+.portfolio__item {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
