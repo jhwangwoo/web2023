@@ -51,3 +51,9 @@
 #skip a:focus {
     left: 5px;
 }
+
+
+/* color */
+.red {
+    color: red;
+}

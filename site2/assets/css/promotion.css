@@ -9,8 +9,99 @@
 .promotion__title > h3 {
     width: 92%;
 }
+.promotion__title > a > span {
+    width: 8%;
+    text-align: end;
+    color: #111;
+    /* border-bottom: 3px solid #111; */
+}
+#promotionSection {
+    padding: 80px 0;
+}
+.promotion__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.promotion__title > h3 {
+    width: 92%;
+}
 .promotion__title > a {
     width: 8%;
     text-align: end;
     /* border-bottom: 3px solid #111; */
+}
+.promotion__title > a span {
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 3px solid #111
+}
+.promotion__title h3 a {
+    color: #111;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.promotion__cont  {
+    width: 100%;
+    overflow: hidden;
+}
+.promotion__cont ul {
+    display: flex;
+    justify-content: space-between;
+    width: 200%;
+}
+.promotion__cont ul li {
+    box-sizing: border-box;
+    width: 12%;
+    /* padding: 0 12px; */
+}
+
+.promotion__cont ul li  .promotion__img {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.promotion__cont ul li  .promotion__img a {
+    width: 100%;
+    height: 100%;
+}
+.promotion__cont ul li .promotion__img a::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    content: '';
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    transition: all 0.2s;
+    /* z-index: 1; */
+}
+.promotion__cont .promotion__img a:hover::before {
+    height: 80%;
+}
+.promotion__cont ul li  .promotion__img a::after {
+    position: absolute;
+    content: '진행 중';
+    text-align: center;
+    width: 50px; 
+    top: 0;
+    left: 0;
+    background: #023586;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 8px;
+    color: #fff;
+}
+
+.promotion__cont ul li  .promotion__desc a span {
+    display: block;
+    color: #111;
+    font-size: 18px;
+    margin: 4px 0 10px;
+}
+.promotion__cont ul li  .promotion__desc a p{
+    color: #888;
+    font-size: 12px;
 }

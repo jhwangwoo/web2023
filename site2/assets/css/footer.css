@@ -1,0 +1,173 @@
+#footer {
+    background-color: #454a56;
+}
+#footer .menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
+}
+#footer .menu li {
+   
+}
+
+#footer .menu li a {
+    padding: 0 5px;
+    font-size: 11px;
+    border-right: 1px solid #fff;
+}
+#footer .menu li:last-child a {
+    border: none;
+}
+#footer .copy {
+    padding:10px 0;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+}
+.footer__inner > div {
+    width: 25%;
+}
+.footer__inner > div > h3 {
+    padding-bottom: 25px;
+    font-weight: 700px;
+    font-size: 24px;
+}
+.footer__inner > div > ul > li {
+    font-size: 14px;
+}
+.footer__inner > div > ul > li > a {
+    font-size: 14px;
+    line-height: 1.8;
+}
+.footer__sns ul {
+    display: flex;
+}
+.footer__sns .select option {
+    color: #000;
+}
+.footer__icon {}
+.footer__icon > a {
+    display: block;
+    margin-bottom: 20px;
+}
+.footer__icon ul {
+    display: flex;
+}
+.footer__icon ul li a img {
+    display: inline-block;
+    margin-bottom: 20px;
+    height: 34px;
+    margin-right: 10px;
+}
+.footer__sns > ul {
+    margin-bottom: 20px;
+}
+.footer__sns > ul > li a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    margin-right: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #111;
+    position: relative;
+}
+.footer__sns > ul > li > a > img {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+}
+.footer__sns .selector {
+    position: relative;
+}
+.footer__sns .selector .label {
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    background: transparent url(//www.paris.co.kr/wp-content/themes/paris/assets/css/../img/icons/selectdown.svg) 100% 50% no-repeat;
+    padding: 0 30px 0 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 200px;
+    height: 44px;
+    line-height: 42px;
+    border-radius: 5px;
+    border: solid 1px #979797;
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.footer__sns .selector .links {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    max-width: 200px;
+    z-index: 9;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    bottom: 100%;
+    border: solid 1px #979797;
+    background: #888;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 8px 0;
+}
+
+.footer__sns .selector .links ul {
+    vertical-align: baseline;
+    display: inline-block; /* 인라인 블록 요소로 설정 */
+    writing-mode: horizontal-tb; /* 가로 방향으로 텍스트 표시 */
+}
+.footer__sns .selector .links ul li {
+    display: block;
+
+}
+.footer__sns .selector .links > ul > li > a {
+    font-size: 12px;
+    opacity: .5;
+    padding: 5px;
+    /* display:inline-block ; */
+    text-decoration: none; /* 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+    cursor: text; /* 커서 스타일을 텍스트 커서로 변경 */
+    pointer-events: none; /* 클릭 이벤트 비활성화 */
+}
+
+.footer__sns .selector .links ul li ul {
+    width: 100%;
+}
+.footer__sns .selector .links ul li ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 0;
+    
+}
+.footer__sns .selector .links ul li ul li:hover {
+    background-color: #797f8d;
+}
+.footer__sns .selector .links ul li ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 12px;
+    color: #fff;
+}
