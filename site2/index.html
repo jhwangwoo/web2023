@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://www.paris.co.kr/wp-content/cache/autoptimize/css/autoptimize_fbe4129e8a73c6b814bc1e68c638aef2.css"> -->
     <style>
+.arrow {
+  position: relative;
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #000;
+}
 
     </style>
 </head>
@@ -20,6 +38,7 @@
         <header id="header">
             <div class="container">
                 <nav class="nav">
+                    <div class="arrow"></div>
                     <h1 class="blind">PARIS BAGUETTE</h1>
                     <div class="nav_left">
                         <ul>
