@@ -9,7 +9,8 @@
 데이터 실행하기 : https://jhwangwoo.github.io/web2023/javascript/javascript03.html   
 데이터 제어하기 : https://jhwangwoo.github.io/web2023/javascript/javascript04.html   
 
-퀴즈 게임01 : https://jhwangwoo.github.io/web2023/javascript/quiz/quizeffect01.html   
+퀴즈 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/quiz/quizeffect01.html   
+게임 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/game/gameeffect01.html   
 
 
 # 사이트
