@@ -18,3 +18,4 @@
 카드 유형01 : https://jhwangwoo.github.io/web2023/site/cardtype/cardtype01.html   
 텍스트 유형01 : https://jhwangwoo.github.io/web2023/site/texttype/texttype01.html   
 슬라이드 유형01 : https://jhwangwoo.github.io/web2023/site/slidertype/slidertype01.html   
+카피 사이트:
