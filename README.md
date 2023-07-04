@@ -11,6 +11,7 @@
 
 퀴즈 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/quiz/quizeffect01.html   
 패럴렉스 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/parallax/parallaxEffect01.html
+
 마우스 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/mouse/mouseeffect01.html
 검색 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/search/searcheffect01.html
 슬라이드 이펙트01 : https://jhwangwoo.github.io/web2023/javascript/slider/sliderEffect01.html
