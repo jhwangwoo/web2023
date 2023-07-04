@@ -27,7 +27,7 @@
             <li><a href="quizeffect04.html">4</a></li>
             <li><a href="quizeffect05.html">5</a></li>
             <li><a href="quizeffect06.html">6</a></li>
-            <li class="active"><a href="quizeffect07.html">7</a></li>
+            <li class="active"><a href="quizeffectJC.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -426,8 +426,16 @@
         const endQuiz = () => {
             alert("시험이 끝났습니다.")
         }
+    
+        // console.log(cbtViewSubject)
+        cbtStartBtn.addEventListener("click",() =>{
+            if(cbtViewSubject.textContent === "기능사"){
+                alert("문제를 선택해주세요!")
+            } else {
+                startQuiz();
+            }
+        });
 
-        cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
         // dataQuestion();
         </script>
